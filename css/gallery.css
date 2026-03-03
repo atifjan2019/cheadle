@@ -1,0 +1,198 @@
+/* =========================================================================
+   GALLERY PAGE — Cheadle Construction
+   ========================================================================= */
+
+/* Stats Bar */
+.gallery-stats {
+    background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
+    padding-block: var(--space-2xl);
+}
+
+.gallery-stats__grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-2xl);
+    flex-wrap: wrap;
+}
+
+.gallery-stats__item {
+    text-align: center;
+    min-width: 140px;
+}
+
+.gallery-stats__num {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+    font-weight: 700;
+    color: var(--color-gold);
+    line-height: 1;
+}
+
+.gallery-stats__label {
+    display: block;
+    font-size: var(--fs-small);
+    color: rgba(255, 255, 255, 0.55);
+    margin-top: var(--space-xs);
+}
+
+.gallery-stats__div {
+    width: 1px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.12);
+}
+
+/* Gallery Grid — Masonry-style */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    cursor: pointer;
+    aspect-ratio: 4/3;
+}
+
+.gallery-item--wide {
+    grid-column: span 2;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.06);
+}
+
+.gallery-item__overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: var(--space-xl);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 50%, transparent 100%);
+    opacity: 0;
+    transition: opacity var(--transition-base);
+}
+
+.gallery-item:hover .gallery-item__overlay {
+    opacity: 1;
+}
+
+.gallery-item__tag {
+    display: inline-block;
+    width: fit-content;
+    padding: 3px 10px;
+    border-radius: var(--radius-sm);
+    background: var(--color-gold);
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: var(--space-xs);
+}
+
+.gallery-item__overlay h3 {
+    font-size: var(--fs-h4);
+    color: #fff;
+    margin-bottom: 2px;
+}
+
+.gallery-item__loc {
+    font-size: var(--fs-xs);
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Trust Cards */
+.gallery-trust__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-xl);
+}
+
+.gallery-trust__card {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-2xl) var(--space-xl);
+    text-align: center;
+    transition: all var(--transition-base);
+}
+
+.gallery-trust__card:hover {
+    border-color: var(--color-border-hover);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-gold);
+}
+
+.gallery-trust__card-icon {
+    font-size: 2rem;
+    margin-bottom: var(--space-md);
+    display: block;
+}
+
+.gallery-trust__card h3 {
+    font-size: var(--fs-h4);
+    margin-bottom: var(--space-sm);
+    color: var(--color-text);
+}
+
+.gallery-trust__card p {
+    font-size: var(--fs-small);
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery-item--wide {
+        grid-column: span 2;
+    }
+
+    .gallery-trust__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery-item__overlay {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 640px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item--wide {
+        grid-column: span 1;
+    }
+
+    .gallery-trust__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-stats__grid {
+        flex-direction: column;
+        gap: var(--space-lg);
+    }
+
+    .gallery-stats__div {
+        width: 48px;
+        height: 1px;
+    }
+}

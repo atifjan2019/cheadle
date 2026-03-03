@@ -19,8 +19,12 @@
   z-index: 0;
 }
 
-.page-hero--about::after {
-  background: linear-gradient(135deg, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0.4) 100%) !important;
+.page-hero--about .page-hero__bg-img::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 1;
 }
 
 
@@ -554,6 +558,7 @@
    RESPONSIVE — Tablet
    ========================================================================= */
 @media (max-width: 968px) {
+
   .about-story__grid,
   .about-approach__grid,
   .about-quality__grid,
