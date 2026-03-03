@@ -1,271 +1,487 @@
 <!DOCTYPE html>
 <html lang="en-GB">
+
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Garage conversion services in Stockport and Manchester.">
-<title>Garage Conversions | Cheadle Construction</title>
-<link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="css/garage-conversions.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-</head><body>
-<!-- ====================================================================
-     HEADER — Cheadle Construction
-     Copy this into every page. Update active nav link as needed.
-     ==================================================================== -->
-<header class="header" id="header">
-    <div class="container header__inner">
-        <a href="index.html" class="header__logo" aria-label="Cheadle Construction Home">
-            <img src="images/logo.png" alt="Cheadle Construction Logo" width="48" height="48">
-        </a>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Professional garage conversion services in Stockport, Manchester and Cheshire. Transform your garage into a bedroom, office, gym or living space with Cheadle Construction.">
+    <title>Garage Conversions | Cheadle Construction</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/garage-conversions.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
 
-        <button class="nav-toggle" aria-label="Toggle navigation menu" tabindex="0">
-            <span class="nav-toggle__bar"></span>
-            <span class="nav-toggle__bar"></span>
-            <span class="nav-toggle__bar"></span>
-        </button>
+<body>
+    <!-- HEADER -->
+    <header class="header" id="header">
+        <div class="container header__inner">
+            <a href="index.html" class="header__logo" aria-label="Cheadle Construction Home"><img src="images/logo.png"
+                    alt="Cheadle Construction Logo" width="48" height="48"></a>
+            <button class="nav-toggle" aria-label="Toggle navigation menu" tabindex="0"><span
+                    class="nav-toggle__bar"></span><span class="nav-toggle__bar"></span><span
+                    class="nav-toggle__bar"></span></button>
+            <nav class="nav" id="main-nav" aria-label="Main navigation">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="about.html" class="nav__link" tabindex="0">About</a>
+                        <div class="nav__dropdown" role="menu"><a href="about.html" class="nav__dropdown-link"
+                                role="menuitem">About Cheadle Construction</a><a href="our-process.html"
+                                class="nav__dropdown-link" role="menuitem">Our Process</a><a href="health-safety.html"
+                                class="nav__dropdown-link" role="menuitem">Health &amp; Safety</a><a
+                                href="accreditations.html" class="nav__dropdown-link" role="menuitem">Accreditations
+                                &amp; Insurance</a><a href="testimonials.html" class="nav__dropdown-link"
+                                role="menuitem">Testimonials</a></div>
+                    </li>
+                    <li class="nav__item"><a href="residential.html" class="nav__link" tabindex="0">Residential</a>
+                        <div class="nav__dropdown nav__mega" role="menu">
+                            <div class="nav__mega-group">
+                                <div class="nav__mega-group-title">Builds &amp; Extensions</div><a
+                                    href="new-builds.html" class="nav__dropdown-link" role="menuitem">New Builds
+                                    Construction</a><a href="home-extensions.html" class="nav__dropdown-link"
+                                    role="menuitem">Home Extensions Construction</a><a
+                                    href="single-storey-extensions.html" class="nav__dropdown-link"
+                                    role="menuitem">Single Storey Extensions</a><a href="double-storey-extensions.html"
+                                    class="nav__dropdown-link" role="menuitem">Double Storey Extensions</a><a
+                                    href="dormer-loft-conversions.html" class="nav__dropdown-link"
+                                    role="menuitem">Dormer Loft Conversions</a><a href="loft-conversions.html"
+                                    class="nav__dropdown-link" role="menuitem">Loft Conversions</a><a
+                                    href="garage-conversions.html" class="nav__dropdown-link" role="menuitem">Garage
+                                    Conversions</a><a href="basement-cellar-conversions.html" class="nav__dropdown-link"
+                                    role="menuitem">Basement &amp; Cellar Conversions</a>
+                            </div>
+                            <div class="nav__mega-group">
+                                <div class="nav__mega-group-title">Renovations &amp; Maintenance</div><a
+                                    href="home-renovation.html" class="nav__dropdown-link" role="menuitem">Home
+                                    Renovation &amp; Improvements</a><a href="kitchen-renovation.html"
+                                    class="nav__dropdown-link" role="menuitem">Kitchen Renovation</a><a
+                                    href="bathroom-renovation.html" class="nav__dropdown-link" role="menuitem">Bathroom
+                                    Renovation</a><a href="interior-maintenance.html" class="nav__dropdown-link"
+                                    role="menuitem">Interior Home Maintenance</a><a href="exterior-maintenance.html"
+                                    class="nav__dropdown-link" role="menuitem">Exterior Home Maintenance</a><a
+                                    href="garden-landscaping.html" class="nav__dropdown-link" role="menuitem">Garden
+                                    Construction &amp; Landscaping</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav__item"><a href="commercial.html" class="nav__link" tabindex="0">Commercial</a>
+                        <div class="nav__dropdown nav__mega" role="menu">
+                            <div class="nav__mega-group">
+                                <div class="nav__mega-group-title">Commercial Builds</div><a
+                                    href="commercial-new-builds.html" class="nav__dropdown-link"
+                                    role="menuitem">Commercial New Builds</a><a href="office-construction.html"
+                                    class="nav__dropdown-link" role="menuitem">Office Construction</a><a
+                                    href="warehouse-construction.html" class="nav__dropdown-link"
+                                    role="menuitem">Warehouse Construction</a><a href="factory-construction.html"
+                                    class="nav__dropdown-link" role="menuitem">Factory Construction</a><a
+                                    href="institutional-construction.html" class="nav__dropdown-link"
+                                    role="menuitem">Institutional Building Construction</a>
+                            </div>
+                            <div class="nav__mega-group">
+                                <div class="nav__mega-group-title">Specialist Sectors</div><a
+                                    href="restaurant-construction.html" class="nav__dropdown-link"
+                                    role="menuitem">Restaurant Construction Services</a><a
+                                    href="retail-construction.html" class="nav__dropdown-link" role="menuitem">Retail
+                                    &amp; Grocery Store Construction</a><a href="hotel-construction.html"
+                                    class="nav__dropdown-link" role="menuitem">Hotel Construction</a><a
+                                    href="accommodation-construction.html" class="nav__dropdown-link"
+                                    role="menuitem">Accommodation Construction</a><a href="building-repair.html"
+                                    class="nav__dropdown-link" role="menuitem">Building Repair &amp; Restoration</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav__item"><a href="areas.html" class="nav__link" tabindex="0">Areas</a>
+                        <div class="nav__dropdown nav__mega" role="menu">
+                            <div class="nav__mega-group">
+                                <div class="nav__mega-group-title">Core Areas</div><a href="builders-cheadle.html"
+                                    class="nav__dropdown-link" role="menuitem">Builders in Cheadle</a><a
+                                    href="builders-cheadle-hulme.html" class="nav__dropdown-link"
+                                    role="menuitem">Builders in Cheadle Hulme</a>
+                            </div>
+                            <div class="nav__mega-group">
+                                <div class="nav__mega-group-title">Affluent Areas</div><a href="builders-bramhall.html"
+                                    class="nav__dropdown-link" role="menuitem">Builders in Bramhall</a><a
+                                    href="builders-wilmslow.html" class="nav__dropdown-link" role="menuitem">Builders in
+                                    Wilmslow</a><a href="builders-alderley-edge.html" class="nav__dropdown-link"
+                                    role="menuitem">Builders in Alderley Edge</a><a href="builders-prestbury.html"
+                                    class="nav__dropdown-link" role="menuitem">Builders in Prestbury</a><a
+                                    href="builders-hale.html" class="nav__dropdown-link" role="menuitem">Builders in
+                                    Hale</a><a href="builders-hale-barns.html" class="nav__dropdown-link"
+                                    role="menuitem">Builders in Hale Barns</a><a href="builders-bowdon.html"
+                                    class="nav__dropdown-link" role="menuitem">Builders in Bowdon</a><a
+                                    href="builders-didsbury.html" class="nav__dropdown-link" role="menuitem">Builders in
+                                    Didsbury</a><a href="builders-heaton-moor.html" class="nav__dropdown-link"
+                                    role="menuitem">Builders in Heaton Moor</a><a href="builders-heaton-mersey.html"
+                                    class="nav__dropdown-link" role="menuitem">Builders in Heaton Mersey</a><a
+                                    href="builders-poynton.html" class="nav__dropdown-link" role="menuitem">Builders in
+                                    Poynton</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav__item"><a href="portfolio.html" class="nav__link">Portfolio</a></li>
+                    <li class="nav__item"><a href="faqs.html" class="nav__link">FAQs</a></li>
+                    <li class="nav__item"><a href="blog.html" class="nav__link">Blog</a></li>
+                    <li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li>
+                </ul>
+                <a href="request-quote.html" class="btn btn--primary header__cta" id="header-cta">Request a Free
+                    Quote</a>
+            </nav>
+        </div>
+    </header>
+    <main>
 
-        <nav class="nav" id="main-nav" aria-label="Main navigation">
-            <ul class="nav__list">
-                <li class="nav__item">
-                    <a href="index.html" class="nav__link">Home</a>
-                </li>
-                <li class="nav__item">
-                    <a href="about.html" class="nav__link" tabindex="0">About</a>
-                    <div class="nav__dropdown" role="menu">
-                        <a href="about.html" class="nav__dropdown-link" role="menuitem">About Cheadle Construction</a>
-                        <a href="our-process.html" class="nav__dropdown-link" role="menuitem">Our Process</a>
-                        <a href="health-safety.html" class="nav__dropdown-link" role="menuitem">Health &amp; Safety</a>
-                        <a href="accreditations.html" class="nav__dropdown-link" role="menuitem">Accreditations &amp;
-                            Insurance</a>
-                        <a href="testimonials.html" class="nav__dropdown-link" role="menuitem">Testimonials</a>
-                    </div>
-                </li>
-                <li class="nav__item">
-                    <a href="residential.html" class="nav__link" tabindex="0">Residential</a>
-                    <div class="nav__dropdown nav__mega" role="menu">
-                        <div class="nav__mega-group">
-                            <div class="nav__mega-group-title">Builds &amp; Extensions</div>
-                            <a href="new-builds.html" class="nav__dropdown-link" role="menuitem">New Builds
-                                Construction</a>
-                            <a href="home-extensions.html" class="nav__dropdown-link" role="menuitem">Home Extensions
-                                Construction</a>
-                            <a href="single-storey-extensions.html" class="nav__dropdown-link" role="menuitem">Single
-                                Storey Extensions</a>
-                            <a href="double-storey-extensions.html" class="nav__dropdown-link" role="menuitem">Double
-                                Storey Extensions</a>
-                            <a href="dormer-loft-conversions.html" class="nav__dropdown-link" role="menuitem">Dormer
-                                Loft Conversions</a>
-                            <a href="loft-conversions.html" class="nav__dropdown-link" role="menuitem">Loft
-                                Conversions</a>
-                            <a href="garage-conversions.html" class="nav__dropdown-link" role="menuitem">Garage
-                                Conversions</a>
-                            <a href="basement-cellar-conversions.html" class="nav__dropdown-link"
-                                role="menuitem">Basement &amp; Cellar Conversions</a>
-                        </div>
-                        <div class="nav__mega-group">
-                            <div class="nav__mega-group-title">Renovations &amp; Maintenance</div>
-                            <a href="home-renovation.html" class="nav__dropdown-link" role="menuitem">Home Renovation
-                                &amp; Improvements</a>
-                            <a href="kitchen-renovation.html" class="nav__dropdown-link" role="menuitem">Kitchen
-                                Renovation</a>
-                            <a href="bathroom-renovation.html" class="nav__dropdown-link" role="menuitem">Bathroom
-                                Renovation</a>
-                            <a href="interior-maintenance.html" class="nav__dropdown-link" role="menuitem">Interior
-                                Home Maintenance</a>
-                            <a href="exterior-maintenance.html" class="nav__dropdown-link" role="menuitem">Exterior
-                                Home Maintenance</a>
-                            <a href="garden-landscaping.html" class="nav__dropdown-link" role="menuitem">Garden
-                                Construction &amp; Landscaping</a>
-                        </div>
-                    </div>
-                </li>
-                <li class="nav__item">
-                    <a href="commercial.html" class="nav__link" tabindex="0">Commercial</a>
-                    <div class="nav__dropdown nav__mega" role="menu">
-                        <div class="nav__mega-group">
-                            <div class="nav__mega-group-title">Commercial Builds</div>
-                            <a href="commercial-new-builds.html" class="nav__dropdown-link" role="menuitem">Commercial
-                                New Builds</a>
-                            <a href="office-construction.html" class="nav__dropdown-link" role="menuitem">Office
-                                Construction</a>
-                            <a href="warehouse-construction.html" class="nav__dropdown-link" role="menuitem">Warehouse
-                                Construction</a>
-                            <a href="factory-construction.html" class="nav__dropdown-link" role="menuitem">Factory
-                                Construction</a>
-                            <a href="institutional-construction.html" class="nav__dropdown-link"
-                                role="menuitem">Institutional Building Construction</a>
-                        </div>
-                        <div class="nav__mega-group">
-                            <div class="nav__mega-group-title">Specialist Sectors</div>
-                            <a href="restaurant-construction.html" class="nav__dropdown-link"
-                                role="menuitem">Restaurant Construction Services</a>
-                            <a href="retail-construction.html" class="nav__dropdown-link" role="menuitem">Retail &amp;
-                                Grocery Store Construction</a>
-                            <a href="hotel-construction.html" class="nav__dropdown-link" role="menuitem">Hotel
-                                Construction</a>
-                            <a href="accommodation-construction.html" class="nav__dropdown-link"
-                                role="menuitem">Accommodation Construction</a>
-                            <a href="building-repair.html" class="nav__dropdown-link" role="menuitem">Building Repair
-                                &amp; Restoration</a>
-                        </div>
-                    </div>
-                </li>
-                <li class="nav__item">
-                    <a href="areas.html" class="nav__link" tabindex="0">Areas</a>
-                    <div class="nav__dropdown nav__mega" role="menu">
-                        <div class="nav__mega-group">
-                            <div class="nav__mega-group-title">Core Areas</div>
-                            <a href="builders-cheadle.html" class="nav__dropdown-link" role="menuitem">Builders in
-                                Cheadle</a>
-                            <a href="builders-cheadle-hulme.html" class="nav__dropdown-link" role="menuitem">Builders
-                                in Cheadle Hulme</a>
-                        </div>
-                        <div class="nav__mega-group">
-                            <div class="nav__mega-group-title">Affluent Areas</div>
-                            <a href="builders-bramhall.html" class="nav__dropdown-link" role="menuitem">Builders in
-                                Bramhall</a>
-                            <a href="builders-wilmslow.html" class="nav__dropdown-link" role="menuitem">Builders in
-                                Wilmslow</a>
-                            <a href="builders-alderley-edge.html" class="nav__dropdown-link" role="menuitem">Builders
-                                in Alderley Edge</a>
-                            <a href="builders-prestbury.html" class="nav__dropdown-link" role="menuitem">Builders in
-                                Prestbury</a>
-                            <a href="builders-hale.html" class="nav__dropdown-link" role="menuitem">Builders in
-                                Hale</a>
-                            <a href="builders-hale-barns.html" class="nav__dropdown-link" role="menuitem">Builders in
-                                Hale Barns</a>
-                            <a href="builders-bowdon.html" class="nav__dropdown-link" role="menuitem">Builders in
-                                Bowdon</a>
-                            <a href="builders-didsbury.html" class="nav__dropdown-link" role="menuitem">Builders in
-                                Didsbury</a>
-                            <a href="builders-heaton-moor.html" class="nav__dropdown-link" role="menuitem">Builders in
-                                Heaton Moor</a>
-                            <a href="builders-heaton-mersey.html" class="nav__dropdown-link" role="menuitem">Builders
-                                in Heaton Mersey</a>
-                            <a href="builders-poynton.html" class="nav__dropdown-link" role="menuitem">Builders in
-                                Poynton</a>
-                        </div>
-                    </div>
-                </li>
-                <li class="nav__item">
-                    <a href="portfolio.html" class="nav__link">Portfolio</a>
-                </li>
-                <li class="nav__item">
-                    <a href="faqs.html" class="nav__link">FAQs</a>
-                </li>
-                <li class="nav__item">
-                    <a href="blog.html" class="nav__link">Blog</a>
-                </li>
-                <li class="nav__item">
-                    <a href="contact.html" class="nav__link">Contact</a>
-                </li>
-            </ul>
-            <a href="request-quote.html" class="btn btn--primary header__cta" id="header-cta">Request a Free Quote</a>
-        </nav>
-    </div>
-</header>
-<main>
-<section class="page-hero"><div class="container"><div class="page-hero__content">
-<div class="page-hero__breadcrumb"><a href="index.html">Home</a> <span>/</span> <a href='residential.html'>Residential</a> <span>/</span> Garage Conversions</div>
-<h1 class="page-hero__title">Garage <em>Conversions</em></h1><p class="page-hero__subtitle">Convert your unused garage into valuable living space.</p>
-</div></div></section>
-<section class="content-section"><div class="container"><div class="content-section__body">
-  <h2>Professional Garage Conversions Services</h2><p>Converting an unused garage is one of the most cost-effective home improvements providing a new bedroom, office, or living area.</p><h2>Why Choose Cheadle Construction?</h2><p>We handle structural alterations, insulation, electrics, plumbing, and finishing.</p>
-  <ul><li>Over 20 years of experience</li><li>Fully qualified and insured tradesmen</li><li>Free site survey and no-obligation quote</li><li>Professional, reliable service</li><li>Serving Stockport, Manchester and the North West</li></ul>
-  <p>Contact us today on <a href="tel:01612189616"><strong>0161 218 9616</strong></a> or <a href="tel:07725818183"><strong>07725 818183</strong></a> to discuss your project requirements.</p>
-  <a href="request-quote.html" class="btn btn--primary">Request a Free Quote</a>
-  </div></div></section>
-<section class="cta-banner"><div class="cta-banner__bg"></div><div class="container"><div class="cta-banner__content">
-<span class="section-label">Start Your Project</span>
-<h2 class="cta-banner__title">Ready to Build Something <span>Extraordinary</span>?</h2>
-<p class="cta-banner__text">Get in touch today for a free, no-obligation consultation and quotation.</p>
-<div class="btn-group"><a href="request-quote.html" class="btn btn--primary">Request a Free Quote</a><a href="tel:01612189616" class="btn btn--secondary">Call 0161 218 9616</a></div>
-</div></div></section>
-</main>
-<!-- ====================================================================
-     FOOTER — Cheadle Construction
-     Copy this into every page.
-     ==================================================================== -->
-<footer class="footer" id="footer">
-    <div class="container">
-        <div class="footer__grid">
-            <div class="footer__brand">
-                <div class="footer__logo">
-                    Cheadle <span>Construction</span>
-                </div>
-                <p class="footer__brand-text">
-                    We are a well established, trustworthy, reliable and professional company with over 20 years
-                    experience. We serve Stockport, Manchester and all surrounding areas of the North West.
-                </p>
-                <div class="footer__contact-item">
-                    <span class="footer__contact-icon">📞</span>
-                    <a href="tel:01612189616" class="footer__link">0161 218 9616</a>
-                </div>
-                <div class="footer__contact-item">
-                    <span class="footer__contact-icon">📱</span>
-                    <a href="tel:07725818183" class="footer__link">07725 818183</a>
-                </div>
-                <div class="footer__contact-item">
-                    <span class="footer__contact-icon">✉</span>
-                    <a href="mailto:info@cheadleconstruction.com" class="footer__link">info@cheadleconstruction.com</a>
-                </div>
-                <div class="footer__contact-item">
-                    <span class="footer__contact-icon">📍</span>
-                    <span>Cheadle, Stockport, SK8</span>
+        <!-- SECTION 1: HERO -->
+        <section class="page-hero page-hero--garage" id="garage-hero">
+            <div class="page-hero__bg-img" aria-hidden="true"></div>
+            <div class="container">
+                <div class="page-hero__content">
+                    <div class="page-hero__breadcrumb"><a href="index.html">Home</a> <span>/</span> <a
+                            href="residential.html">Residential</a> <span>/</span> Garage Conversions</div>
+                    <h1 class="page-hero__title">Garage <em>Conversions</em></h1>
+                    <p class="page-hero__subtitle">Transform your unused garage into a stunning living space — one of
+                        the most cost-effective ways to add a room to your home across Stockport and Cheshire.</p>
                 </div>
             </div>
-            <div>
-                <h3 class="footer__heading">Quick Links</h3>
-                <nav class="footer__links" aria-label="Footer quick links">
-                    <a href="index.html" class="footer__link">Home</a>
-                    <a href="about.html" class="footer__link">About Us</a>
-                    <a href="our-process.html" class="footer__link">Our Process</a>
-                    <a href="portfolio.html" class="footer__link">Portfolio</a>
-                    <a href="testimonials.html" class="footer__link">Testimonials</a>
-                    <a href="blog.html" class="footer__link">Blog</a>
-                    <a href="faqs.html" class="footer__link">FAQs</a>
-                    <a href="contact.html" class="footer__link">Contact</a>
-                    <a href="request-quote.html" class="footer__link">Request a Quote</a>
-                </nav>
+        </section>
+
+
+        <!-- SECTION 2: INTRO -->
+        <section class="gc-intro section" id="gc-intro" aria-labelledby="gc-intro-title">
+            <div class="container">
+                <div class="gc-intro__grid">
+                    <div class="gc-intro__image-wrap">
+                        <img src="images/home-improvement-1.png"
+                            alt="Converted garage used as a modern home office with built-in desk and shelving"
+                            width="600" height="480" loading="lazy">
+                        <div class="gc-intro__badge"><span>💰</span><span>One of the most affordable conversions</span>
+                        </div>
+                    </div>
+                    <div class="gc-intro__content">
+                        <span class="section-label">Garage Conversion Specialists</span>
+                        <h2 class="section-title section-title--gold" id="gc-intro-title">Stop Storing Junk, Start
+                            <span>Living</span></h2>
+                        <p>Most garages are used for storage, not cars. A garage conversion transforms this wasted space
+                            into a fully insulated, heated room — often for under £15,000 — making it one of the most
+                            affordable ways to add genuine living space to your home.</p>
+                        <div class="gc-intro__highlights">
+                            <div class="gc-intro__highlight"><strong>£10k–£20k</strong><span>Typical conversion
+                                    cost</span></div>
+                            <div class="gc-intro__highlight"><strong>4-6</strong><span>Weeks to complete</span></div>
+                            <div class="gc-intro__highlight"><strong>No</strong><span>Planning usually needed</span>
+                            </div>
+                        </div>
+                        <a href="request-quote.html" class="btn btn--primary">Get a Free Quote</a>
+                    </div>
+                </div>
             </div>
-            <div>
-                <h3 class="footer__heading">Services</h3>
-                <nav class="footer__links" aria-label="Footer service links">
-                    <a href="new-builds.html" class="footer__link">New Builds</a>
-                    <a href="home-extensions.html" class="footer__link">Home Extensions</a>
-                    <a href="loft-conversions.html" class="footer__link">Loft Conversions</a>
-                    <a href="kitchen-renovation.html" class="footer__link">Kitchen Renovation</a>
-                    <a href="bathroom-renovation.html" class="footer__link">Bathroom Renovation</a>
-                    <a href="garage-conversions.html" class="footer__link">Garage Conversions</a>
-                    <a href="commercial-new-builds.html" class="footer__link">Commercial Builds</a>
-                    <a href="office-construction.html" class="footer__link">Office Construction</a>
-                </nav>
+        </section>
+
+
+        <!-- SECTION 3: ROOM IDEAS — 6 Use Case Cards -->
+        <section class="gc-ideas section section--alt" id="room-ideas" aria-labelledby="gc-ideas-title">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Room Ideas</span>
+                    <h2 class="section-title section-title--gold" id="gc-ideas-title">What Could Your Garage
+                        <span>Become</span>?</h2>
+                    <p class="section-desc">A single garage gives you around 15m² of usable floor space. Here are the
+                        most popular uses.</p>
+                    <hr class="divider">
+                </div>
+                <div class="gc-ideas__grid">
+                    <div class="gc-ideas__card"><span class="gc-ideas__icon">🖥</span>
+                        <h3>Home Office</h3>
+                        <p>A quiet, dedicated workspace separate from the main house — ideal for remote workers and
+                            freelancers.</p>
+                    </div>
+                    <div class="gc-ideas__card"><span class="gc-ideas__icon">🛏</span>
+                        <h3>Extra Bedroom</h3>
+                        <p>A ground-floor bedroom with en-suite — perfect for elderly relatives, guests, or growing
+                            families.</p>
+                    </div>
+                    <div class="gc-ideas__card"><span class="gc-ideas__icon">🏋</span>
+                        <h3>Home Gym</h3>
+                        <p>A fully equipped gym with rubber flooring, mirrors, and ventilation. Train at home, on your
+                            schedule.</p>
+                    </div>
+                    <div class="gc-ideas__card"><span class="gc-ideas__icon">🎮</span>
+                        <h3>Games Room / Den</h3>
+                        <p>A cinema room, gaming setup, or teenage den with soundproofing and custom lighting.</p>
+                    </div>
+                    <div class="gc-ideas__card"><span class="gc-ideas__icon">🛋</span>
+                        <h3>Lounge Extension</h3>
+                        <p>Open the garage into your existing living room to create a larger, open-plan family space.
+                        </p>
+                    </div>
+                    <div class="gc-ideas__card"><span class="gc-ideas__icon">🧺</span>
+                        <h3>Utility Room</h3>
+                        <p>A functional utility and storage room with washing machine, tumble dryer, deep sink, and boot
+                            room.</p>
+                    </div>
+                </div>
             </div>
-            <div>
-                <h3 class="footer__heading">Areas</h3>
-                <nav class="footer__links" aria-label="Footer area links">
-                    <a href="builders-cheadle.html" class="footer__link">Cheadle</a>
-                    <a href="builders-cheadle-hulme.html" class="footer__link">Cheadle Hulme</a>
-                    <a href="builders-bramhall.html" class="footer__link">Bramhall</a>
-                    <a href="builders-wilmslow.html" class="footer__link">Wilmslow</a>
-                    <a href="builders-alderley-edge.html" class="footer__link">Alderley Edge</a>
-                    <a href="builders-prestbury.html" class="footer__link">Prestbury</a>
-                    <a href="builders-hale.html" class="footer__link">Hale</a>
-                    <a href="builders-bowdon.html" class="footer__link">Bowdon</a>
-                    <a href="builders-didsbury.html" class="footer__link">Didsbury</a>
-                </nav>
+        </section>
+
+
+        <!-- SECTION 4: WHAT'S INVOLVED — Technical Overview -->
+        <section class="gc-work section" id="whats-involved" aria-labelledby="gc-work-title">
+            <div class="container">
+                <div class="gc-work__grid">
+                    <div class="gc-work__content">
+                        <span class="section-label">The Build</span>
+                        <h2 class="section-title section-title--gold" id="gc-work-title">What's Involved in a
+                            <span>Garage</span> Conversion</h2>
+                        <p>A garage conversion is a relatively straightforward building project when done correctly.
+                            Here's what's typically included:</p>
+                        <div class="gc-work__items">
+                            <div class="gc-work__item"><span>🧱</span>
+                                <div><strong>Garage Door Removal</strong>
+                                    <p>The existing garage door is removed and replaced with a brick wall, window, or
+                                        French doors to match your property.</p>
+                                </div>
+                            </div>
+                            <div class="gc-work__item"><span>🔧</span>
+                                <div><strong>Damp-Proofing &amp; Insulation</strong>
+                                    <p>The concrete floor is damp-proofed and insulated. Walls are insulated and
+                                        dry-lined to meet Building Regulations.</p>
+                                </div>
+                            </div>
+                            <div class="gc-work__item"><span>⚡</span>
+                                <div><strong>Electrics &amp; Heating</strong>
+                                    <p>Full electrical wiring, lighting, sockets, and extension of your central heating
+                                        system with new radiators.</p>
+                                </div>
+                            </div>
+                            <div class="gc-work__item"><span>🪟</span>
+                                <div><strong>Windows &amp; Doors</strong>
+                                    <p>New double-glazed windows and internal or external doors fitted. Existing
+                                        internal access door widened if needed.</p>
+                                </div>
+                            </div>
+                            <div class="gc-work__item"><span>✨</span>
+                                <div><strong>Plastering &amp; Finishing</strong>
+                                    <p>Walls plastered, flooring laid, painted and decorated to your specification.
+                                        Ready to furnish and enjoy.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gc-work__image-wrap">
+                        <img src="images/about-process.png"
+                            alt="Garage conversion in progress showing insulation and stud walls" width="550"
+                            height="480" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- SECTION 5: PLANNING & BUILDING REGS -->
+        <section class="gc-regs section section--alt" id="gc-regs" aria-labelledby="gc-regs-title">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Permissions &amp; Regulations</span>
+                    <h2 class="section-title section-title--gold" id="gc-regs-title">Do You Need <span>Planning</span>
+                        Permission?</h2>
+                    <p class="section-desc">Most garage conversions don't need planning permission, but all require
+                        Building Regulations approval.</p>
+                    <hr class="divider">
+                </div>
+                <div class="gc-regs__grid">
+                    <div class="gc-regs__card gc-regs__card--green">
+                        <h3>✅ Usually No Planning Needed</h3>
+                        <p>Converting an existing integral or attached garage to habitable space is normally classed as
+                            a change of use rather than new development. No planning application is typically required.
+                        </p>
+                    </div>
+                    <div class="gc-regs__card gc-regs__card--amber">
+                        <h3>⚠ Exceptions</h3>
+                        <p>Planning may be required if your property is listed, in a conservation area, or subject to a
+                            condition requiring the garage to remain for parking. Some new-build estates also have
+                            restrictive covenants.</p>
+                    </div>
+                    <div class="gc-regs__card gc-regs__card--blue">
+                        <h3>📋 Building Regulations Required</h3>
+                        <p>All garage conversions require Building Regulations approval. This covers structural
+                            integrity, damp-proofing, insulation, fire safety, ventilation, and drainage. We manage the
+                            entire application process.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- SECTION 6: COST & VALUE -->
+        <section class="gc-cost section" id="gc-cost" aria-labelledby="gc-cost-title">
+            <div class="container">
+                <div class="gc-cost__grid">
+                    <div class="gc-cost__content">
+                        <span class="section-label">Investment Guide</span>
+                        <h2 class="section-title section-title--gold" id="gc-cost-title">Garage Conversion
+                            <span>Costs</span></h2>
+                        <p>A garage conversion typically costs a fraction of an extension, yet can add significant value
+                            to your property.</p>
+                        <div class="gc-cost__breakdown">
+                            <div class="gc-cost__row"><span>Basic conversion (single garage)</span><span>£10,000 –
+                                    £15,000</span></div>
+                            <div class="gc-cost__row"><span>Mid-range with en-suite</span><span>£15,000 – £22,000</span>
+                            </div>
+                            <div class="gc-cost__row"><span>High-spec or double garage</span><span>£20,000 –
+                                    £35,000</span></div>
+                            <div class="gc-cost__row gc-cost__row--highlight"><span>Typical value
+                                    added</span><span>10-15%</span></div>
+                        </div>
+                        <p class="gc-cost__note">Fixed-price quotes provided after a free site survey. No hidden costs.
+                        </p>
+                        <a href="request-quote.html" class="btn btn--primary">Get Your Free Quote</a>
+                    </div>
+                    <div class="gc-cost__image-wrap">
+                        <img src="images/about-team.png"
+                            alt="Cheadle Construction team reviewing plans for a garage conversion project" width="550"
+                            height="440" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- SECTION 7: FAQs -->
+        <section class="gc-faq section section--alt" id="gc-faqs" aria-labelledby="gc-faq-title">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Common Questions</span>
+                    <h2 class="section-title section-title--gold" id="gc-faq-title">Garage Conversion <span>FAQs</span>
+                    </h2>
+                    <p class="section-desc">Quick answers to the most asked questions about garage conversions.</p>
+                    <hr class="divider">
+                </div>
+                <div class="gc-faq__list">
+                    <details class="gc-faq__item">
+                        <summary class="gc-faq__question">Will converting my garage reduce my property value?</summary>
+                        <div class="gc-faq__answer">
+                            <p>No — in most cases, a well-executed garage conversion adds 10-15% to your property's
+                                value. The gain in living space almost always outweighs the loss of a garage, especially
+                                if you have on-street parking or driveway parking available.</p>
+                        </div>
+                    </details>
+                    <details class="gc-faq__item">
+                        <summary class="gc-faq__question">How long does a garage conversion take?</summary>
+                        <div class="gc-faq__answer">
+                            <p>A typical single garage conversion takes 4-6 weeks from start to finish. This includes
+                                structural work, insulation, electrics, plumbing (if needed), plastering, and
+                                decoration. Larger or more complex projects may take a little longer.</p>
+                        </div>
+                    </details>
+                    <details class="gc-faq__item">
+                        <summary class="gc-faq__question">Can I convert a detached garage?</summary>
+                        <div class="gc-faq__answer">
+                            <p>Yes, detached garages can be converted. However, they may need additional work for
+                                insulation, damp-proofing, and services (electricity, water, heating). This can increase
+                                costs slightly compared to an integral or attached garage.</p>
+                        </div>
+                    </details>
+                    <details class="gc-faq__item">
+                        <summary class="gc-faq__question">What happens to the garage floor?</summary>
+                        <div class="gc-faq__answer">
+                            <p>Garage floors are typically lower than the house floor. We level the floor, install a
+                                damp-proof membrane, insulation, and a new floor surface. The finished floor level
+                                matches the rest of your home for a seamless transition.</p>
+                        </div>
+                    </details>
+                    <details class="gc-faq__item">
+                        <summary class="gc-faq__question">Can I turn it back into a garage later?</summary>
+                        <div class="gc-faq__answer">
+                            <p>Technically yes, though most people don't want to. The conversion is a permanent building
+                                improvement. If needed, a new garage door opening could be reinstated, though this would
+                                involve additional construction work.</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- CTA BANNER -->
+        <section class="cta-banner">
+            <div class="cta-banner__bg"></div>
+            <div class="container">
+                <div class="cta-banner__content">
+                    <span class="section-label">Start Your Conversion</span>
+                    <h2 class="cta-banner__title">Ready to Transform Your <span>Garage</span>?</h2>
+                    <p class="cta-banner__text">Book a free site survey and get a fixed-price quotation for your garage
+                        conversion. Quick, affordable, and life-changing.</p>
+                    <div class="btn-group"><a href="request-quote.html" class="btn btn--primary">Request a Free
+                            Quote</a><a href="tel:01612189616" class="btn btn--secondary">Call 0161 218 9616</a></div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <!-- FOOTER -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <div class="footer__logo">Cheadle <span>Construction</span></div>
+                    <p class="footer__brand-text">We are a well established, trustworthy, reliable and professional
+                        company with over 20 years experience. We serve Stockport, Manchester and all surrounding areas
+                        of the North West.</p>
+                    <div class="footer__contact-item"><span class="footer__contact-icon">📞</span><a
+                            href="tel:01612189616" class="footer__link">0161 218 9616</a></div>
+                    <div class="footer__contact-item"><span class="footer__contact-icon">📱</span><a
+                            href="tel:07725818183" class="footer__link">07725 818183</a></div>
+                    <div class="footer__contact-item"><span class="footer__contact-icon">✉</span><a
+                            href="mailto:info@cheadleconstruction.com"
+                            class="footer__link">info@cheadleconstruction.com</a></div>
+                    <div class="footer__contact-item"><span class="footer__contact-icon">📍</span><span>Cheadle,
+                            Stockport, SK8</span></div>
+                </div>
+                <div>
+                    <h3 class="footer__heading">Quick Links</h3>
+                    <nav class="footer__links" aria-label="Footer quick links"><a href="index.html"
+                            class="footer__link">Home</a><a href="about.html" class="footer__link">About Us</a><a
+                            href="our-process.html" class="footer__link">Our Process</a><a href="portfolio.html"
+                            class="footer__link">Portfolio</a><a href="testimonials.html"
+                            class="footer__link">Testimonials</a><a href="blog.html" class="footer__link">Blog</a><a
+                            href="faqs.html" class="footer__link">FAQs</a><a href="contact.html"
+                            class="footer__link">Contact</a><a href="request-quote.html" class="footer__link">Request a
+                            Quote</a></nav>
+                </div>
+                <div>
+                    <h3 class="footer__heading">Services</h3>
+                    <nav class="footer__links" aria-label="Footer service links"><a href="new-builds.html"
+                            class="footer__link">New Builds</a><a href="home-extensions.html" class="footer__link">Home
+                            Extensions</a><a href="loft-conversions.html" class="footer__link">Loft Conversions</a><a
+                            href="kitchen-renovation.html" class="footer__link">Kitchen Renovation</a><a
+                            href="bathroom-renovation.html" class="footer__link">Bathroom Renovation</a><a
+                            href="garage-conversions.html" class="footer__link">Garage Conversions</a><a
+                            href="commercial-new-builds.html" class="footer__link">Commercial Builds</a><a
+                            href="office-construction.html" class="footer__link">Office Construction</a></nav>
+                </div>
+                <div>
+                    <h3 class="footer__heading">Areas</h3>
+                    <nav class="footer__links" aria-label="Footer area links"><a href="builders-cheadle.html"
+                            class="footer__link">Cheadle</a><a href="builders-cheadle-hulme.html"
+                            class="footer__link">Cheadle Hulme</a><a href="builders-bramhall.html"
+                            class="footer__link">Bramhall</a><a href="builders-wilmslow.html"
+                            class="footer__link">Wilmslow</a><a href="builders-alderley-edge.html"
+                            class="footer__link">Alderley Edge</a><a href="builders-prestbury.html"
+                            class="footer__link">Prestbury</a><a href="builders-hale.html"
+                            class="footer__link">Hale</a><a href="builders-bowdon.html"
+                            class="footer__link">Bowdon</a><a href="builders-didsbury.html"
+                            class="footer__link">Didsbury</a></nav>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">&copy; 2025 Cheadle Construction. All rights reserved. Company Reg:
+                    12345678</p>
+                <div class="footer__legal"><a href="privacy-policy.html">Privacy Policy</a><a
+                        href="terms-conditions.html">Terms &amp; Conditions</a><a href="sitemap.html">Sitemap</a></div>
             </div>
         </div>
-        <div class="footer__bottom">
-            <p class="footer__copyright">&copy; 2025 Cheadle Construction. All rights reserved. Company Reg: 12345678
-            </p>
-            <div class="footer__legal">
-                <a href="privacy-policy.html">Privacy Policy</a>
-                <a href="terms-conditions.html">Terms &amp; Conditions</a>
-                <a href="sitemap.html">Sitemap</a>
-            </div>
-        </div>
-    </div>
-</footer>
-<script src="js/nav.js"></script>
-</body></html>
+    </footer>
+    <script src="js/nav.js"></script>
+</body>
+
+</html>

@@ -1,100 +1,81 @@
 /* =========================================================================
-   LOFT CONVERSIONS PAGE — Custom Styles
+   KITCHEN RENOVATION PAGE — Custom Styles
    ========================================================================= */
 
-/* ----- Hero ----- */
-.page-hero--loft {
+.page-hero--kitchen {
     position: relative;
     padding: calc(var(--header-height) + var(--space-5xl)) 0 var(--space-5xl);
     background: #111111;
     overflow: hidden;
 }
 
-.page-hero--loft .page-hero__bg-img {
+.page-hero--kitchen .page-hero__bg-img {
     position: absolute;
     inset: 0;
-    background: url('../images/home-improvement-2.png') center/cover no-repeat;
+    background: url('../images/about-quality.png') center/cover no-repeat;
     opacity: 0.22;
 }
 
-.page-hero--loft .page-hero__bg-img::after {
+.page-hero--kitchen .page-hero__bg-img::after {
     content: '';
     position: absolute;
     inset: 0;
     background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 100%);
 }
 
-
-/* =========================================================================
-   SECTION 2: INTRO — Stats + Image
-   ========================================================================= */
-.lc-intro__grid {
+/* --- Intro --- */
+.kr-intro__grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--space-3xl);
     align-items: center;
 }
 
-.lc-intro__content p {
+.kr-intro__content p {
     color: var(--color-text-secondary);
     line-height: 1.85;
     margin-bottom: var(--space-lg);
 }
 
-.lc-intro__stats {
+.kr-intro__features {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-md);
+    gap: var(--space-xs);
     margin-bottom: var(--space-xl);
 }
 
-.lc-intro__stat {
-    text-align: center;
-    padding: var(--space-md) var(--space-sm);
-    background: var(--color-bg-alt);
-    border-radius: var(--radius-md);
-    border: 1px solid var(--color-border);
+.kr-intro__feature {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-size: var(--fs-small);
+    font-weight: 500;
 }
 
-.lc-intro__stat strong {
-    display: block;
-    font-family: var(--font-heading);
-    font-size: var(--fs-h3);
-    font-weight: 700;
+.kr-intro__feature span {
     color: var(--color-gold);
-    line-height: 1;
-    margin-bottom: 4px;
+    font-size: 0.7rem;
 }
 
-.lc-intro__stat span {
-    font-size: var(--fs-xs);
-    color: var(--color-text-secondary);
-    line-height: 1.4;
-}
-
-.lc-intro__image-wrap {
+.kr-intro__image-wrap {
     border-radius: var(--radius-lg);
     overflow: hidden;
 }
 
-.lc-intro__image-wrap img {
+.kr-intro__image-wrap img {
     width: 100%;
     height: 480px;
     object-fit: cover;
     display: block;
 }
 
-
-/* =========================================================================
-   SECTION 3: TYPES — 4 Image Cards
-   ========================================================================= */
-.lc-types__grid {
+/* --- Kitchen Styles Cards --- */
+.kr-styles__grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: var(--space-xl);
 }
 
-.lc-types__card {
+.kr-styles__card {
     background: var(--color-bg-card);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-lg);
@@ -103,187 +84,135 @@
     transition: all var(--transition-base);
 }
 
-.lc-types__card:hover {
+.kr-styles__card:hover {
     border-color: var(--color-border-hover);
     transform: translateY(-4px);
     box-shadow: var(--shadow-md);
 }
 
-.lc-types__card-image {
+.kr-styles__card-img {
     height: 200px;
     overflow: hidden;
 }
 
-.lc-types__card-image img {
+.kr-styles__card-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform var(--transition-slow);
 }
 
-.lc-types__card:hover .lc-types__card-image img {
+.kr-styles__card:hover .kr-styles__card-img img {
     transform: scale(1.05);
 }
 
-.lc-types__card-body {
+.kr-styles__card-body {
     padding: var(--space-xl);
 }
 
-.lc-types__card-price {
-    display: inline-block;
-    font-size: var(--fs-xs);
-    font-weight: 600;
-    color: var(--color-gold);
-    background: var(--color-gold-glow);
-    padding: 3px 10px;
-    border-radius: var(--radius-sm);
-    margin-bottom: var(--space-sm);
-}
-
-.lc-types__card-body h3 {
+.kr-styles__card-body h3 {
     font-family: var(--font-body);
     font-size: var(--fs-h4);
     font-weight: 600;
     margin-bottom: var(--space-sm);
 }
 
-.lc-types__card-body p {
+.kr-styles__card-body p {
     font-size: var(--fs-small);
     color: var(--color-text-secondary);
     line-height: 1.75;
 }
 
-.lc-types__card-body a {
-    color: var(--color-gold);
-    font-weight: 600;
-    text-decoration: none;
-}
-
-.lc-types__card-body a:hover {
-    text-decoration: underline;
-}
-
-
-/* =========================================================================
-   SECTION 4: SUITABILITY — Image + Checks
-   ========================================================================= */
-.lc-suitable__grid {
+/* --- What's Included --- */
+.kr-included__grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--space-3xl);
     align-items: center;
 }
 
-.lc-suitable__image-wrap {
+.kr-included__image-wrap {
     border-radius: var(--radius-lg);
     overflow: hidden;
 }
 
-.lc-suitable__image-wrap img {
+.kr-included__image-wrap img {
     width: 100%;
     height: 480px;
     object-fit: cover;
     display: block;
 }
 
-.lc-suitable__content>p {
+.kr-included__content>p {
     color: var(--color-text-secondary);
     line-height: 1.85;
     margin-bottom: var(--space-xl);
 }
 
-.lc-suitable__checks {
+.kr-included__list {
     display: grid;
-    gap: var(--space-md);
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xs) var(--space-lg);
 }
 
-.lc-suitable__check {
-    display: flex;
-    gap: var(--space-md);
-    align-items: flex-start;
-    padding: var(--space-md) var(--space-lg);
-    background: var(--color-bg-alt);
-    border-radius: var(--radius-md);
-    border: 1px solid var(--color-border);
-}
-
-.lc-suitable__check>span {
-    font-size: 1.3rem;
-    min-width: 28px;
-    margin-top: 2px;
-}
-
-.lc-suitable__check strong {
-    display: block;
-    font-size: var(--fs-body);
-    margin-bottom: 2px;
-}
-
-.lc-suitable__check p {
-    font-size: var(--fs-small);
-    color: var(--color-text-secondary);
-    line-height: 1.6;
-    margin: 0;
-}
-
-
-/* =========================================================================
-   SECTION 5: PROCESS — 5 Numbered Steps
-   ========================================================================= */
-.lc-process__steps {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: var(--space-lg);
-}
-
-.lc-process__step {
-    text-align: center;
-    padding: var(--space-xl) var(--space-lg);
-    background: var(--color-bg-card);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-card);
-    transition: all var(--transition-base);
-}
-
-.lc-process__step:hover {
-    border-color: var(--color-border-hover);
-    transform: translateY(-4px);
-}
-
-.lc-process__step-num {
+.kr-included__item {
     display: flex;
     align-items: center;
-    justify-content: center;
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark));
-    color: #ffffff;
-    font-family: var(--font-heading);
-    font-size: var(--fs-body);
-    font-weight: 700;
-    margin: 0 auto var(--space-md);
-}
-
-.lc-process__step h3 {
-    font-family: var(--font-body);
-    font-size: var(--fs-body);
-    font-weight: 600;
-    margin-bottom: var(--space-sm);
-}
-
-.lc-process__step p {
-    font-size: var(--fs-xs);
+    gap: var(--space-sm);
+    font-size: var(--fs-small);
     color: var(--color-text-secondary);
     line-height: 1.7;
 }
 
+.kr-included__item span {
+    color: var(--color-gold);
+    font-weight: 700;
+}
 
-/* =========================================================================
-   SECTION 6: COST TABLE
-   ========================================================================= */
-.lc-costs__table {
+/* --- Worktops --- */
+.kr-worktops__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-xl);
+}
+
+.kr-worktops__card {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-2xl);
+    box-shadow: var(--shadow-card);
+    transition: all var(--transition-base);
+}
+
+.kr-worktops__card:hover {
+    border-color: var(--color-border-hover);
+    transform: translateY(-4px);
+}
+
+.kr-worktops__card h3 {
+    font-family: var(--font-body);
+    font-size: var(--fs-h4);
+    font-weight: 600;
+    margin-bottom: var(--space-sm);
+}
+
+.kr-worktops__card p {
+    font-size: var(--fs-small);
+    color: var(--color-text-secondary);
+    line-height: 1.75;
+    margin-bottom: var(--space-md);
+}
+
+.kr-worktops__price {
+    font-family: var(--font-heading);
+    font-size: var(--fs-h4);
+    font-weight: 700;
+    color: var(--color-gold);
+}
+
+/* --- Cost Table --- */
+.kr-cost__table {
     max-width: 900px;
     margin: 0 auto var(--space-xl);
     border: 1px solid var(--color-border);
@@ -291,9 +220,9 @@
     overflow: hidden;
 }
 
-.lc-costs__row {
+.kr-cost__row {
     display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    grid-template-columns: 1.2fr 1fr 1.5fr;
     gap: var(--space-md);
     padding: var(--space-md) var(--space-xl);
     font-size: var(--fs-small);
@@ -301,11 +230,11 @@
     border-bottom: 1px solid var(--color-border);
 }
 
-.lc-costs__row:last-child {
+.kr-cost__row:last-child {
     border-bottom: none;
 }
 
-.lc-costs__row--header {
+.kr-cost__row--header {
     background: var(--color-bg-alt);
     font-weight: 600;
     color: var(--color-text);
@@ -314,12 +243,12 @@
     letter-spacing: 0.04em;
 }
 
-.lc-costs__row span:nth-child(2) {
+.kr-cost__row span:nth-child(2) {
     font-weight: 600;
     color: var(--color-gold);
 }
 
-.lc-costs__note {
+.kr-cost__note {
     text-align: center;
     font-size: var(--fs-xs);
     color: var(--color-text-muted);
@@ -328,16 +257,13 @@
     line-height: 1.6;
 }
 
-
-/* =========================================================================
-   SECTION 7: FAQs
-   ========================================================================= */
-.lc-faq__list {
+/* --- FAQs --- */
+.kr-faq__list {
     max-width: 800px;
     margin-inline: auto;
 }
 
-.lc-faq__item {
+.kr-faq__item {
     background: var(--color-bg-card);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-md);
@@ -346,16 +272,16 @@
     transition: all var(--transition-base);
 }
 
-.lc-faq__item:hover {
+.kr-faq__item:hover {
     border-color: var(--color-border-hover);
 }
 
-.lc-faq__item[open] {
+.kr-faq__item[open] {
     border-color: rgba(252, 3, 1, 0.2);
     box-shadow: var(--shadow-gold);
 }
 
-.lc-faq__question {
+.kr-faq__question {
     padding: var(--space-lg) var(--space-xl);
     font-family: var(--font-body);
     font-size: var(--fs-body);
@@ -369,11 +295,11 @@
     user-select: none;
 }
 
-.lc-faq__question::-webkit-details-marker {
+.kr-faq__question::-webkit-details-marker {
     display: none;
 }
 
-.lc-faq__question::after {
+.kr-faq__question::after {
     content: '+';
     font-size: 1.4rem;
     font-weight: 300;
@@ -382,88 +308,78 @@
     text-align: center;
 }
 
-.lc-faq__item[open] .lc-faq__question::after {
+.kr-faq__item[open] .kr-faq__question::after {
     content: '−';
 }
 
-.lc-faq__question:hover {
+.kr-faq__question:hover {
     color: var(--color-gold);
 }
 
-.lc-faq__answer {
+.kr-faq__answer {
     padding: 0 var(--space-xl) var(--space-lg);
 }
 
-.lc-faq__answer p {
+.kr-faq__answer p {
     font-size: var(--fs-small);
     color: var(--color-text-secondary);
     line-height: 1.85;
     margin: 0;
 }
 
-
-/* =========================================================================
-   RESPONSIVE
-   ========================================================================= */
+/* --- Responsive --- */
 @media (max-width: 1024px) {
-    .lc-types__grid {
+    .kr-styles__grid {
         grid-template-columns: 1fr;
         max-width: 540px;
         margin-inline: auto;
     }
 
-    .lc-process__steps {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .lc-costs__row {
-        grid-template-columns: 1fr 1fr;
-        gap: var(--space-sm);
+    .kr-worktops__grid {
+        grid-template-columns: 1fr;
+        max-width: 480px;
+        margin-inline: auto;
     }
 }
 
 @media (max-width: 768px) {
-    .page-hero--loft {
+    .page-hero--kitchen {
         padding: calc(var(--header-height) + var(--space-3xl)) 0 var(--space-3xl);
     }
 
-    .lc-intro__grid {
+    .kr-intro__grid {
         grid-template-columns: 1fr;
         gap: var(--space-2xl);
     }
 
-    .lc-intro__image-wrap img {
+    .kr-intro__image-wrap img {
         height: 300px;
     }
 
-    .lc-intro__stats {
-        grid-template-columns: 1fr;
-    }
-
-    .lc-suitable__grid {
+    .kr-included__grid {
         grid-template-columns: 1fr;
         gap: var(--space-2xl);
     }
 
-    .lc-suitable__image-wrap img {
+    .kr-included__image-wrap img {
         height: 280px;
     }
 
-    .lc-process__steps {
+    .kr-included__list {
         grid-template-columns: 1fr;
     }
 
-    .lc-costs__row {
+    .kr-cost__row {
         grid-template-columns: 1fr;
         text-align: center;
     }
 
-    .lc-faq__question {
+    .kr-faq__question {
         padding: var(--space-md) var(--space-lg);
         font-size: var(--fs-small);
     }
 
-    .lc-faq__answer {
+    .kr-faq__answer {
         padding: 0 var(--space-lg) var(--space-md);
     }
 }

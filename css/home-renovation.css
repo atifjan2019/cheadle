@@ -1,65 +1,61 @@
 /* =========================================================================
-   DORMER LOFT CONVERSIONS PAGE — Custom Styles
+   HOME RENOVATION PAGE — Custom Styles
    ========================================================================= */
 
-/* ----- Hero ----- */
-.page-hero--dormer {
+.page-hero--renovation {
     position: relative;
     padding: calc(var(--header-height) + var(--space-5xl)) 0 var(--space-5xl);
     background: #111111;
     overflow: hidden;
 }
 
-.page-hero--dormer .page-hero__bg-img {
+.page-hero--renovation .page-hero__bg-img {
     position: absolute;
     inset: 0;
-    background: url('../images/about-quality.png') center/cover no-repeat;
+    background: url('../images/home-improvement-1.png') center/cover no-repeat;
     opacity: 0.22;
 }
 
-.page-hero--dormer .page-hero__bg-img::after {
+.page-hero--renovation .page-hero__bg-img::after {
     content: '';
     position: absolute;
     inset: 0;
     background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 100%);
 }
 
-
-/* =========================================================================
-   SECTION 2: INTRO — Image + Features
-   ========================================================================= */
-.dlc-intro__grid {
+/* --- Intro --- */
+.hr-intro__grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--space-3xl);
     align-items: center;
 }
 
-.dlc-intro__image-wrap {
+.hr-intro__image-wrap {
     border-radius: var(--radius-lg);
     overflow: hidden;
 }
 
-.dlc-intro__image-wrap img {
+.hr-intro__image-wrap img {
     width: 100%;
     height: 480px;
     object-fit: cover;
     display: block;
 }
 
-.dlc-intro__content p {
+.hr-intro__content p {
     color: var(--color-text-secondary);
     line-height: 1.85;
     margin-bottom: var(--space-lg);
 }
 
-.dlc-intro__features {
+.hr-intro__features {
     display: grid;
     gap: var(--space-xs);
     margin-bottom: var(--space-xl);
 }
 
-.dlc-intro__feature {
+.hr-intro__feature {
     display: flex;
     align-items: center;
     gap: var(--space-sm);
@@ -67,183 +63,198 @@
     font-weight: 500;
 }
 
-.dlc-intro__feature span {
+.hr-intro__feature span {
     color: var(--color-gold);
     font-size: 0.7rem;
 }
 
-
-/* =========================================================================
-   SECTION 3: DORMER TYPES — 3 Cards
-   ========================================================================= */
-.dlc-types__grid {
+/* --- Services Grid --- */
+.hr-services__grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--space-xl);
 }
 
-.dlc-types__card {
-    position: relative;
+.hr-services__card {
     background: var(--color-bg-card);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-lg);
     padding: var(--space-2xl);
     box-shadow: var(--shadow-card);
     transition: all var(--transition-base);
+    text-align: center;
 }
 
-.dlc-types__card:hover {
+.hr-services__card:hover {
     border-color: var(--color-border-hover);
     transform: translateY(-4px);
     box-shadow: var(--shadow-md);
 }
 
-.dlc-types__card-icon {
+.hr-services__icon {
     font-size: 2rem;
-    margin-bottom: var(--space-md);
     display: block;
+    margin-bottom: var(--space-md);
 }
 
-.dlc-types__card h3 {
+.hr-services__card h3 {
     font-family: var(--font-body);
     font-size: var(--fs-h4);
     font-weight: 600;
     margin-bottom: var(--space-sm);
 }
 
-.dlc-types__card>p {
+.hr-services__card p {
     font-size: var(--fs-small);
     color: var(--color-text-secondary);
     line-height: 1.75;
 }
 
-.dlc-types__card-tag {
-    position: absolute;
-    top: var(--space-lg);
-    right: var(--space-lg);
+.hr-services__card a {
+    color: var(--color-gold);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.hr-services__card a:hover {
+    text-decoration: underline;
+}
+
+/* --- Scope / Pricing Cards --- */
+.hr-scope__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-xl);
+    align-items: stretch;
+}
+
+.hr-scope__card {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-2xl);
+    box-shadow: var(--shadow-card);
+    display: flex;
+    flex-direction: column;
+    transition: all var(--transition-base);
+}
+
+.hr-scope__card:hover {
+    border-color: var(--color-border-hover);
+    transform: translateY(-4px);
+}
+
+.hr-scope__card--featured {
+    border-color: rgba(252, 3, 1, 0.3);
+    box-shadow: var(--shadow-gold);
+    position: relative;
+}
+
+.hr-scope__card-tier {
+    display: inline-block;
     font-size: var(--fs-xs);
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.08em;
     color: var(--color-gold);
-    background: var(--color-gold-glow);
-    padding: 3px 10px;
-    border-radius: var(--radius-sm);
-    border: 1px solid rgba(252, 3, 1, 0.15);
+    margin-bottom: var(--space-md);
 }
 
+.hr-scope__card h3 {
+    font-family: var(--font-body);
+    font-size: var(--fs-h4);
+    font-weight: 600;
+    margin-bottom: var(--space-sm);
+}
 
-/* =========================================================================
-   SECTION 4: WHAT'S INCLUDED — Checklist + Image
-   ========================================================================= */
-.dlc-included__grid {
+.hr-scope__card p {
+    font-size: var(--fs-small);
+    color: var(--color-text-secondary);
+    line-height: 1.75;
+    flex: 1;
+}
+
+.hr-scope__price {
+    display: block;
+    margin-top: var(--space-lg);
+    font-family: var(--font-heading);
+    font-size: var(--fs-h3);
+    font-weight: 700;
+    color: var(--color-gold);
+}
+
+/* --- Approach --- */
+.hr-approach__grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--space-3xl);
     align-items: center;
 }
 
-.dlc-included__content>p {
+.hr-approach__content>p {
     color: var(--color-text-secondary);
     line-height: 1.85;
     margin-bottom: var(--space-xl);
 }
 
-.dlc-included__list {
+.hr-approach__steps {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-xs) var(--space-lg);
+    gap: var(--space-md);
 }
 
-.dlc-included__item {
+.hr-approach__step {
     display: flex;
+    gap: var(--space-md);
     align-items: flex-start;
-    gap: var(--space-sm);
-    font-size: var(--fs-small);
-    color: var(--color-text-secondary);
-    line-height: 1.7;
+    padding: var(--space-md) var(--space-lg);
+    background: var(--color-bg-card);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
 }
 
-.dlc-included__item span {
-    color: var(--color-gold);
+.hr-approach__step>span {
+    font-family: var(--font-heading);
+    font-size: var(--fs-h4);
     font-weight: 700;
-    font-size: 0.85rem;
-    min-width: 16px;
+    color: var(--color-gold);
+    opacity: 0.5;
+    min-width: 32px;
     margin-top: 2px;
 }
 
-.dlc-included__image-wrap {
+.hr-approach__step strong {
+    display: block;
+    font-size: var(--fs-body);
+    margin-bottom: 2px;
+}
+
+.hr-approach__step p {
+    font-size: var(--fs-small);
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.hr-approach__image-wrap {
     border-radius: var(--radius-lg);
     overflow: hidden;
 }
 
-.dlc-included__image-wrap img {
+.hr-approach__image-wrap img {
     width: 100%;
     height: 480px;
     object-fit: cover;
     display: block;
 }
 
-
-/* =========================================================================
-   SECTION 5: WHAT A DORMER ADDS — Numbered Cards
-   ========================================================================= */
-.dlc-impact__grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: var(--space-xl);
-}
-
-.dlc-impact__card {
-    background: var(--color-bg-card);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-lg);
-    padding: var(--space-2xl);
-    box-shadow: var(--shadow-card);
-    transition: all var(--transition-base);
-}
-
-.dlc-impact__card:hover {
-    border-color: var(--color-border-hover);
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-md);
-}
-
-.dlc-impact__num {
-    display: inline-block;
-    font-family: var(--font-heading);
-    font-size: var(--fs-h2);
-    font-weight: 700;
-    color: var(--color-gold);
-    opacity: 0.3;
-    line-height: 1;
-    margin-bottom: var(--space-md);
-}
-
-.dlc-impact__card h3 {
-    font-family: var(--font-body);
-    font-size: var(--fs-h4);
-    font-weight: 600;
-    margin-bottom: var(--space-sm);
-}
-
-.dlc-impact__card p {
-    font-size: var(--fs-small);
-    color: var(--color-text-secondary);
-    line-height: 1.75;
-}
-
-
-/* =========================================================================
-   SECTION 6: BUILDING REGS — 4 Cards
-   ========================================================================= */
-.dlc-regs__cards {
+/* --- Why Choose Us --- */
+.hr-why__grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: var(--space-xl);
 }
 
-.dlc-regs__card {
+.hr-why__card {
     background: var(--color-bg-card);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-lg);
@@ -252,41 +263,42 @@
     transition: all var(--transition-base);
 }
 
-.dlc-regs__card:hover {
+.hr-why__card:hover {
     border-color: var(--color-border-hover);
     transform: translateY(-4px);
-    box-shadow: var(--shadow-md);
 }
 
-.dlc-regs__card-icon {
-    font-size: 1.6rem;
-    margin-bottom: var(--space-md);
+.hr-why__num {
     display: block;
+    font-family: var(--font-heading);
+    font-size: var(--fs-h2);
+    font-weight: 700;
+    color: var(--color-gold);
+    opacity: 0.25;
+    line-height: 1;
+    margin-bottom: var(--space-md);
 }
 
-.dlc-regs__card h3 {
+.hr-why__card h3 {
     font-family: var(--font-body);
     font-size: var(--fs-h4);
     font-weight: 600;
     margin-bottom: var(--space-sm);
 }
 
-.dlc-regs__card p {
+.hr-why__card p {
     font-size: var(--fs-small);
     color: var(--color-text-secondary);
     line-height: 1.75;
 }
 
-
-/* =========================================================================
-   SECTION 7: FAQs
-   ========================================================================= */
-.dlc-faq__list {
+/* --- FAQs --- */
+.hr-faq__list {
     max-width: 800px;
     margin-inline: auto;
 }
 
-.dlc-faq__item {
+.hr-faq__item {
     background: var(--color-bg-card);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-md);
@@ -295,16 +307,16 @@
     transition: all var(--transition-base);
 }
 
-.dlc-faq__item:hover {
+.hr-faq__item:hover {
     border-color: var(--color-border-hover);
 }
 
-.dlc-faq__item[open] {
+.hr-faq__item[open] {
     border-color: rgba(252, 3, 1, 0.2);
     box-shadow: var(--shadow-gold);
 }
 
-.dlc-faq__question {
+.hr-faq__question {
     padding: var(--space-lg) var(--space-xl);
     font-family: var(--font-body);
     font-size: var(--fs-body);
@@ -318,11 +330,11 @@
     user-select: none;
 }
 
-.dlc-faq__question::-webkit-details-marker {
+.hr-faq__question::-webkit-details-marker {
     display: none;
 }
 
-.dlc-faq__question::after {
+.hr-faq__question::after {
     content: '+';
     font-size: 1.4rem;
     font-weight: 300;
@@ -331,82 +343,75 @@
     text-align: center;
 }
 
-.dlc-faq__item[open] .dlc-faq__question::after {
+.hr-faq__item[open] .hr-faq__question::after {
     content: '−';
 }
 
-.dlc-faq__question:hover {
+.hr-faq__question:hover {
     color: var(--color-gold);
 }
 
-.dlc-faq__answer {
+.hr-faq__answer {
     padding: 0 var(--space-xl) var(--space-lg);
 }
 
-.dlc-faq__answer p {
+.hr-faq__answer p {
     font-size: var(--fs-small);
     color: var(--color-text-secondary);
     line-height: 1.85;
     margin: 0;
 }
 
-
-/* =========================================================================
-   RESPONSIVE
-   ========================================================================= */
+/* --- Responsive --- */
 @media (max-width: 1024px) {
-    .dlc-types__grid {
+    .hr-services__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hr-scope__grid {
         grid-template-columns: 1fr;
-        max-width: 500px;
+        max-width: 480px;
         margin-inline: auto;
     }
 
-    .dlc-impact__grid {
-        grid-template-columns: repeat(2, 1fr);
+    .hr-why__grid {
+        grid-template-columns: 1fr;
     }
 }
 
 @media (max-width: 768px) {
-    .page-hero--dormer {
+    .page-hero--renovation {
         padding: calc(var(--header-height) + var(--space-3xl)) 0 var(--space-3xl);
     }
 
-    .dlc-intro__grid {
+    .hr-intro__grid {
         grid-template-columns: 1fr;
         gap: var(--space-2xl);
     }
 
-    .dlc-intro__image-wrap img {
+    .hr-intro__image-wrap img {
         height: 300px;
     }
 
-    .dlc-included__grid {
+    .hr-services__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hr-approach__grid {
         grid-template-columns: 1fr;
         gap: var(--space-2xl);
     }
 
-    .dlc-included__list {
-        grid-template-columns: 1fr;
-    }
-
-    .dlc-included__image-wrap img {
+    .hr-approach__image-wrap img {
         height: 280px;
     }
 
-    .dlc-impact__grid {
-        grid-template-columns: 1fr;
-    }
-
-    .dlc-regs__cards {
-        grid-template-columns: 1fr;
-    }
-
-    .dlc-faq__question {
+    .hr-faq__question {
         padding: var(--space-md) var(--space-lg);
         font-size: var(--fs-small);
     }
 
-    .dlc-faq__answer {
+    .hr-faq__answer {
         padding: 0 var(--space-lg) var(--space-md);
     }
 }

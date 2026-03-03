@@ -1,23 +1,23 @@
 /* =========================================================================
-   LOFT CONVERSIONS PAGE — Custom Styles
+   BASEMENT & CELLAR CONVERSIONS PAGE — Custom Styles
    ========================================================================= */
 
 /* ----- Hero ----- */
-.page-hero--loft {
+.page-hero--basement {
     position: relative;
     padding: calc(var(--header-height) + var(--space-5xl)) 0 var(--space-5xl);
     background: #111111;
     overflow: hidden;
 }
 
-.page-hero--loft .page-hero__bg-img {
+.page-hero--basement .page-hero__bg-img {
     position: absolute;
     inset: 0;
-    background: url('../images/home-improvement-2.png') center/cover no-repeat;
+    background: url('../images/about-quality.png') center/cover no-repeat;
     opacity: 0.22;
 }
 
-.page-hero--loft .page-hero__bg-img::after {
+.page-hero--basement .page-hero__bg-img::after {
     content: '';
     position: absolute;
     inset: 0;
@@ -26,58 +26,46 @@
 
 
 /* =========================================================================
-   SECTION 2: INTRO — Stats + Image
+   SECTION 2: INTRO
    ========================================================================= */
-.lc-intro__grid {
+.bc-intro__grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--space-3xl);
     align-items: center;
 }
 
-.lc-intro__content p {
+.bc-intro__content p {
     color: var(--color-text-secondary);
     line-height: 1.85;
     margin-bottom: var(--space-lg);
 }
 
-.lc-intro__stats {
+.bc-intro__features {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-md);
+    gap: var(--space-xs);
     margin-bottom: var(--space-xl);
 }
 
-.lc-intro__stat {
-    text-align: center;
-    padding: var(--space-md) var(--space-sm);
-    background: var(--color-bg-alt);
-    border-radius: var(--radius-md);
-    border: 1px solid var(--color-border);
+.bc-intro__feature {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-size: var(--fs-small);
+    font-weight: 500;
 }
 
-.lc-intro__stat strong {
-    display: block;
-    font-family: var(--font-heading);
-    font-size: var(--fs-h3);
-    font-weight: 700;
+.bc-intro__feature span {
     color: var(--color-gold);
-    line-height: 1;
-    margin-bottom: 4px;
+    font-size: 0.7rem;
 }
 
-.lc-intro__stat span {
-    font-size: var(--fs-xs);
-    color: var(--color-text-secondary);
-    line-height: 1.4;
-}
-
-.lc-intro__image-wrap {
+.bc-intro__image-wrap {
     border-radius: var(--radius-lg);
     overflow: hidden;
 }
 
-.lc-intro__image-wrap img {
+.bc-intro__image-wrap img {
     width: 100%;
     height: 480px;
     object-fit: cover;
@@ -86,258 +74,250 @@
 
 
 /* =========================================================================
-   SECTION 3: TYPES — 4 Image Cards
+   SECTION 3: ROOM IDEAS — 6 Cards
    ========================================================================= */
-.lc-types__grid {
+.bc-ideas__grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--space-xl);
 }
 
-.lc-types__card {
+.bc-ideas__card {
     background: var(--color-bg-card);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-lg);
-    overflow: hidden;
+    padding: var(--space-2xl);
     box-shadow: var(--shadow-card);
     transition: all var(--transition-base);
+    text-align: center;
 }
 
-.lc-types__card:hover {
+.bc-ideas__card:hover {
     border-color: var(--color-border-hover);
     transform: translateY(-4px);
     box-shadow: var(--shadow-md);
 }
 
-.lc-types__card-image {
-    height: 200px;
-    overflow: hidden;
+.bc-ideas__icon {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: var(--space-md);
 }
 
-.lc-types__card-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform var(--transition-slow);
-}
-
-.lc-types__card:hover .lc-types__card-image img {
-    transform: scale(1.05);
-}
-
-.lc-types__card-body {
-    padding: var(--space-xl);
-}
-
-.lc-types__card-price {
-    display: inline-block;
-    font-size: var(--fs-xs);
-    font-weight: 600;
-    color: var(--color-gold);
-    background: var(--color-gold-glow);
-    padding: 3px 10px;
-    border-radius: var(--radius-sm);
-    margin-bottom: var(--space-sm);
-}
-
-.lc-types__card-body h3 {
+.bc-ideas__card h3 {
     font-family: var(--font-body);
     font-size: var(--fs-h4);
     font-weight: 600;
     margin-bottom: var(--space-sm);
 }
 
-.lc-types__card-body p {
+.bc-ideas__card p {
     font-size: var(--fs-small);
     color: var(--color-text-secondary);
     line-height: 1.75;
 }
 
-.lc-types__card-body a {
-    color: var(--color-gold);
-    font-weight: 600;
-    text-decoration: none;
-}
-
-.lc-types__card-body a:hover {
-    text-decoration: underline;
-}
-
 
 /* =========================================================================
-   SECTION 4: SUITABILITY — Image + Checks
+   SECTION 4: WATERPROOFING — Image + Methods
    ========================================================================= */
-.lc-suitable__grid {
+.bc-waterproof__grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--space-3xl);
     align-items: center;
 }
 
-.lc-suitable__image-wrap {
+.bc-waterproof__image-wrap {
     border-radius: var(--radius-lg);
     overflow: hidden;
 }
 
-.lc-suitable__image-wrap img {
+.bc-waterproof__image-wrap img {
     width: 100%;
     height: 480px;
     object-fit: cover;
     display: block;
 }
 
-.lc-suitable__content>p {
+.bc-waterproof__content>p {
     color: var(--color-text-secondary);
     line-height: 1.85;
     margin-bottom: var(--space-xl);
 }
 
-.lc-suitable__checks {
+.bc-waterproof__methods {
     display: grid;
     gap: var(--space-md);
 }
 
-.lc-suitable__check {
-    display: flex;
-    gap: var(--space-md);
-    align-items: flex-start;
+.bc-waterproof__method {
     padding: var(--space-md) var(--space-lg);
     background: var(--color-bg-alt);
     border-radius: var(--radius-md);
     border: 1px solid var(--color-border);
 }
 
-.lc-suitable__check>span {
-    font-size: 1.3rem;
-    min-width: 28px;
-    margin-top: 2px;
-}
-
-.lc-suitable__check strong {
+.bc-waterproof__method strong {
     display: block;
     font-size: var(--fs-body);
-    margin-bottom: 2px;
+    margin-bottom: 4px;
 }
 
-.lc-suitable__check p {
+.bc-waterproof__method p {
     font-size: var(--fs-small);
     color: var(--color-text-secondary);
     line-height: 1.6;
     margin: 0;
 }
 
+.bc-waterproof__method:last-child {
+    border-color: rgba(252, 3, 1, 0.2);
+    background: var(--color-gold-glow);
+}
+
 
 /* =========================================================================
-   SECTION 5: PROCESS — 5 Numbered Steps
+   SECTION 5: PROCESS — Vertical Timeline
    ========================================================================= */
-.lc-process__steps {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: var(--space-lg);
+.bc-process__timeline {
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+    padding-left: var(--space-3xl);
 }
 
-.lc-process__step {
-    text-align: center;
-    padding: var(--space-xl) var(--space-lg);
-    background: var(--color-bg-card);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-card);
-    transition: all var(--transition-base);
+.bc-process__timeline::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--color-border);
 }
 
-.lc-process__step:hover {
-    border-color: var(--color-border-hover);
-    transform: translateY(-4px);
-}
-
-.lc-process__step-num {
+.bc-process__step {
+    position: relative;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 42px;
-    height: 42px;
+    gap: var(--space-xl);
+    margin-bottom: var(--space-2xl);
+}
+
+.bc-process__step:last-child {
+    margin-bottom: 0;
+}
+
+.bc-process__step-marker {
+    position: absolute;
+    left: calc(-1 * var(--space-3xl) + 8px);
+    width: 28px;
+    height: 28px;
     border-radius: 50%;
     background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark));
     color: #ffffff;
     font-family: var(--font-heading);
-    font-size: var(--fs-body);
-    font-weight: 700;
-    margin: 0 auto var(--space-md);
-}
-
-.lc-process__step h3 {
-    font-family: var(--font-body);
-    font-size: var(--fs-body);
-    font-weight: 600;
-    margin-bottom: var(--space-sm);
-}
-
-.lc-process__step p {
     font-size: var(--fs-xs);
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.bc-process__step-content h3 {
+    font-family: var(--font-body);
+    font-size: var(--fs-h4);
+    font-weight: 600;
+    margin-bottom: var(--space-xs);
+}
+
+.bc-process__step-content p {
+    font-size: var(--fs-small);
     color: var(--color-text-secondary);
-    line-height: 1.7;
+    line-height: 1.75;
 }
 
 
 /* =========================================================================
-   SECTION 6: COST TABLE
+   SECTION 6: COST — Breakdown + Image
    ========================================================================= */
-.lc-costs__table {
-    max-width: 900px;
-    margin: 0 auto var(--space-xl);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-lg);
-    overflow: hidden;
+.bc-cost__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3xl);
+    align-items: center;
 }
 
-.lc-costs__row {
-    display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr 1fr;
-    gap: var(--space-md);
-    padding: var(--space-md) var(--space-xl);
+.bc-cost__content>p {
+    color: var(--color-text-secondary);
+    line-height: 1.85;
+    margin-bottom: var(--space-xl);
+}
+
+.bc-cost__breakdown {
+    margin-bottom: var(--space-lg);
+}
+
+.bc-cost__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-sm) var(--space-md);
     font-size: var(--fs-small);
     color: var(--color-text-secondary);
     border-bottom: 1px solid var(--color-border);
 }
 
-.lc-costs__row:last-child {
+.bc-cost__row:last-child {
     border-bottom: none;
 }
 
-.lc-costs__row--header {
-    background: var(--color-bg-alt);
+.bc-cost__row span:last-child {
     font-weight: 600;
     color: var(--color-text);
-    font-size: var(--fs-xs);
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
 }
 
-.lc-costs__row span:nth-child(2) {
-    font-weight: 600;
-    color: var(--color-gold);
+.bc-cost__row--highlight {
+    background: var(--color-gold-glow);
+    border-radius: var(--radius-sm);
+    border-bottom: none;
 }
 
-.lc-costs__note {
-    text-align: center;
+.bc-cost__row--highlight span {
+    color: var(--color-gold) !important;
+    font-weight: 700 !important;
+}
+
+.bc-cost__note {
     font-size: var(--fs-xs);
     color: var(--color-text-muted);
-    max-width: 700px;
-    margin-inline: auto;
+    margin-bottom: var(--space-lg);
     line-height: 1.6;
+}
+
+.bc-cost__image-wrap {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.bc-cost__image-wrap img {
+    width: 100%;
+    height: 440px;
+    object-fit: cover;
+    display: block;
 }
 
 
 /* =========================================================================
    SECTION 7: FAQs
    ========================================================================= */
-.lc-faq__list {
+.bc-faq__list {
     max-width: 800px;
     margin-inline: auto;
 }
 
-.lc-faq__item {
+.bc-faq__item {
     background: var(--color-bg-card);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-md);
@@ -346,16 +326,16 @@
     transition: all var(--transition-base);
 }
 
-.lc-faq__item:hover {
+.bc-faq__item:hover {
     border-color: var(--color-border-hover);
 }
 
-.lc-faq__item[open] {
+.bc-faq__item[open] {
     border-color: rgba(252, 3, 1, 0.2);
     box-shadow: var(--shadow-gold);
 }
 
-.lc-faq__question {
+.bc-faq__question {
     padding: var(--space-lg) var(--space-xl);
     font-family: var(--font-body);
     font-size: var(--fs-body);
@@ -369,11 +349,11 @@
     user-select: none;
 }
 
-.lc-faq__question::-webkit-details-marker {
+.bc-faq__question::-webkit-details-marker {
     display: none;
 }
 
-.lc-faq__question::after {
+.bc-faq__question::after {
     content: '+';
     font-size: 1.4rem;
     font-weight: 300;
@@ -382,19 +362,19 @@
     text-align: center;
 }
 
-.lc-faq__item[open] .lc-faq__question::after {
+.bc-faq__item[open] .bc-faq__question::after {
     content: '−';
 }
 
-.lc-faq__question:hover {
+.bc-faq__question:hover {
     color: var(--color-gold);
 }
 
-.lc-faq__answer {
+.bc-faq__answer {
     padding: 0 var(--space-xl) var(--space-lg);
 }
 
-.lc-faq__answer p {
+.bc-faq__answer p {
     font-size: var(--fs-small);
     color: var(--color-text-secondary);
     line-height: 1.85;
@@ -406,64 +386,53 @@
    RESPONSIVE
    ========================================================================= */
 @media (max-width: 1024px) {
-    .lc-types__grid {
-        grid-template-columns: 1fr;
-        max-width: 540px;
-        margin-inline: auto;
-    }
-
-    .lc-process__steps {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .lc-costs__row {
-        grid-template-columns: 1fr 1fr;
-        gap: var(--space-sm);
+    .bc-ideas__grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 768px) {
-    .page-hero--loft {
+    .page-hero--basement {
         padding: calc(var(--header-height) + var(--space-3xl)) 0 var(--space-3xl);
     }
 
-    .lc-intro__grid {
+    .bc-intro__grid {
         grid-template-columns: 1fr;
         gap: var(--space-2xl);
     }
 
-    .lc-intro__image-wrap img {
+    .bc-intro__image-wrap img {
         height: 300px;
     }
 
-    .lc-intro__stats {
+    .bc-ideas__grid {
         grid-template-columns: 1fr;
     }
 
-    .lc-suitable__grid {
+    .bc-waterproof__grid {
         grid-template-columns: 1fr;
         gap: var(--space-2xl);
     }
 
-    .lc-suitable__image-wrap img {
+    .bc-waterproof__image-wrap img {
         height: 280px;
     }
 
-    .lc-process__steps {
+    .bc-cost__grid {
         grid-template-columns: 1fr;
+        gap: var(--space-2xl);
     }
 
-    .lc-costs__row {
-        grid-template-columns: 1fr;
-        text-align: center;
+    .bc-cost__image-wrap img {
+        height: 280px;
     }
 
-    .lc-faq__question {
+    .bc-faq__question {
         padding: var(--space-md) var(--space-lg);
         font-size: var(--fs-small);
     }
 
-    .lc-faq__answer {
+    .bc-faq__answer {
         padding: 0 var(--space-lg) var(--space-md);
     }
 }

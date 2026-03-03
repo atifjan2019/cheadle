@@ -1,0 +1,495 @@
+/* =========================================================================
+   DOUBLE STOREY EXTENSIONS PAGE — Custom Styles
+   ========================================================================= */
+
+/* ----- Hero ----- */
+.page-hero--dse {
+    position: relative;
+    padding: calc(var(--header-height) + var(--space-5xl)) 0 var(--space-5xl);
+    background: #111111;
+    overflow: hidden;
+}
+
+.page-hero--dse .page-hero__bg-img {
+    position: absolute;
+    inset: 0;
+    background: url('../images/gallery-newbuild.png') center/cover no-repeat;
+    opacity: 0.22;
+}
+
+.page-hero--dse .page-hero__bg-img::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 100%);
+}
+
+
+/* =========================================================================
+   SECTION 2: INTRO — Comparison Box
+   ========================================================================= */
+.dse-intro__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3xl);
+    align-items: center;
+}
+
+.dse-intro__content>p {
+    color: var(--color-text-secondary);
+    line-height: 1.85;
+    margin-bottom: var(--space-xl);
+}
+
+.dse-intro__vs-box {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+}
+
+.dse-intro__vs-box h4 {
+    font-family: var(--font-body);
+    font-size: var(--fs-body);
+    font-weight: 600;
+    margin-bottom: var(--space-md);
+    text-align: center;
+}
+
+.dse-intro__vs-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
+    margin-bottom: var(--space-md);
+}
+
+.dse-intro__vs-item {
+    text-align: center;
+    padding: var(--space-md);
+    border-radius: var(--radius-md);
+    background: var(--color-bg-alt);
+}
+
+.dse-intro__vs-item p {
+    font-size: var(--fs-small);
+    color: var(--color-text-secondary);
+    margin: 2px 0;
+    line-height: 1.5;
+}
+
+.dse-intro__vs-label {
+    display: inline-block;
+    font-size: var(--fs-xs);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 3px 10px;
+    border-radius: var(--radius-sm);
+    margin-bottom: var(--space-sm);
+}
+
+.dse-intro__vs-label--single {
+    color: var(--color-text-secondary);
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+}
+
+.dse-intro__vs-label--double {
+    color: var(--color-gold);
+    background: var(--color-gold-glow);
+    border: 1px solid rgba(252, 3, 1, 0.15);
+}
+
+.dse-intro__vs-note {
+    font-size: var(--fs-xs);
+    color: var(--color-text-muted);
+    text-align: center;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.dse-intro__image-wrap {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.dse-intro__image-wrap img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* =========================================================================
+   SECTION 3: FLOOR LAYOUTS — Two Columns
+   ========================================================================= */
+.dse-layouts__columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+}
+
+.dse-layouts__col {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+}
+
+.dse-layouts__col-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-lg) var(--space-xl);
+    font-family: var(--font-body);
+    font-size: var(--fs-h4);
+    font-weight: 600;
+}
+
+.dse-layouts__col-header--ground {
+    background: rgba(34, 197, 94, 0.08);
+    border-bottom: 2px solid #22c55e;
+    color: #22c55e;
+}
+
+.dse-layouts__col-header--first {
+    background: var(--color-gold-glow);
+    border-bottom: 2px solid var(--color-gold);
+    color: var(--color-gold);
+}
+
+.dse-layouts__col-items {
+    padding: var(--space-lg) var(--space-xl);
+}
+
+.dse-layouts__item {
+    padding: var(--space-md) 0;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.dse-layouts__item:last-child {
+    border-bottom: none;
+}
+
+.dse-layouts__item strong {
+    display: block;
+    font-size: var(--fs-body);
+    margin-bottom: 4px;
+}
+
+.dse-layouts__item p {
+    font-size: var(--fs-small);
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+    margin: 0;
+}
+
+
+/* =========================================================================
+   SECTION 4: STRUCTURAL ENGINEERING — Image + Items Grid
+   ========================================================================= */
+.dse-structural__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3xl);
+    align-items: center;
+}
+
+.dse-structural__image-wrap {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.dse-structural__image-wrap img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    display: block;
+}
+
+.dse-structural__content>p {
+    color: var(--color-text-secondary);
+    line-height: 1.85;
+    margin-bottom: var(--space-xl);
+}
+
+.dse-structural__items {
+    display: grid;
+    gap: var(--space-md);
+}
+
+.dse-structural__item {
+    display: flex;
+    gap: var(--space-md);
+    align-items: flex-start;
+    padding: var(--space-md) var(--space-lg);
+    background: var(--color-bg-alt);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
+}
+
+.dse-structural__item span {
+    font-size: 1.3rem;
+    min-width: 28px;
+    margin-top: 2px;
+}
+
+.dse-structural__item strong {
+    display: block;
+    font-size: var(--fs-body);
+    margin-bottom: 2px;
+}
+
+.dse-structural__item p {
+    font-size: var(--fs-small);
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    margin: 0;
+}
+
+
+/* =========================================================================
+   SECTION 5: PLANNING REQUIREMENTS — 4 Cards
+   ========================================================================= */
+.dse-planning__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-xl);
+}
+
+.dse-planning__card {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-2xl);
+    box-shadow: var(--shadow-card);
+    transition: all var(--transition-base);
+}
+
+.dse-planning__card:hover {
+    border-color: var(--color-border-hover);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.dse-planning__card-icon {
+    font-size: 1.6rem;
+    margin-bottom: var(--space-md);
+    display: block;
+}
+
+.dse-planning__card h3 {
+    font-family: var(--font-body);
+    font-size: var(--fs-h4);
+    font-weight: 600;
+    margin-bottom: var(--space-sm);
+}
+
+.dse-planning__card p {
+    font-size: var(--fs-small);
+    color: var(--color-text-secondary);
+    line-height: 1.75;
+}
+
+
+/* =========================================================================
+   SECTION 6: COST & VALUE — Breakdown + Image
+   ========================================================================= */
+.dse-value__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3xl);
+    align-items: center;
+}
+
+.dse-value__content>p {
+    color: var(--color-text-secondary);
+    line-height: 1.85;
+    margin-bottom: var(--space-xl);
+}
+
+.dse-value__breakdown {
+    margin-bottom: var(--space-xl);
+}
+
+.dse-value__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-sm) var(--space-md);
+    font-size: var(--fs-small);
+    color: var(--color-text-secondary);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.dse-value__row:last-child {
+    border-bottom: none;
+}
+
+.dse-value__row span:last-child {
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.dse-value__row--highlight {
+    background: var(--color-gold-glow);
+    border-radius: var(--radius-sm);
+    border-bottom: none;
+}
+
+.dse-value__row--highlight span {
+    color: var(--color-gold) !important;
+    font-weight: 700 !important;
+}
+
+.dse-value__note {
+    font-size: var(--fs-xs);
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-lg);
+    line-height: 1.6;
+}
+
+.dse-value__image-wrap {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.dse-value__image-wrap img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* =========================================================================
+   SECTION 7: FAQs
+   ========================================================================= */
+.dse-faq__list {
+    max-width: 800px;
+    margin-inline: auto;
+}
+
+.dse-faq__item {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-md);
+    overflow: hidden;
+    transition: all var(--transition-base);
+}
+
+.dse-faq__item:hover {
+    border-color: var(--color-border-hover);
+}
+
+.dse-faq__item[open] {
+    border-color: rgba(252, 3, 1, 0.2);
+    box-shadow: var(--shadow-gold);
+}
+
+.dse-faq__question {
+    padding: var(--space-lg) var(--space-xl);
+    font-family: var(--font-body);
+    font-size: var(--fs-body);
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-md);
+    user-select: none;
+}
+
+.dse-faq__question::-webkit-details-marker {
+    display: none;
+}
+
+.dse-faq__question::after {
+    content: '+';
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: var(--color-gold);
+    min-width: 20px;
+    text-align: center;
+}
+
+.dse-faq__item[open] .dse-faq__question::after {
+    content: '−';
+}
+
+.dse-faq__question:hover {
+    color: var(--color-gold);
+}
+
+.dse-faq__answer {
+    padding: 0 var(--space-xl) var(--space-lg);
+}
+
+.dse-faq__answer p {
+    font-size: var(--fs-small);
+    color: var(--color-text-secondary);
+    line-height: 1.85;
+    margin: 0;
+}
+
+
+/* =========================================================================
+   RESPONSIVE
+   ========================================================================= */
+@media (max-width: 1024px) {
+    .dse-planning__cards {
+        grid-template-columns: 1fr;
+        max-width: 540px;
+        margin-inline: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-hero--dse {
+        padding: calc(var(--header-height) + var(--space-3xl)) 0 var(--space-3xl);
+    }
+
+    .dse-intro__grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+    }
+
+    .dse-intro__image-wrap img {
+        height: 320px;
+    }
+
+    .dse-layouts__columns {
+        grid-template-columns: 1fr;
+    }
+
+    .dse-structural__grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+    }
+
+    .dse-structural__image-wrap img {
+        height: 280px;
+    }
+
+    .dse-value__grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+    }
+
+    .dse-value__image-wrap img {
+        height: 300px;
+    }
+
+    .dse-faq__question {
+        padding: var(--space-md) var(--space-lg);
+        font-size: var(--fs-small);
+    }
+
+    .dse-faq__answer {
+        padding: 0 var(--space-lg) var(--space-md);
+    }
+}

@@ -1,0 +1,666 @@
+/* =========================================================================
+   HOME EXTENSIONS PAGE — Custom Styles
+   Extends the global styles.css design system
+   ========================================================================= */
+
+/* ----- Hero Modifier ----- */
+.page-hero--ext {
+    position: relative;
+    padding: calc(var(--header-height) + var(--space-5xl)) 0 var(--space-5xl);
+    background: #111111;
+    overflow: hidden;
+}
+
+.page-hero--ext .page-hero__bg-img {
+    position: absolute;
+    inset: 0;
+    background: url('../images/home-improvement-1.png') center/cover no-repeat;
+    opacity: 0.22;
+}
+
+.page-hero--ext .page-hero__bg-img::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 100%);
+}
+
+
+/* =========================================================================
+   SECTION 2: INTRODUCTION
+   ========================================================================= */
+.ext-intro__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3xl);
+    align-items: center;
+}
+
+.ext-intro__image-wrap {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.ext-intro__image-wrap img {
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+    display: block;
+}
+
+.ext-intro__badge-card {
+    position: absolute;
+    bottom: var(--space-xl);
+    left: var(--space-xl);
+    background: rgba(17, 17, 17, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: var(--space-md) var(--space-lg);
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(252, 3, 1, 0.2);
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.ext-intro__badge-icon {
+    font-size: 1.4rem;
+}
+
+.ext-intro__badge-text {
+    font-size: var(--fs-small);
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 600;
+}
+
+.ext-intro__content p {
+    color: var(--color-text-secondary);
+    line-height: 1.85;
+    margin-bottom: var(--space-lg);
+}
+
+.ext-intro__highlights {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-md);
+    margin-bottom: var(--space-xl);
+}
+
+.ext-intro__highlight {
+    text-align: center;
+    padding: var(--space-lg) var(--space-sm);
+    background: var(--color-bg-alt);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
+}
+
+.ext-intro__highlight strong {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: var(--fs-h3);
+    font-weight: 700;
+    color: var(--color-gold);
+    line-height: 1;
+    margin-bottom: 4px;
+}
+
+.ext-intro__highlight span {
+    font-size: var(--fs-xs);
+    color: var(--color-text-secondary);
+    line-height: 1.4;
+}
+
+
+/* =========================================================================
+   SECTION 3: EXTENSION OPTIONS — 4 Comparison Cards
+   ========================================================================= */
+.ext-options__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-xl);
+}
+
+.ext-options__card {
+    position: relative;
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-2xl);
+    box-shadow: var(--shadow-card);
+    transition: all var(--transition-base);
+    overflow: hidden;
+}
+
+.ext-options__card:hover {
+    border-color: var(--color-border-hover);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.ext-options__card-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    margin-bottom: var(--space-md);
+}
+
+.ext-options__card-icon {
+    font-size: 1.8rem;
+}
+
+.ext-options__card-title {
+    font-family: var(--font-body);
+    font-size: var(--fs-h4);
+    font-weight: 600;
+}
+
+.ext-options__card-text {
+    font-size: var(--fs-small);
+    color: var(--color-text-secondary);
+    line-height: 1.75;
+    margin-bottom: var(--space-lg);
+}
+
+.ext-options__card-features {
+    padding-left: var(--space-sm);
+}
+
+.ext-options__card-features li {
+    font-size: var(--fs-small);
+    color: var(--color-text-secondary);
+    line-height: 1.8;
+    padding-left: var(--space-md);
+    position: relative;
+}
+
+.ext-options__card-features li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.7em;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--color-gold);
+}
+
+.ext-options__card-tag {
+    position: absolute;
+    top: var(--space-lg);
+    right: var(--space-lg);
+    font-size: var(--fs-xs);
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-gold);
+    background: var(--color-gold-glow);
+    padding: 4px 12px;
+    border-radius: var(--radius-sm);
+    border: 1px solid rgba(252, 3, 1, 0.15);
+}
+
+
+/* =========================================================================
+   SECTION 4: PLANNING & PERMISSIONS
+   ========================================================================= */
+.ext-planning__content {
+    max-width: 960px;
+}
+
+.ext-planning__content>p {
+    color: var(--color-text-secondary);
+    line-height: 1.85;
+    margin-bottom: var(--space-xl);
+}
+
+.ext-planning__comparison {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+    margin-bottom: var(--space-xl);
+}
+
+.ext-planning__col {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    box-shadow: var(--shadow-card);
+}
+
+.ext-planning__col--pd {
+    border-top: 3px solid #22c55e;
+}
+
+.ext-planning__col--fp {
+    border-top: 3px solid var(--color-gold);
+}
+
+.ext-planning__col h4 {
+    font-family: var(--font-body);
+    font-size: var(--fs-h4);
+    font-weight: 600;
+    margin-bottom: var(--space-sm);
+}
+
+.ext-planning__col>p {
+    font-size: var(--fs-small);
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+    margin-bottom: var(--space-md);
+}
+
+.ext-planning__col ul {
+    padding-left: var(--space-sm);
+}
+
+.ext-planning__col ul li {
+    font-size: var(--fs-small);
+    color: var(--color-text-secondary);
+    line-height: 1.8;
+    padding-left: var(--space-md);
+    position: relative;
+    margin-bottom: 2px;
+}
+
+.ext-planning__col ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.7em;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--color-gold);
+}
+
+.ext-planning__col--pd ul li::before {
+    background: #22c55e;
+}
+
+.ext-planning__note {
+    background: var(--color-gold-glow);
+    border: 1px solid rgba(252, 3, 1, 0.15);
+    border-radius: var(--radius-md);
+    padding: var(--space-lg) var(--space-xl);
+    font-size: var(--fs-small);
+    color: var(--color-text);
+    line-height: 1.7;
+}
+
+
+/* =========================================================================
+   SECTION 5: WHAT WE DELIVER — Feature Grid
+   ========================================================================= */
+.ext-deliver__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+}
+
+.ext-deliver__item {
+    display: flex;
+    gap: var(--space-lg);
+    align-items: flex-start;
+    padding: var(--space-xl);
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-base);
+}
+
+.ext-deliver__item:hover {
+    border-color: var(--color-border-hover);
+    box-shadow: var(--shadow-sm);
+}
+
+.ext-deliver__icon {
+    font-size: 1.6rem;
+    min-width: 40px;
+    text-align: center;
+    margin-top: 2px;
+}
+
+.ext-deliver__item strong {
+    display: block;
+    font-size: var(--fs-body);
+    margin-bottom: 4px;
+}
+
+.ext-deliver__item p {
+    font-size: var(--fs-small);
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+    margin: 0;
+}
+
+
+/* =========================================================================
+   SECTION 6: COST GUIDE — Pricing Cards
+   ========================================================================= */
+.ext-costs__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-xl);
+    margin-bottom: var(--space-xl);
+}
+
+.ext-costs__card {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-2xl);
+    text-align: center;
+    box-shadow: var(--shadow-card);
+    transition: all var(--transition-base);
+    display: flex;
+    flex-direction: column;
+}
+
+.ext-costs__card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.ext-costs__card--featured {
+    border-color: var(--color-gold);
+    box-shadow: var(--shadow-gold);
+    position: relative;
+}
+
+.ext-costs__card--featured::before {
+    content: 'MOST POPULAR';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark));
+    color: #ffffff;
+    font-size: var(--fs-xs);
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    padding: 6px 0;
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+.ext-costs__card--featured .ext-costs__card-header {
+    margin-top: var(--space-lg);
+}
+
+.ext-costs__card-header h3 {
+    font-family: var(--font-body);
+    font-size: var(--fs-h4);
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.ext-costs__card-size {
+    font-size: var(--fs-small);
+    color: var(--color-text-muted);
+}
+
+.ext-costs__card-price {
+    padding: var(--space-xl) 0;
+    border-bottom: 1px solid var(--color-border);
+    margin-bottom: var(--space-lg);
+}
+
+.ext-costs__from {
+    display: block;
+    font-size: var(--fs-xs);
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 4px;
+}
+
+.ext-costs__amount {
+    font-family: var(--font-heading);
+    font-size: var(--fs-h2);
+    font-weight: 700;
+    color: var(--color-gold);
+}
+
+.ext-costs__card-includes {
+    text-align: left;
+    margin-bottom: var(--space-xl);
+    flex-grow: 1;
+}
+
+.ext-costs__card-includes li {
+    font-size: var(--fs-small);
+    color: var(--color-text-secondary);
+    line-height: 1.8;
+    padding-left: var(--space-lg);
+    position: relative;
+}
+
+.ext-costs__card-includes li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--color-gold);
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+.ext-costs__card .btn {
+    width: 100%;
+    justify-content: center;
+}
+
+.ext-costs__disclaimer {
+    text-align: center;
+    font-size: var(--fs-xs);
+    color: var(--color-text-muted);
+    max-width: 700px;
+    margin-inline: auto;
+    line-height: 1.6;
+}
+
+
+/* =========================================================================
+   SECTION 7: WHY CHOOSE US
+   ========================================================================= */
+.ext-why__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3xl);
+    align-items: center;
+}
+
+.ext-why__image-wrap {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.ext-why__image-wrap img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    display: block;
+}
+
+.ext-why__content p {
+    color: var(--color-text-secondary);
+    line-height: 1.85;
+    margin-bottom: var(--space-xl);
+}
+
+.ext-why__features {
+    display: grid;
+    gap: var(--space-md);
+    margin-bottom: var(--space-xl);
+}
+
+.ext-why__feature {
+    display: flex;
+    gap: var(--space-md);
+    align-items: flex-start;
+}
+
+.ext-why__feature-icon {
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+    border-radius: 50%;
+    background: var(--color-gold-glow);
+    border: 1px solid rgba(252, 3, 1, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-gold);
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin-top: 2px;
+}
+
+.ext-why__feature strong {
+    display: block;
+    font-size: var(--fs-body);
+    margin-bottom: 2px;
+}
+
+.ext-why__feature p {
+    font-size: var(--fs-small);
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+
+/* =========================================================================
+   SECTION 8: FAQs
+   ========================================================================= */
+.ext-faq__list {
+    max-width: 800px;
+    margin-inline: auto;
+}
+
+.ext-faq__item {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-md);
+    overflow: hidden;
+    transition: all var(--transition-base);
+}
+
+.ext-faq__item:hover {
+    border-color: var(--color-border-hover);
+}
+
+.ext-faq__item[open] {
+    border-color: rgba(252, 3, 1, 0.2);
+    box-shadow: var(--shadow-gold);
+}
+
+.ext-faq__question {
+    padding: var(--space-lg) var(--space-xl);
+    font-family: var(--font-body);
+    font-size: var(--fs-body);
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-md);
+    transition: color var(--transition-fast);
+    user-select: none;
+}
+
+.ext-faq__question::-webkit-details-marker {
+    display: none;
+}
+
+.ext-faq__question::after {
+    content: '+';
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: var(--color-gold);
+    transition: transform var(--transition-base);
+    min-width: 20px;
+    text-align: center;
+}
+
+.ext-faq__item[open] .ext-faq__question::after {
+    content: '−';
+}
+
+.ext-faq__question:hover {
+    color: var(--color-gold);
+}
+
+.ext-faq__answer {
+    padding: 0 var(--space-xl) var(--space-lg);
+}
+
+.ext-faq__answer p {
+    font-size: var(--fs-small);
+    color: var(--color-text-secondary);
+    line-height: 1.85;
+    margin: 0;
+}
+
+
+/* =========================================================================
+   RESPONSIVE
+   ========================================================================= */
+@media (max-width: 1024px) {
+    .ext-options__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ext-costs__grid {
+        grid-template-columns: 1fr;
+        max-width: 420px;
+        margin-inline: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-hero--ext {
+        padding: calc(var(--header-height) + var(--space-3xl)) 0 var(--space-3xl);
+    }
+
+    .ext-intro__grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+    }
+
+    .ext-intro__image-wrap img {
+        height: 320px;
+    }
+
+    .ext-intro__highlights {
+        grid-template-columns: 1fr;
+    }
+
+    .ext-planning__comparison {
+        grid-template-columns: 1fr;
+    }
+
+    .ext-deliver__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ext-why__grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+    }
+
+    .ext-why__image-wrap img {
+        height: 320px;
+    }
+
+    .ext-faq__question {
+        padding: var(--space-md) var(--space-lg);
+        font-size: var(--fs-small);
+    }
+
+    .ext-faq__answer {
+        padding: 0 var(--space-lg) var(--space-md);
+    }
+}

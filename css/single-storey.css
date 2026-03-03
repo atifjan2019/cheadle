@@ -1,0 +1,503 @@
+/* =========================================================================
+   SINGLE STOREY EXTENSIONS PAGE — Custom Styles
+   ========================================================================= */
+
+/* ----- Hero ----- */
+.page-hero--sse {
+    position: relative;
+    padding: calc(var(--header-height) + var(--space-5xl)) 0 var(--space-5xl);
+    background: #111111;
+    overflow: hidden;
+}
+
+.page-hero--sse .page-hero__bg-img {
+    position: absolute;
+    inset: 0;
+    background: url('../images/about-quality.png') center/cover no-repeat;
+    opacity: 0.22;
+}
+
+.page-hero--sse .page-hero__bg-img::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 100%);
+}
+
+
+/* =========================================================================
+   SECTION 2: INTRO — Numbered Benefits
+   ========================================================================= */
+.sse-intro__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3xl);
+    align-items: center;
+}
+
+.sse-intro__content p {
+    color: var(--color-text-secondary);
+    line-height: 1.85;
+    margin-bottom: var(--space-lg);
+}
+
+.sse-intro__benefits {
+    display: grid;
+    gap: var(--space-md);
+    margin-bottom: var(--space-xl);
+}
+
+.sse-intro__benefit {
+    display: flex;
+    gap: var(--space-md);
+    align-items: flex-start;
+    padding: var(--space-md) var(--space-lg);
+    background: var(--color-bg-alt);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
+    transition: all var(--transition-base);
+}
+
+.sse-intro__benefit:hover {
+    border-color: var(--color-border-hover);
+}
+
+.sse-intro__benefit-num {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark));
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-heading);
+    font-size: var(--fs-xs);
+    font-weight: 700;
+    margin-top: 2px;
+}
+
+.sse-intro__benefit strong {
+    display: block;
+    font-size: var(--fs-body);
+    margin-bottom: 2px;
+}
+
+.sse-intro__benefit p {
+    font-size: var(--fs-small);
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.sse-intro__image-wrap {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.sse-intro__image-wrap img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* =========================================================================
+   SECTION 3: DESIGN IDEAS — 4 Cards
+   ========================================================================= */
+.sse-ideas__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-xl);
+}
+
+.sse-ideas__card {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+    transition: all var(--transition-base);
+}
+
+.sse-ideas__card:hover {
+    border-color: var(--color-border-hover);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.sse-ideas__card-image {
+    height: 220px;
+    overflow: hidden;
+}
+
+.sse-ideas__card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+}
+
+.sse-ideas__card:hover .sse-ideas__card-image img {
+    transform: scale(1.05);
+}
+
+.sse-ideas__card-body {
+    padding: var(--space-xl);
+}
+
+.sse-ideas__card-label {
+    display: inline-block;
+    font-size: var(--fs-xs);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-gold);
+    background: var(--color-gold-glow);
+    padding: 3px 10px;
+    border-radius: var(--radius-sm);
+    margin-bottom: var(--space-sm);
+}
+
+.sse-ideas__card-body h3 {
+    font-family: var(--font-body);
+    font-size: var(--fs-h4);
+    font-weight: 600;
+    margin-bottom: var(--space-sm);
+}
+
+.sse-ideas__card-body p {
+    font-size: var(--fs-small);
+    color: var(--color-text-secondary);
+    line-height: 1.75;
+}
+
+
+/* =========================================================================
+   SECTION 4: ROOF OPTIONS — 3 Cards
+   ========================================================================= */
+.sse-roofs__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-xl);
+}
+
+.sse-roofs__card {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-2xl);
+    box-shadow: var(--shadow-card);
+    transition: all var(--transition-base);
+}
+
+.sse-roofs__card:hover {
+    border-color: var(--color-border-hover);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.sse-roofs__card-icon {
+    font-size: 2rem;
+    margin-bottom: var(--space-md);
+    display: block;
+}
+
+.sse-roofs__card h3 {
+    font-family: var(--font-body);
+    font-size: var(--fs-h4);
+    font-weight: 600;
+    margin-bottom: var(--space-sm);
+}
+
+.sse-roofs__card>p {
+    font-size: var(--fs-small);
+    color: var(--color-text-secondary);
+    line-height: 1.75;
+    margin-bottom: var(--space-lg);
+}
+
+.sse-roofs__card-pros {
+    display: grid;
+    gap: 6px;
+}
+
+.sse-roofs__card-pros span {
+    font-size: var(--fs-small);
+    color: var(--color-text-secondary);
+    padding-left: 4px;
+}
+
+
+/* =========================================================================
+   SECTION 5: PERMITTED DEVELOPMENT — Rules Grid
+   ========================================================================= */
+.sse-pd__grid {
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+    gap: var(--space-3xl);
+    align-items: center;
+}
+
+.sse-pd__content>p {
+    color: var(--color-text-secondary);
+    line-height: 1.85;
+    margin-bottom: var(--space-xl);
+}
+
+.sse-pd__rules {
+    display: grid;
+    gap: var(--space-md);
+    margin-bottom: var(--space-xl);
+}
+
+.sse-pd__rule {
+    display: flex;
+    gap: var(--space-md);
+    align-items: flex-start;
+    padding: var(--space-lg);
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+}
+
+.sse-pd__rule-icon {
+    font-size: 1.4rem;
+    min-width: 32px;
+    text-align: center;
+    margin-top: 2px;
+}
+
+.sse-pd__rule strong {
+    display: block;
+    font-size: var(--fs-body);
+    margin-bottom: 2px;
+}
+
+.sse-pd__rule p {
+    font-size: var(--fs-small);
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+    margin: 0;
+}
+
+.sse-pd__note {
+    background: rgba(252, 193, 0, 0.06);
+    border: 1px solid rgba(252, 193, 0, 0.15);
+    border-radius: var(--radius-md);
+    padding: var(--space-md) var(--space-lg);
+    font-size: var(--fs-small);
+    color: var(--color-text);
+    line-height: 1.7;
+}
+
+.sse-pd__image-wrap {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.sse-pd__image-wrap img {
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* =========================================================================
+   SECTION 6: BUILD TIMELINE — Horizontal Track
+   ========================================================================= */
+.sse-timeline__track {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: var(--space-md);
+    position: relative;
+}
+
+.sse-timeline__track::before {
+    content: '';
+    position: absolute;
+    top: 52px;
+    left: 5%;
+    right: 5%;
+    height: 2px;
+    background: var(--color-border);
+}
+
+.sse-timeline__item {
+    text-align: center;
+    position: relative;
+}
+
+.sse-timeline__week {
+    font-size: var(--fs-xs);
+    font-weight: 600;
+    color: var(--color-gold);
+    letter-spacing: 0.04em;
+    margin-bottom: var(--space-sm);
+}
+
+.sse-timeline__dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--color-gold);
+    margin: 0 auto var(--space-md);
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 0 0 4px rgba(252, 3, 1, 0.15);
+}
+
+.sse-timeline__detail h4 {
+    font-family: var(--font-body);
+    font-size: var(--fs-small);
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.sse-timeline__detail p {
+    font-size: var(--fs-xs);
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+}
+
+
+/* =========================================================================
+   SECTION 7: FAQs
+   ========================================================================= */
+.sse-faq__list {
+    max-width: 800px;
+    margin-inline: auto;
+}
+
+.sse-faq__item {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-md);
+    overflow: hidden;
+    transition: all var(--transition-base);
+}
+
+.sse-faq__item:hover {
+    border-color: var(--color-border-hover);
+}
+
+.sse-faq__item[open] {
+    border-color: rgba(252, 3, 1, 0.2);
+    box-shadow: var(--shadow-gold);
+}
+
+.sse-faq__question {
+    padding: var(--space-lg) var(--space-xl);
+    font-family: var(--font-body);
+    font-size: var(--fs-body);
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-md);
+    user-select: none;
+}
+
+.sse-faq__question::-webkit-details-marker {
+    display: none;
+}
+
+.sse-faq__question::after {
+    content: '+';
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: var(--color-gold);
+    min-width: 20px;
+    text-align: center;
+}
+
+.sse-faq__item[open] .sse-faq__question::after {
+    content: '−';
+}
+
+.sse-faq__question:hover {
+    color: var(--color-gold);
+}
+
+.sse-faq__answer {
+    padding: 0 var(--space-xl) var(--space-lg);
+}
+
+.sse-faq__answer p {
+    font-size: var(--fs-small);
+    color: var(--color-text-secondary);
+    line-height: 1.85;
+    margin: 0;
+}
+
+
+/* =========================================================================
+   RESPONSIVE
+   ========================================================================= */
+@media (max-width: 1024px) {
+    .sse-roofs__grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin-inline: auto;
+    }
+
+    .sse-timeline__track {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--space-xl);
+    }
+
+    .sse-timeline__track::before {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-hero--sse {
+        padding: calc(var(--header-height) + var(--space-3xl)) 0 var(--space-3xl);
+    }
+
+    .sse-intro__grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+    }
+
+    .sse-intro__image-wrap img {
+        height: 320px;
+    }
+
+    .sse-intro__image-wrap {
+        order: -1;
+    }
+
+    .sse-ideas__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sse-pd__grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+    }
+
+    .sse-pd__image-wrap img {
+        height: 300px;
+    }
+
+    .sse-timeline__track {
+        grid-template-columns: 1fr;
+    }
+
+    .sse-faq__question {
+        padding: var(--space-md) var(--space-lg);
+        font-size: var(--fs-small);
+    }
+
+    .sse-faq__answer {
+        padding: 0 var(--space-lg) var(--space-md);
+    }
+}
