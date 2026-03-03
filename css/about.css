@@ -1,0 +1,638 @@
+/* =========================================================================
+   ABOUT PAGE — CHEADLE CONSTRUCTION
+   Premium about page styles with rich sections and animations
+   ========================================================================= */
+
+/* ----- Hero Override for About Page ----- */
+.page-hero--about {
+  position: relative;
+  min-height: 420px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.page-hero--about .page-hero__bg-img {
+  position: absolute;
+  inset: 0;
+  background: url('../images/about-team.png') center/cover no-repeat;
+  z-index: 0;
+}
+
+.page-hero--about::after {
+  background: linear-gradient(135deg, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0.4) 100%) !important;
+}
+
+
+/* =========================================================================
+   SECTION 2: OUR STORY — Image + Content Grid
+   ========================================================================= */
+.about-story__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3xl);
+  align-items: center;
+}
+
+.about-story__image-wrap {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.about-story__img {
+  width: 100%;
+  height: 560px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  transition: transform var(--transition-slow);
+}
+
+.about-story__image-wrap:hover .about-story__img {
+  transform: scale(1.03);
+}
+
+.about-story__stat-card {
+  position: absolute;
+  bottom: var(--space-xl);
+  right: var(--space-xl);
+  background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark));
+  color: #fff;
+  padding: var(--space-lg) var(--space-xl);
+  border-radius: var(--radius-md);
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(252, 3, 1, 0.3);
+  z-index: 2;
+}
+
+.about-story__stat-num {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.about-story__stat-label {
+  display: block;
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-top: var(--space-xs);
+  opacity: 0.9;
+}
+
+.about-story__content {
+  padding-left: var(--space-xl);
+}
+
+.about-story__content p {
+  color: var(--color-text-secondary);
+  line-height: 1.85;
+  margin-bottom: var(--space-lg);
+}
+
+.about-story__features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-sm) var(--space-lg);
+  margin-top: var(--space-xl);
+  padding-top: var(--space-xl);
+  border-top: 1px solid var(--color-border);
+}
+
+.about-story__feature {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: var(--fs-small);
+  font-weight: 500;
+  color: var(--color-text-secondary);
+}
+
+.about-story__feature span {
+  color: var(--color-gold);
+  font-size: 0.7rem;
+}
+
+
+/* =========================================================================
+   SECTION 3: STATS BAR
+   ========================================================================= */
+.about-stats {
+  background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
+  padding-block: var(--space-3xl);
+}
+
+.about-stats__grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-2xl);
+  flex-wrap: wrap;
+}
+
+.about-stats__item {
+  text-align: center;
+  min-width: 160px;
+}
+
+.about-stats__num {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 700;
+  color: var(--color-gold);
+  line-height: 1;
+}
+
+.about-stats__label {
+  display: block;
+  font-size: var(--fs-small);
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: var(--space-xs);
+  letter-spacing: 0.04em;
+}
+
+.about-stats__div {
+  width: 1px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+
+/* =========================================================================
+   SECTION 4: OUR VALUES — Card Grid
+   ========================================================================= */
+.about-values__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+}
+
+.about-values__card {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-2xl) var(--space-xl);
+  text-align: center;
+  transition: all var(--transition-base);
+  position: relative;
+  overflow: hidden;
+}
+
+.about-values__card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.about-values__card:hover {
+  border-color: var(--color-border-hover);
+  background: var(--color-bg-card-hover);
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-gold);
+}
+
+.about-values__card:hover::before {
+  opacity: 1;
+}
+
+.about-values__card-icon {
+  font-size: 2.4rem;
+  margin-bottom: var(--space-lg);
+  display: block;
+}
+
+.about-values__card-title {
+  font-size: var(--fs-h4);
+  margin-bottom: var(--space-md);
+  color: var(--color-text);
+}
+
+.about-values__card-text {
+  font-size: var(--fs-small);
+  color: var(--color-text-secondary);
+  line-height: 1.8;
+}
+
+
+/* =========================================================================
+   SECTION 5: OUR APPROACH — Image + Content (Reversed)
+   ========================================================================= */
+.about-approach__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3xl);
+  align-items: center;
+}
+
+.about-approach__content p {
+  color: var(--color-text-secondary);
+  line-height: 1.85;
+  margin-bottom: var(--space-xl);
+}
+
+.about-approach__steps {
+  margin-bottom: var(--space-2xl);
+}
+
+.about-approach__step {
+  display: flex;
+  gap: var(--space-lg);
+  padding: var(--space-lg) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.about-approach__step:last-child {
+  border-bottom: none;
+}
+
+.about-approach__step-num {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-white);
+  background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark));
+  border-radius: var(--radius-md);
+}
+
+.about-approach__step h4 {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: var(--space-xs);
+}
+
+.about-approach__step p {
+  font-size: var(--fs-small);
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+.about-approach__image-wrap {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.about-approach__img {
+  width: 100%;
+  height: 580px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  transition: transform var(--transition-slow);
+}
+
+.about-approach__image-wrap:hover .about-approach__img {
+  transform: scale(1.03);
+}
+
+
+/* =========================================================================
+   SECTION 6: QUALITY & STANDARDS
+   ========================================================================= */
+.about-quality__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3xl);
+  align-items: center;
+}
+
+.about-quality__image-wrap {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.about-quality__image-wrap img {
+  width: 100%;
+  height: 560px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  transition: transform var(--transition-slow);
+}
+
+.about-quality__image-wrap:hover img {
+  transform: scale(1.03);
+}
+
+.about-quality__content p {
+  color: var(--color-text-secondary);
+  line-height: 1.85;
+  margin-bottom: var(--space-xl);
+}
+
+.about-quality__badges {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+  margin-bottom: var(--space-2xl);
+}
+
+.about-quality__badge {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-base);
+}
+
+.about-quality__badge:hover {
+  border-color: var(--color-border-hover);
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-2px);
+}
+
+.about-quality__badge-icon {
+  font-size: 1.6rem;
+  flex-shrink: 0;
+}
+
+.about-quality__badge strong {
+  display: block;
+  font-size: var(--fs-small);
+  font-weight: 600;
+  color: var(--color-text);
+  line-height: 1.3;
+}
+
+.about-quality__badge span {
+  font-size: var(--fs-xs);
+  color: var(--color-text-muted);
+}
+
+
+/* =========================================================================
+   SECTION 7: AREAS WE SERVE
+   ========================================================================= */
+.about-areas__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3xl);
+  align-items: center;
+}
+
+.about-areas__content p {
+  color: var(--color-text-secondary);
+  line-height: 1.85;
+  margin-bottom: var(--space-xl);
+}
+
+.about-areas__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+  margin-bottom: var(--space-2xl);
+}
+
+.about-areas__col h4 {
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: var(--space-md);
+  padding-bottom: var(--space-xs);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.about-areas__col ul li {
+  padding: var(--space-xs) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.about-areas__col ul li:last-child {
+  border-bottom: none;
+}
+
+.about-areas__col ul li a {
+  font-size: var(--fs-small);
+  color: var(--color-text-secondary);
+  transition: all var(--transition-fast);
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.about-areas__col ul li a::before {
+  content: '→';
+  font-size: 0.7rem;
+  color: var(--color-gold);
+  transition: transform var(--transition-fast);
+}
+
+.about-areas__col ul li a:hover {
+  color: var(--color-gold);
+}
+
+.about-areas__col ul li a:hover::before {
+  transform: translateX(4px);
+}
+
+.about-areas__image-wrap {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.about-areas__image-wrap img {
+  width: 100%;
+  height: 560px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  transition: transform var(--transition-slow);
+}
+
+.about-areas__image-wrap:hover img {
+  transform: scale(1.03);
+}
+
+
+/* =========================================================================
+   SECTION 8: HEALTH & SAFETY
+   ========================================================================= */
+.about-hs__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3xl);
+  align-items: center;
+}
+
+.about-hs__image-wrap {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.about-hs__image-wrap img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  transition: transform var(--transition-slow);
+}
+
+.about-hs__image-wrap:hover img {
+  transform: scale(1.03);
+}
+
+.about-hs__content p {
+  color: var(--color-text-secondary);
+  line-height: 1.85;
+  margin-bottom: var(--space-xl);
+}
+
+.about-hs__features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+  margin-bottom: var(--space-2xl);
+}
+
+.about-hs__feature {
+  display: flex;
+  gap: var(--space-md);
+  padding: var(--space-md);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-base);
+}
+
+.about-hs__feature:hover {
+  border-color: var(--color-border-hover);
+  box-shadow: var(--shadow-sm);
+}
+
+.about-hs__feature-icon {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-white);
+  background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark));
+  border-radius: var(--radius-sm);
+}
+
+.about-hs__feature strong {
+  display: block;
+  font-size: var(--fs-small);
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 2px;
+}
+
+.about-hs__feature p {
+  font-size: var(--fs-xs);
+  color: var(--color-text-muted);
+  line-height: 1.5;
+  margin-bottom: 0 !important;
+}
+
+
+/* =========================================================================
+   RESPONSIVE — Tablet
+   ========================================================================= */
+@media (max-width: 968px) {
+  .about-story__grid,
+  .about-approach__grid,
+  .about-quality__grid,
+  .about-areas__grid,
+  .about-hs__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+
+  .about-story__content {
+    padding-left: 0;
+  }
+
+  .about-story__img,
+  .about-approach__img,
+  .about-quality__image-wrap img,
+  .about-areas__image-wrap img,
+  .about-hs__image-wrap img {
+    height: 400px;
+  }
+
+  .about-values__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-approach__grid {
+    direction: ltr;
+  }
+
+  /* Reorder for mobile — image first on approach section */
+  .about-approach__image-wrap {
+    order: -1;
+  }
+
+  .about-quality__badges {
+    grid-template-columns: 1fr;
+  }
+
+  .about-hs__features {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* =========================================================================
+   RESPONSIVE — Mobile
+   ========================================================================= */
+@media (max-width: 640px) {
+  .about-values__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-story__features {
+    grid-template-columns: 1fr;
+  }
+
+  .about-story__img,
+  .about-approach__img,
+  .about-quality__image-wrap img,
+  .about-areas__image-wrap img,
+  .about-hs__image-wrap img {
+    height: 300px;
+  }
+
+  .about-stats__grid {
+    flex-direction: column;
+    gap: var(--space-lg);
+  }
+
+  .about-stats__div {
+    width: 48px;
+    height: 1px;
+  }
+
+  .about-areas__list {
+    grid-template-columns: 1fr;
+  }
+
+  .page-hero--about {
+    min-height: 320px;
+  }
+}
