@@ -34,10 +34,11 @@
 }
 
 
-/* Hide video section until real videos are added.
-   To show on a specific project, add: #project-videos { display: block; }
-   in that project's individual CSS file. */
-#project-videos {
+/* Hide gallery and video sections until real content is added.
+   To show on a specific project, add: #project-gallery { display: block; }
+   or #project-videos { display: block; } in that project's individual CSS file. */
+#project-videos,
+#project-gallery {
     display: none;
 }
 
@@ -230,6 +231,11 @@
     width: 100%;
     height: 100%;
     border: none;
+}
+
+/* Clean video — minimal YouTube branding via URL params */
+.project-video__clean {
+    position: relative;
 }
 
 .project-video__placeholder {

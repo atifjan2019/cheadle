@@ -2,3 +2,8 @@
    PORTFOLIO: CONGLETON — Project-specific overrides
    Customise gallery layout, video embeds, and any unique styles here.
    ========================================================================= */
+
+/* Show video section — this project has real videos */
+#project-videos {
+   display: block;
+}
