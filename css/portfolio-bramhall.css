@@ -1,0 +1,10 @@
+/* =========================================================================
+   PORTFOLIO: BRAMHALL — Project-specific overrides
+   Customise gallery layout, video embeds, and any unique styles here.
+   ========================================================================= */
+
+/* Example: If this project has many images, change the grid */
+/* .project-gallery__grid { grid-template-columns: repeat(4, 1fr); } */
+
+/* Example: Custom hero height for this project */
+/* .project-hero { min-height: 500px; } */

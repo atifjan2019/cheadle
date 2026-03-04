@@ -2,12 +2,9 @@
    PORTFOLIO DETAIL — Single project page styles
    ========================================================================= */
 
-/* Project Hero */
+/* Project Hero — override page-hero to show background image */
 .project-hero {
     position: relative;
-    min-height: 400px;
-    display: flex;
-    align-items: flex-end;
     overflow: hidden;
 }
 
@@ -76,6 +73,29 @@
     width: 1px;
     height: 40px;
     background: rgba(255, 255, 255, 0.12);
+}
+
+/* Split Layout — self-contained, no inner-pages.css dependency */
+.project-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3xl);
+    align-items: start;
+}
+
+.project-split__img {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    position: sticky;
+    top: calc(var(--header-height) + var(--space-xl));
+}
+
+.project-split__img img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+    border-radius: var(--radius-lg);
 }
 
 /* Project Overview */
@@ -285,6 +305,18 @@
    RESPONSIVE
    ========================================================================= */
 @media (max-width: 968px) {
+    .project-split {
+        grid-template-columns: 1fr;
+    }
+
+    .project-split__img {
+        position: static;
+    }
+
+    .project-split__img img {
+        height: 350px;
+    }
+
     .project-gallery__grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -321,6 +353,10 @@
 
     .project-gallery__item__caption {
         opacity: 1;
+    }
+
+    .project-split__img img {
+        height: 280px;
     }
 
     .project-highlights__grid {

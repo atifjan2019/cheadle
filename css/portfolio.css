@@ -66,6 +66,34 @@
     }
 }
 
+/* Clickable card link wrapper */
+.portfolio-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.portfolio-card-link:hover .portfolio-card {
+    border-color: var(--color-border-hover);
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-gold);
+}
+
+.portfolio-card__link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    font-size: var(--fs-small);
+    font-weight: 600;
+    color: var(--color-gold);
+    margin-top: var(--space-md);
+    transition: gap var(--transition-fast);
+}
+
+.portfolio-card-link:hover .portfolio-card__link {
+    gap: var(--space-sm);
+}
+
 @media (max-width: 640px) {
     .suppliers-grid {
         grid-template-columns: repeat(2, 1fr);
