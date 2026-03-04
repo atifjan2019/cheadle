@@ -112,15 +112,44 @@
                     <hr class="divider">
                 </div>
                 <div class="project-video__grid">
-                    <div class="project-video__item project-video__clean">
-                        <iframe
-                            src="https://player.vimeo.com/video/1170220158?title=0&byline=0&portrait=0&muted=1&loop=1"
+                    <div class="project-video__item project-video__clean" id="vimeo-wrap">
+                        <iframe id="vimeo-player"
+                            src="https://player.vimeo.com/video/1170220158?title=0&byline=0&portrait=0&muted=1&loop=1&controls=0"
                             title="Congleton Conservatory Conversion" allow="autoplay; fullscreen; picture-in-picture"
                             allowfullscreen></iframe>
+                        <img class="video-thumb" id="video-thumb" src="images/about-quality.png"
+                            alt="Click to play video">
+                        <div class="video-thumb-overlay" id="video-thumb-overlay">
+                            <h3 class="video-thumb-title">Conservatory Conversion &amp; Kitchen
+                                Redesign<br><span>Congleton</span></h3>
+                        </div>
+                        <button class="video-play-btn" id="video-play-btn" aria-label="Play video">
+                            <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+                                <circle cx="32" cy="32" r="32" fill="rgba(0,0,0,0.55)" />
+                                <polygon points="25,16 52,32 25,48" fill="#fff" />
+                            </svg>
+                        </button>
                     </div>
                 </div>
             </div>
         </section>
+        <script src="https://player.vimeo.com/api/player.js"></script>
+        <script>
+            (function () {
+                var p = new Vimeo.Player(document.getElementById('vimeo-player')),
+                    b = document.getElementById('video-play-btn'),
+                    t = document.getElementById('video-thumb'),
+                    o = document.getElementById('video-thumb-overlay'),
+                    on = false;
+                function toggle() {
+                    if (on) { p.pause(); b.classList.remove('video-play-btn--hidden'); t.classList.remove('video-thumb--hidden'); o.classList.remove('video-thumb--hidden'); }
+                    else { p.play(); b.classList.add('video-play-btn--hidden'); t.classList.add('video-thumb--hidden'); o.classList.add('video-thumb--hidden'); }
+                    on = !on;
+                }
+                b.addEventListener('click', toggle);
+                document.getElementById('vimeo-wrap').addEventListener('click', function (e) { if (e.target !== b && !b.contains(e.target)) toggle(); });
+            })();
+        </script>
 
         <section class="section section--alt" id="project-highlights">
             <div class="container">
