@@ -15,124 +15,12 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap"
     rel="stylesheet">
+<script src="js/load-includes.js" defer></script>
 </head>
 
 <body>
 
-  <!-- ====================================================================
-       HEADER — Elegant Glass Dark
-       ==================================================================== -->
-  <header class="hp-header" id="header">
-    <div class="hp-header__inner">
-
-      <!-- Logo -->
-      <a href="index.html" class="hp-header__logo" aria-label="Cheadle Construction Home">
-        <img src="images/logo.png" alt="Cheadle Construction Logo" width="44" height="44">
-      </a>
-
-      <!-- Hamburger -->
-      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-        <span class="nav-toggle__bar"></span>
-        <span class="nav-toggle__bar"></span>
-        <span class="nav-toggle__bar"></span>
-      </button>
-
-      <!-- Nav -->
-      <nav class="hp-nav" id="main-nav" aria-label="Main navigation">
-        <ul class="hp-nav__list">
-          <li class="hp-nav__item"><a href="index.html" class="hp-nav__link hp-nav__link--active">Home</a></li>
-
-          <li class="hp-nav__item hp-nav__item--drop">
-            <a href="about.html" class="hp-nav__link">About <span class="hp-nav__caret">▾</span></a>
-            <div class="hp-nav__dropdown">
-              <a href="about.html" class="hp-nav__dropdown-link">About Cheadle Construction</a>
-              <a href="our-process.html" class="hp-nav__dropdown-link">Our Process</a>
-              <a href="health-safety.html" class="hp-nav__dropdown-link">Health &amp; Safety</a>
-              <a href="accreditations.html" class="hp-nav__dropdown-link">Accreditations &amp; Insurance</a>
-              <a href="testimonials.html" class="hp-nav__dropdown-link">Testimonials</a>
-            </div>
-          </li>
-
-          <li class="hp-nav__item hp-nav__item--drop">
-            <a href="residential.html" class="hp-nav__link">Residential <span class="hp-nav__caret">▾</span></a>
-            <div class="hp-nav__dropdown hp-nav__mega">
-              <div class="hp-nav__mega-col">
-                <div class="hp-nav__mega-title">Builds &amp; Extensions</div>
-                <a href="new-builds.html" class="hp-nav__dropdown-link">New Builds Construction</a>
-                <a href="home-extensions.html" class="hp-nav__dropdown-link">Home Extensions</a>
-                <a href="single-storey-extensions.html" class="hp-nav__dropdown-link">Single Storey Extensions</a>
-                <a href="double-storey-extensions.html" class="hp-nav__dropdown-link">Double Storey Extensions</a>
-                <a href="dormer-loft-conversions.html" class="hp-nav__dropdown-link">Dormer Loft Conversions</a>
-                <a href="loft-conversions.html" class="hp-nav__dropdown-link">Loft Conversions</a>
-                <a href="garage-conversions.html" class="hp-nav__dropdown-link">Garage Conversions</a>
-                <a href="basement-cellar-conversions.html" class="hp-nav__dropdown-link">Basement &amp; Cellar
-                  Conversions</a>
-              </div>
-              <div class="hp-nav__mega-col">
-                <div class="hp-nav__mega-title">Renovations &amp; Maintenance</div>
-                <a href="home-renovation.html" class="hp-nav__dropdown-link">Home Renovation &amp; Improvements</a>
-                <a href="kitchen-renovation.html" class="hp-nav__dropdown-link">Kitchen Renovation</a>
-                <a href="bathroom-renovation.html" class="hp-nav__dropdown-link">Bathroom Renovation</a>
-                <a href="interior-maintenance.html" class="hp-nav__dropdown-link">Interior Home Maintenance</a>
-                <a href="exterior-maintenance.html" class="hp-nav__dropdown-link">Exterior Home Maintenance</a>
-                <a href="garden-landscaping.html" class="hp-nav__dropdown-link">Garden Construction &amp;
-                  Landscaping</a>
-              </div>
-            </div>
-          </li>
-
-          <li class="hp-nav__item hp-nav__item--drop">
-            <a href="commercial.html" class="hp-nav__link">Commercial <span class="hp-nav__caret">▾</span></a>
-            <div class="hp-nav__dropdown hp-nav__mega">
-              <div class="hp-nav__mega-col">
-                <div class="hp-nav__mega-title">Commercial Builds</div>
-                <a href="commercial-new-builds.html" class="hp-nav__dropdown-link">Commercial New Builds</a>
-                <a href="office-construction.html" class="hp-nav__dropdown-link">Office Construction</a>
-                <a href="warehouse-construction.html" class="hp-nav__dropdown-link">Warehouse Construction</a>
-                <a href="factory-construction.html" class="hp-nav__dropdown-link">Factory Construction</a>
-                <a href="institutional-construction.html" class="hp-nav__dropdown-link">Institutional Construction</a>
-              </div>
-              <div class="hp-nav__mega-col">
-                <div class="hp-nav__mega-title">Specialist Sectors</div>
-                <a href="restaurant-construction.html" class="hp-nav__dropdown-link">Restaurant Construction</a>
-                <a href="retail-construction.html" class="hp-nav__dropdown-link">Retail &amp; Grocery Store
-                  Construction</a>
-                <a href="hotel-construction.html" class="hp-nav__dropdown-link">Hotel Construction</a>
-                <a href="accommodation-construction.html" class="hp-nav__dropdown-link">Accommodation Construction</a>
-                <a href="building-repair.html" class="hp-nav__dropdown-link">Building Repair &amp; Restoration</a>
-              </div>
-            </div>
-          </li>
-
-          <li class="hp-nav__item hp-nav__item--drop">
-            <a href="areas.html" class="hp-nav__link">Areas <span class="hp-nav__caret">▾</span></a>
-            <div class="hp-nav__dropdown hp-nav__mega">
-              <div class="hp-nav__mega-col">
-                <div class="hp-nav__mega-title">Core Areas</div>
-                <a href="builders-cheadle.html" class="hp-nav__dropdown-link">Builders in Cheadle</a>
-                <a href="builders-cheadle-hulme.html" class="hp-nav__dropdown-link">Builders in Cheadle Hulme</a>
-              </div>
-              <div class="hp-nav__mega-col">
-                <div class="hp-nav__mega-title">Affluent Areas</div>
-                <a href="builders-bramhall.html" class="hp-nav__dropdown-link">Builders in Bramhall</a>
-                <a href="builders-wilmslow.html" class="hp-nav__dropdown-link">Builders in Wilmslow</a>
-                <a href="builders-alderley-edge.html" class="hp-nav__dropdown-link">Builders in Alderley Edge</a>
-                <a href="builders-prestbury.html" class="hp-nav__dropdown-link">Builders in Prestbury</a>
-                <a href="builders-hale.html" class="hp-nav__dropdown-link">Builders in Hale</a>
-                <a href="builders-didsbury.html" class="hp-nav__dropdown-link">Builders in Didsbury</a>
-              </div>
-            </div>
-          </li>
-
-          <li class="hp-nav__item"><a href="portfolio.html" class="hp-nav__link">Portfolio</a></li>
-          <li class="hp-nav__item"><a href="faqs.html" class="hp-nav__link">FAQs</a></li>
-          <li class="hp-nav__item"><a href="blog.html" class="hp-nav__link">Blog</a></li>
-          <li class="hp-nav__item"><a href="contact.html" class="hp-nav__link">Contact</a></li>
-        </ul>
-        <a href="request-quote.html" class="hp-header__cta" id="header-cta">Free Quote</a>
-      </nav>
-    </div>
-  </header>
+  <div id="header-root"></div>
 
 
   <main>
@@ -933,8 +821,7 @@
     </div>
   </footer>
 
-  <script src="js/nav.js"></script>
-  <script src="js/homepage.js"></script>
+    <script src="js/homepage.js"></script>
 </body>
 
 </html>

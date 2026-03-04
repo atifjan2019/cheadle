@@ -1,0 +1,223 @@
+/* =========================================================================
+   AREA PAGES — Shared Styles
+   Used across all builders-*.html area pages
+   ========================================================================= */
+
+/* Hero */
+.page-hero--area {
+    position: relative;
+    padding: calc(var(--header-height) + var(--space-5xl)) 0 var(--space-5xl);
+    background: #111111;
+    overflow: hidden;
+}
+
+.page-hero--area .page-hero__bg-img {
+    position: absolute;
+    inset: 0;
+    background: url('../images/commercial.png') center/cover no-repeat;
+    opacity: 0.18;
+}
+
+.page-hero--area .page-hero__bg-img::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 100%);
+}
+
+/* Intro */
+.area-intro__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3xl);
+    align-items: center;
+}
+
+.area-intro__content p {
+    color: var(--color-text-secondary);
+    line-height: 1.85;
+    margin-bottom: var(--space-lg);
+}
+
+.area-intro__highlights {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-xl);
+}
+
+.area-intro__highlight {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-size: var(--fs-small);
+    font-weight: 500;
+    padding: var(--space-sm) var(--space-md);
+    background: var(--color-bg-alt);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--color-border);
+}
+
+.area-intro__image-wrap {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.area-intro__image-wrap img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Services Grid */
+.area-services__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-xl);
+}
+
+.area-services__card {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-2xl);
+    box-shadow: var(--shadow-card);
+    transition: all var(--transition-base);
+    text-align: center;
+}
+
+.area-services__card:hover {
+    border-color: var(--color-border-hover);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.area-services__card span.area-services__icon {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: var(--space-md);
+}
+
+.area-services__card h3 {
+    font-family: var(--font-body);
+    font-size: var(--fs-body);
+    font-weight: 600;
+    margin-bottom: var(--space-xs);
+}
+
+.area-services__card p {
+    font-size: var(--fs-small);
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+}
+
+/* Why Choose */
+.area-why__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-xl);
+}
+
+.area-why__card {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-2xl);
+    box-shadow: var(--shadow-card);
+    text-align: center;
+    transition: all var(--transition-base);
+}
+
+.area-why__card:hover {
+    border-color: var(--color-border-hover);
+    transform: translateY(-4px);
+}
+
+.area-why__card span {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: var(--space-md);
+}
+
+.area-why__card h3 {
+    font-family: var(--font-body);
+    font-size: var(--fs-body);
+    font-weight: 600;
+    margin-bottom: var(--space-xs);
+}
+
+.area-why__card p {
+    font-size: var(--fs-small);
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+}
+
+/* Nearby Areas */
+.area-nearby__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-md);
+}
+
+.area-nearby__link {
+    display: block;
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: var(--space-lg) var(--space-xl);
+    text-align: center;
+    font-weight: 600;
+    font-size: var(--fs-small);
+    color: var(--color-text);
+    transition: all var(--transition-base);
+    text-decoration: none;
+}
+
+.area-nearby__link:hover {
+    border-color: var(--color-gold);
+    color: var(--color-gold);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-card);
+}
+
+@media (max-width: 1024px) {
+    .area-services__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .area-nearby__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .page-hero--area {
+        padding: calc(var(--header-height) + var(--space-3xl)) 0 var(--space-3xl);
+    }
+
+    .area-intro__grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+    }
+
+    .area-intro__image-wrap img {
+        height: 300px;
+    }
+
+    .area-intro__highlights {
+        grid-template-columns: 1fr;
+    }
+
+    .area-services__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .area-why__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .area-nearby__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
