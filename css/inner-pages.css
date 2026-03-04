@@ -525,7 +525,7 @@
     }
 
     .ip-split__img-wrap img {
-        height: 280px;
+        height: 240px;
     }
 
     .ip-stats__grid {
@@ -536,5 +536,71 @@
     .ip-stats__div {
         width: 48px;
         height: 1px;
+    }
+
+    /* Featured testimonial mobile */
+    .ip-featured {
+        padding: var(--space-xl);
+        margin-bottom: var(--space-xl);
+    }
+
+    .ip-featured__quote {
+        font-size: var(--fs-body-lg);
+        line-height: 1.6;
+    }
+
+    /* Card padding reduction on mobile */
+    .ip-card,
+    .ip-badge,
+    .ip-testimonial,
+    .ip-timeline__step {
+        padding: var(--space-xl) var(--space-lg);
+    }
+
+    /* Ensure buttons stack on mobile */
+    .ip-split__content .btn-group {
+        flex-direction: column;
+    }
+
+    .ip-split__content .btn-group .btn {
+        text-align: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    /* Section titles mobile */
+    .section-header {
+        text-align: center;
+    }
+
+    .section-desc {
+        margin-inline: auto;
+    }
+}
+
+/* Very small screens */
+@media (max-width: 400px) {
+    .ip-split__img-wrap img {
+        height: 200px;
+    }
+
+    .ip-timeline__num {
+        width: 40px;
+        height: 40px;
+        font-size: 0.95rem;
+    }
+
+    .ip-card__icon,
+    .ip-badge__icon {
+        font-size: 1.6rem;
+    }
+
+    .ip-checklist__item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .ip-checklist__icon {
+        margin: 0 auto;
     }
 }

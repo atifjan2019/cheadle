@@ -1,118 +1,266 @@
 <!DOCTYPE html>
 <html lang="en-GB">
+
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="View completed construction projects across Stockport and Manchester.">
-<title>Portfolio | Cheadle Construction</title>
-<link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="css/portfolio.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<script src="js/load-includes.js" defer></script>
-</head><body>
-<div id="header-root"></div>
-<main>
-<section class="page-hero"><div class="container"><div class="page-hero__content">
-<div class="page-hero__breadcrumb"><a href="index.html">Home</a> <span>/</span> Portfolio</div>
-<h1 class="page-hero__title">Our <em>Portfolio</em></h1><p class="page-hero__subtitle">Explore our recently completed projects showcasing quality and attention to detail.</p>
-</div></div></section>
-<section class="content-section"><div class="container"><div class="portfolio-grid">
-<article class="portfolio-card"><div class="portfolio-card__image"><img src="images/case-study-1.png" alt="Modern rear extension" loading="lazy"></div><div class="portfolio-card__body"><div class="portfolio-card__tag">Extension</div><h3 class="portfolio-card__title">Contemporary Rear Extension</h3><div class="portfolio-card__location">Wilmslow, SK9</div></div></article>
-<article class="portfolio-card"><div class="portfolio-card__image"><img src="images/case-study-2.png" alt="Loft conversion" loading="lazy"></div><div class="portfolio-card__body"><div class="portfolio-card__tag">Loft Conversion</div><h3 class="portfolio-card__title">Luxury Dormer Loft Conversion</h3><div class="portfolio-card__location">Alderley Edge, SK9</div></div></article>
-<article class="portfolio-card"><div class="portfolio-card__image"><img src="images/case-study-3.png" alt="Bathroom renovation" loading="lazy"></div><div class="portfolio-card__body"><div class="portfolio-card__tag">Renovation</div><h3 class="portfolio-card__title">Whole-House Luxury Renovation</h3><div class="portfolio-card__location">Hale, WA15</div></div></article>
-<article class="portfolio-card"><div class="portfolio-card__image"><img src="images/residential.png" alt="Kitchen" loading="lazy"></div><div class="portfolio-card__body"><div class="portfolio-card__tag">Kitchen</div><h3 class="portfolio-card__title">Bespoke Kitchen Design</h3><div class="portfolio-card__location">Bramhall, SK7</div></div></article>
-<article class="portfolio-card"><div class="portfolio-card__image"><img src="images/commercial.png" alt="Office" loading="lazy"></div><div class="portfolio-card__body"><div class="portfolio-card__tag">Commercial</div><h3 class="portfolio-card__title">Modern Office Fit-Out</h3><div class="portfolio-card__location">Stockport, SK1</div></div></article>
-<article class="portfolio-card"><div class="portfolio-card__image"><img src="images/about.png" alt="New build" loading="lazy"></div><div class="portfolio-card__body"><div class="portfolio-card__tag">New Build</div><h3 class="portfolio-card__title">Detached Family Home</h3><div class="portfolio-card__location">Cheadle, SK8</div></div></article>
-</div></div></section>
-<section class="cta-banner"><div class="cta-banner__bg"></div><div class="container"><div class="cta-banner__content">
-<span class="section-label">Start Your Project</span>
-<h2 class="cta-banner__title">Ready to Build Something <span>Extraordinary</span>?</h2>
-<p class="cta-banner__text">Get in touch today for a free, no-obligation consultation and quotation.</p>
-<div class="btn-group"><a href="request-quote.html" class="btn btn--primary">Request a Free Quote</a><a href="tel:01612189616" class="btn btn--secondary">Call 0161 218 9616</a></div>
-</div></div></section>
-</main>
-<!-- ====================================================================
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="View completed construction projects across Stockport and Manchester.">
+    <title>Portfolio | Cheadle Construction</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/portfolio.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="js/load-includes.js" defer></script>
+</head>
+
+<body>
+    <div id="header-root"></div>
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <div class="page-hero__content">
+                    <div class="page-hero__breadcrumb"><a href="index.html">Home</a> <span>/</span> Portfolio</div>
+                    <h1 class="page-hero__title">Our <em>Portfolio</em></h1>
+                    <p class="page-hero__subtitle">Real projects, real results. Explore our recent residential and
+                        commercial work across the North West.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 1: RECENT PROJECTS INTRO -->
+        <section class="content-section" id="portfolio-intro">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Recent Work</span>
+                    <h2 class="section-title section-title--gold">Our Latest <span>Projects</span></h2>
+                    <p class="section-desc">From full property transformations to kitchen redesigns, here are some of
+                        our recent projects across Cheshire and the North West. 95% of our work is domestic — and that's
+                        exactly where our passion lies.</p>
+                    <hr class="divider">
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: PROJECT CARDS — Real projects -->
+        <section class="content-section" style="padding-top:0;">
+            <div class="container">
+                <div class="portfolio-grid">
+
+                    <!-- Bramhall Project -->
+                    <article class="portfolio-card">
+                        <div class="portfolio-card__image"><img src="images/case-study-1.png"
+                                alt="Full property renovation with multiple extensions in Bramhall" loading="lazy">
+                        </div>
+                        <div class="portfolio-card__body">
+                            <div class="portfolio-card__tag">Full Renovation</div>
+                            <h3 class="portfolio-card__title">Complete Property Transformation</h3>
+                            <div class="portfolio-card__location">Bramhall, SK7</div>
+                            <p class="portfolio-card__desc">Multiple extensions on a dated property with full
+                                reconfiguration of rooms, new kitchen, bathrooms, and a showcase master suite — creating
+                                stylish modern living in Bramhall.</p>
+                            <div class="portfolio-card__meta"><span>⏱ Approx. 8 months</span></div>
+                        </div>
+                    </article>
+
+                    <!-- Cheadle Project -->
+                    <article class="portfolio-card">
+                        <div class="portfolio-card__image"><img src="images/case-study-3.png"
+                                alt="Loft conversion and rear extension in Cheadle conservation area" loading="lazy">
+                        </div>
+                        <div class="portfolio-card__body">
+                            <div class="portfolio-card__tag">Loft &amp; Extension</div>
+                            <h3 class="portfolio-card__title">Conservation Area Renovation</h3>
+                            <div class="portfolio-card__location">Cheadle, SK8</div>
+                            <p class="portfolio-card__desc">Ongoing project nearing completion — loft conversion, rear
+                                ground floor extension, new kitchen and bathrooms in a conservation area. Timeless
+                                modern traditional design, future-proofed for family living.</p>
+                            <div class="portfolio-card__meta"><span>🔨 Nearing Completion</span></div>
+                        </div>
+                    </article>
+
+                    <!-- Congleton Project -->
+                    <article class="portfolio-card">
+                        <div class="portfolio-card__image"><img src="images/about-quality.png"
+                                alt="Conservatory conversion and kitchen redesign in Congleton" loading="lazy"></div>
+                        <div class="portfolio-card__body">
+                            <div class="portfolio-card__tag">Conversion</div>
+                            <h3 class="portfolio-card__title">Conservatory Conversion &amp; Kitchen Redesign</h3>
+                            <div class="portfolio-card__location">Congleton, CW12</div>
+                            <p class="portfolio-card__desc">Full conservatory conversion paired with a contemporary
+                                kitchen redesign — seamlessly blending the existing space with modern functionality and
+                                style.</p>
+                        </div>
+                    </article>
+
+                    <!-- Alderley Edge Project -->
+                    <article class="portfolio-card">
+                        <div class="portfolio-card__image"><img src="images/home-improvement-2.png"
+                                alt="Double storey extension in Alderley Edge" loading="lazy"></div>
+                        <div class="portfolio-card__body">
+                            <div class="portfolio-card__tag">Extension</div>
+                            <h3 class="portfolio-card__title">Double Storey Extension</h3>
+                            <div class="portfolio-card__location">Alderley Edge, SK9</div>
+                            <p class="portfolio-card__desc">Double storey extension with internal alterations.
+                                Traditional high-quality build with meticulous attention to detail, in keeping with the
+                                character of the area.</p>
+                        </div>
+                    </article>
+
+                    <!-- Clayton Hotel Manchester — Commercial -->
+                    <article class="portfolio-card">
+                        <div class="portfolio-card__image"><img src="images/gallery-commercial.png"
+                                alt="Clayton Hotel Manchester commercial fit-out" loading="lazy"></div>
+                        <div class="portfolio-card__body">
+                            <div class="portfolio-card__tag">Commercial</div>
+                            <h3 class="portfolio-card__title">Clayton Hotel Manchester</h3>
+                            <div class="portfolio-card__location">Manchester City Centre</div>
+                            <p class="portfolio-card__desc">Roof repairs and internal fit-out works for the Clayton
+                                Hotel Manchester. While 95% of our work is domestic, we selectively take on commercial
+                                contracts where we can deliver real value.</p>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: TRUSTED SUPPLIERS -->
+        <section class="content-section section--alt" id="portfolio-suppliers">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Our Partners</span>
+                    <h2 class="section-title section-title--gold">Trusted <span>Suppliers</span></h2>
+                    <p class="section-desc">We work with the UK's leading building suppliers, ensuring quality materials
+                        on every project.</p>
+                    <hr class="divider">
+                </div>
+                <div class="suppliers-grid">
+                    <div class="supplier-card">
+                        <div class="supplier-card__name">Howdens</div>
+                        <p>Kitchens &amp; joinery</p>
+                    </div>
+                    <div class="supplier-card">
+                        <div class="supplier-card__name">Huws Gray</div>
+                        <p>Building materials</p>
+                    </div>
+                    <div class="supplier-card">
+                        <div class="supplier-card__name">Jewson</div>
+                        <p>Timber &amp; building supplies</p>
+                    </div>
+                    <div class="supplier-card">
+                        <div class="supplier-card__name">Travis Perkins</div>
+                        <p>Building materials &amp; tools</p>
+                    </div>
+                    <div class="supplier-card">
+                        <div class="supplier-card__name">Element Kitchens</div>
+                        <p>Bespoke kitchen design</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-banner">
+            <div class="cta-banner__bg"></div>
+            <div class="container">
+                <div class="cta-banner__content">
+                    <span class="section-label">Start Your Project</span>
+                    <h2 class="cta-banner__title">Ready to Build Something <span>Extraordinary</span>?</h2>
+                    <p class="cta-banner__text">Get in touch today for a free, no-obligation consultation and quotation.
+                    </p>
+                    <div class="btn-group"><a href="request-quote.html" class="btn btn--primary">Request a Free
+                            Quote</a><a href="tel:01612189616" class="btn btn--secondary">Call 0161 218 9616</a></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- ====================================================================
      FOOTER — Cheadle Construction
      Copy this into every page.
      ==================================================================== -->
-<footer class="footer" id="footer">
-    <div class="container">
-        <div class="footer__grid">
-            <div class="footer__brand">
-                <div class="footer__logo">
-                    Cheadle <span>Construction</span>
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <div class="footer__logo">
+                        Cheadle <span>Construction</span>
+                    </div>
+                    <p class="footer__brand-text">
+                        We are a well established, trustworthy, reliable and professional company with over 20 years
+                        experience. We serve Stockport, Manchester and all surrounding areas of the North West.
+                    </p>
+                    <div class="footer__contact-item">
+                        <span class="footer__contact-icon">📞</span>
+                        <a href="tel:01612189616" class="footer__link">0161 218 9616</a>
+                    </div>
+                    <div class="footer__contact-item">
+                        <span class="footer__contact-icon">📱</span>
+                        <a href="tel:07725818183" class="footer__link">07725 818183</a>
+                    </div>
+                    <div class="footer__contact-item">
+                        <span class="footer__contact-icon">✉</span>
+                        <a href="mailto:info@cheadleconstruction.com"
+                            class="footer__link">info@cheadleconstruction.com</a>
+                    </div>
+                    <div class="footer__contact-item">
+                        <span class="footer__contact-icon">📍</span>
+                        <span>Cheadle, Stockport, SK8</span>
+                    </div>
                 </div>
-                <p class="footer__brand-text">
-                    We are a well established, trustworthy, reliable and professional company with over 20 years
-                    experience. We serve Stockport, Manchester and all surrounding areas of the North West.
+                <div>
+                    <h3 class="footer__heading">Quick Links</h3>
+                    <nav class="footer__links" aria-label="Footer quick links">
+                        <a href="index.html" class="footer__link">Home</a>
+                        <a href="about.html" class="footer__link">About Us</a>
+                        <a href="our-process.html" class="footer__link">Our Process</a>
+                        <a href="portfolio.html" class="footer__link">Portfolio</a>
+                        <a href="testimonials.html" class="footer__link">Testimonials</a>
+                        <a href="blog.html" class="footer__link">Blog</a>
+                        <a href="faqs.html" class="footer__link">FAQs</a>
+                        <a href="contact.html" class="footer__link">Contact</a>
+                        <a href="request-quote.html" class="footer__link">Request a Quote</a>
+                    </nav>
+                </div>
+                <div>
+                    <h3 class="footer__heading">Services</h3>
+                    <nav class="footer__links" aria-label="Footer service links">
+                        <a href="new-builds.html" class="footer__link">New Builds</a>
+                        <a href="home-extensions.html" class="footer__link">Home Extensions</a>
+                        <a href="loft-conversions.html" class="footer__link">Loft Conversions</a>
+                        <a href="kitchen-renovation.html" class="footer__link">Kitchen Renovation</a>
+                        <a href="bathroom-renovation.html" class="footer__link">Bathroom Renovation</a>
+                        <a href="garage-conversions.html" class="footer__link">Garage Conversions</a>
+                        <a href="commercial-new-builds.html" class="footer__link">Commercial Builds</a>
+                        <a href="office-construction.html" class="footer__link">Office Construction</a>
+                    </nav>
+                </div>
+                <div>
+                    <h3 class="footer__heading">Areas</h3>
+                    <nav class="footer__links" aria-label="Footer area links">
+                        <a href="builders-cheadle.html" class="footer__link">Cheadle</a>
+                        <a href="builders-cheadle-hulme.html" class="footer__link">Cheadle Hulme</a>
+                        <a href="builders-bramhall.html" class="footer__link">Bramhall</a>
+                        <a href="builders-wilmslow.html" class="footer__link">Wilmslow</a>
+                        <a href="builders-alderley-edge.html" class="footer__link">Alderley Edge</a>
+                        <a href="builders-prestbury.html" class="footer__link">Prestbury</a>
+                        <a href="builders-hale.html" class="footer__link">Hale</a>
+                        <a href="builders-bowdon.html" class="footer__link">Bowdon</a>
+                        <a href="builders-didsbury.html" class="footer__link">Didsbury</a>
+                    </nav>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">&copy; 2025 Cheadle Construction. All rights reserved. Company Reg:
+                    12345678
                 </p>
-                <div class="footer__contact-item">
-                    <span class="footer__contact-icon">📞</span>
-                    <a href="tel:01612189616" class="footer__link">0161 218 9616</a>
+                <div class="footer__legal">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms-conditions.html">Terms &amp; Conditions</a>
+                    <a href="sitemap.html">Sitemap</a>
                 </div>
-                <div class="footer__contact-item">
-                    <span class="footer__contact-icon">📱</span>
-                    <a href="tel:07725818183" class="footer__link">07725 818183</a>
-                </div>
-                <div class="footer__contact-item">
-                    <span class="footer__contact-icon">✉</span>
-                    <a href="mailto:info@cheadleconstruction.com" class="footer__link">info@cheadleconstruction.com</a>
-                </div>
-                <div class="footer__contact-item">
-                    <span class="footer__contact-icon">📍</span>
-                    <span>Cheadle, Stockport, SK8</span>
-                </div>
-            </div>
-            <div>
-                <h3 class="footer__heading">Quick Links</h3>
-                <nav class="footer__links" aria-label="Footer quick links">
-                    <a href="index.html" class="footer__link">Home</a>
-                    <a href="about.html" class="footer__link">About Us</a>
-                    <a href="our-process.html" class="footer__link">Our Process</a>
-                    <a href="portfolio.html" class="footer__link">Portfolio</a>
-                    <a href="testimonials.html" class="footer__link">Testimonials</a>
-                    <a href="blog.html" class="footer__link">Blog</a>
-                    <a href="faqs.html" class="footer__link">FAQs</a>
-                    <a href="contact.html" class="footer__link">Contact</a>
-                    <a href="request-quote.html" class="footer__link">Request a Quote</a>
-                </nav>
-            </div>
-            <div>
-                <h3 class="footer__heading">Services</h3>
-                <nav class="footer__links" aria-label="Footer service links">
-                    <a href="new-builds.html" class="footer__link">New Builds</a>
-                    <a href="home-extensions.html" class="footer__link">Home Extensions</a>
-                    <a href="loft-conversions.html" class="footer__link">Loft Conversions</a>
-                    <a href="kitchen-renovation.html" class="footer__link">Kitchen Renovation</a>
-                    <a href="bathroom-renovation.html" class="footer__link">Bathroom Renovation</a>
-                    <a href="garage-conversions.html" class="footer__link">Garage Conversions</a>
-                    <a href="commercial-new-builds.html" class="footer__link">Commercial Builds</a>
-                    <a href="office-construction.html" class="footer__link">Office Construction</a>
-                </nav>
-            </div>
-            <div>
-                <h3 class="footer__heading">Areas</h3>
-                <nav class="footer__links" aria-label="Footer area links">
-                    <a href="builders-cheadle.html" class="footer__link">Cheadle</a>
-                    <a href="builders-cheadle-hulme.html" class="footer__link">Cheadle Hulme</a>
-                    <a href="builders-bramhall.html" class="footer__link">Bramhall</a>
-                    <a href="builders-wilmslow.html" class="footer__link">Wilmslow</a>
-                    <a href="builders-alderley-edge.html" class="footer__link">Alderley Edge</a>
-                    <a href="builders-prestbury.html" class="footer__link">Prestbury</a>
-                    <a href="builders-hale.html" class="footer__link">Hale</a>
-                    <a href="builders-bowdon.html" class="footer__link">Bowdon</a>
-                    <a href="builders-didsbury.html" class="footer__link">Didsbury</a>
-                </nav>
             </div>
         </div>
-        <div class="footer__bottom">
-            <p class="footer__copyright">&copy; 2025 Cheadle Construction. All rights reserved. Company Reg: 12345678
-            </p>
-            <div class="footer__legal">
-                <a href="privacy-policy.html">Privacy Policy</a>
-                <a href="terms-conditions.html">Terms &amp; Conditions</a>
-                <a href="sitemap.html">Sitemap</a>
-            </div>
-        </div>
-    </div>
-</footer>
-</body></html>
+    </footer>
+</body>
+
+</html>

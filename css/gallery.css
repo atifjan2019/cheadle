@@ -195,4 +195,32 @@
         width: 48px;
         height: 1px;
     }
+
+    /* Always show overlay on touch devices */
+    .gallery-item__overlay {
+        opacity: 1;
+        padding: var(--space-lg);
+    }
+
+    .gallery-item__overlay h3 {
+        font-size: var(--fs-body);
+    }
+
+    .gallery-trust__card {
+        padding: var(--space-xl) var(--space-lg);
+    }
+
+    .gallery-item {
+        aspect-ratio: 16/10;
+    }
+}
+
+@media (max-width: 400px) {
+    .gallery-item {
+        aspect-ratio: 4/3;
+    }
+
+    .gallery-stats__item {
+        min-width: 100px;
+    }
 }
