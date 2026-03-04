@@ -3,6 +3,7 @@
    Customise gallery layout, video embeds, and any unique styles here.
    ========================================================================= */
 
-#project-videos {
+#project-videos,
+#project-gallery {
    display: block;
 }
