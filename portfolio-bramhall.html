@@ -9,7 +9,7 @@
     <title>Bramhall Property Transformation | Cheadle Construction Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="css/portfolio-detail.css">
-<link rel="stylesheet" href="css/portfolio-bramhall.css">
+    <link rel="stylesheet" href="css/portfolio-bramhall.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="js/load-includes.js" defer></script>
@@ -127,22 +127,48 @@
                     <hr class="divider">
                 </div>
                 <div class="project-video__grid">
-                    <!-- Replace with YouTube embeds or video files -->
-                    <div class="project-video__placeholder">
-                        <span class="project-video__placeholder-icon">🎬</span>
-                        <span>Video coming soon</span>
-                        <span style="font-size:var(--fs-xs);color:var(--color-text-muted);">Paste YouTube embed or
-                            upload .mp4</span>
-                    </div>
-                    <div class="project-video__placeholder">
-                        <span class="project-video__placeholder-icon">🎬</span>
-                        <span>Video coming soon</span>
-                        <span style="font-size:var(--fs-xs);color:var(--color-text-muted);">Paste YouTube embed or
-                            upload .mp4</span>
+                    <div class="project-video__item project-video__clean" id="bramhall-vwrap">
+                        <iframe id="bramhall-video"
+                            src="https://drive.google.com/file/d/1ft2SKCdNROrztDGUPmKEKydMLLFhx3r8/preview"
+                            title="Bramhall Project Video" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                        <img class="video-thumb" id="bramhall-thumb" src="images/case-study-1.png" alt="Play video">
+                        <div class="video-thumb-overlay" id="bramhall-overlay">
+                            <h3 class="video-thumb-title">Complete Property Transformation<br><span>Bramhall, SK7</span>
+                            </h3>
+                        </div>
+                        <button class="video-play-btn" id="bramhall-btn" aria-label="Play video">
+                            <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+                                <circle cx="32" cy="32" r="32" fill="rgba(0,0,0,0.55)" />
+                                <polygon points="25,16 52,32 25,48" fill="#fff" />
+                            </svg>
+                        </button>
                     </div>
                 </div>
             </div>
         </section>
+        <script>
+            (function () {
+                var wrap = document.getElementById('bramhall-vwrap'),
+                    btn = document.getElementById('bramhall-btn'),
+                    thumb = document.getElementById('bramhall-thumb'),
+                    overlay = document.getElementById('bramhall-overlay'),
+                    on = false;
+                function toggle() {
+                    if (on) {
+                        btn.classList.remove('video-play-btn--hidden');
+                        thumb.classList.remove('video-thumb--hidden');
+                        overlay.classList.remove('video-thumb--hidden');
+                    } else {
+                        btn.classList.add('video-play-btn--hidden');
+                        thumb.classList.add('video-thumb--hidden');
+                        overlay.classList.add('video-thumb--hidden');
+                    }
+                    on = !on;
+                }
+                btn.addEventListener('click', toggle);
+                wrap.addEventListener('click', function (e) { if (e.target !== btn && !btn.contains(e.target)) toggle(); });
+            })();
+        </script>
 
         <!-- SECTION 4: PROJECT HIGHLIGHTS -->
         <section class="section section--alt" id="project-highlights">
