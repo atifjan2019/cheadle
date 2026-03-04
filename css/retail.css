@@ -1,0 +1,315 @@
+/* =========================================================================
+   RETAIL & GROCERY CONSTRUCTION PAGE — Custom Styles
+   ========================================================================= */
+
+.page-hero--retail {
+    position: relative;
+    padding: calc(var(--header-height) + var(--space-5xl)) 0 var(--space-5xl);
+    background: #111111;
+    overflow: hidden;
+}
+
+.page-hero--retail .page-hero__bg-img {
+    position: absolute;
+    inset: 0;
+    background: url('../images/commercial.png') center/cover no-repeat;
+    opacity: 0.22;
+}
+
+.page-hero--retail .page-hero__bg-img::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 100%);
+}
+
+/* --- Intro --- */
+.rt-intro__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3xl);
+    align-items: center;
+}
+
+.rt-intro__image-wrap {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.rt-intro__image-wrap img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    display: block;
+}
+
+.rt-intro__content p {
+    color: var(--color-text-secondary);
+    line-height: 1.85;
+    margin-bottom: var(--space-xl);
+}
+
+/* --- Store Types --- */
+.rt-types__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-xl);
+}
+
+.rt-types__card {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-2xl);
+    box-shadow: var(--shadow-card);
+    transition: all var(--transition-base);
+    text-align: center;
+}
+
+.rt-types__card:hover {
+    border-color: var(--color-border-hover);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.rt-types__card>span {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: var(--space-md);
+}
+
+.rt-types__card h3 {
+    font-family: var(--font-body);
+    font-size: var(--fs-body);
+    font-weight: 600;
+    margin-bottom: var(--space-sm);
+}
+
+.rt-types__card p {
+    font-size: var(--fs-small);
+    color: var(--color-text-secondary);
+    line-height: 1.75;
+}
+
+/* --- Customer Journey --- */
+.rt-journey__flow {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-lg);
+}
+
+.rt-journey__node {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    box-shadow: var(--shadow-card);
+    text-align: center;
+    position: relative;
+    transition: all var(--transition-base);
+}
+
+.rt-journey__node:hover {
+    border-color: var(--color-border-hover);
+    transform: translateY(-4px);
+}
+
+.rt-journey__node>span {
+    font-size: 1.5rem;
+    display: block;
+    margin-bottom: var(--space-sm);
+}
+
+.rt-journey__node h3 {
+    font-family: var(--font-body);
+    font-size: var(--fs-small);
+    font-weight: 600;
+    margin-bottom: var(--space-xs);
+}
+
+.rt-journey__node p {
+    font-size: var(--fs-xs);
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+}
+
+.rt-journey__node:not(:last-child)::after {
+    content: '→';
+    position: absolute;
+    right: -18px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-gold);
+    font-size: 1.2rem;
+    font-weight: 700;
+    z-index: 2;
+}
+
+/* --- Shopfront --- */
+.rt-shopfront__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3xl);
+    align-items: center;
+}
+
+.rt-shopfront__content>p {
+    color: var(--color-text-secondary);
+    line-height: 1.85;
+    margin-bottom: var(--space-xl);
+}
+
+.rt-shopfront__list {
+    display: grid;
+    gap: var(--space-xs);
+}
+
+.rt-shopfront__item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-size: var(--fs-small);
+    font-weight: 500;
+    padding: var(--space-sm) var(--space-md);
+    background: var(--color-bg-alt);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--color-border);
+}
+
+.rt-shopfront__item span {
+    color: var(--color-gold);
+    font-weight: 700;
+}
+
+.rt-shopfront__image-wrap {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.rt-shopfront__image-wrap img {
+    width: 100%;
+    height: 440px;
+    object-fit: cover;
+    display: block;
+}
+
+/* --- FAQs --- */
+.rt-faq__list {
+    max-width: 800px;
+    margin-inline: auto;
+}
+
+.rt-faq__item {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-md);
+    overflow: hidden;
+    transition: all var(--transition-base);
+}
+
+.rt-faq__item:hover {
+    border-color: var(--color-border-hover);
+}
+
+.rt-faq__item[open] {
+    border-color: rgba(252, 3, 1, 0.2);
+    box-shadow: var(--shadow-gold);
+}
+
+.rt-faq__question {
+    padding: var(--space-lg) var(--space-xl);
+    font-family: var(--font-body);
+    font-size: var(--fs-body);
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-md);
+    user-select: none;
+}
+
+.rt-faq__question::-webkit-details-marker {
+    display: none;
+}
+
+.rt-faq__question::after {
+    content: '+';
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: var(--color-gold);
+    min-width: 20px;
+    text-align: center;
+}
+
+.rt-faq__item[open] .rt-faq__question::after {
+    content: '−';
+}
+
+.rt-faq__question:hover {
+    color: var(--color-gold);
+}
+
+.rt-faq__answer {
+    padding: 0 var(--space-xl) var(--space-lg);
+}
+
+.rt-faq__answer p {
+    font-size: var(--fs-small);
+    color: var(--color-text-secondary);
+    line-height: 1.85;
+    margin: 0;
+}
+
+@media (max-width: 1024px) {
+    .rt-types__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .rt-journey__flow {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .rt-journey__node:not(:last-child)::after {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-hero--retail {
+        padding: calc(var(--header-height) + var(--space-3xl)) 0 var(--space-3xl);
+    }
+
+    .rt-intro__grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+    }
+
+    .rt-intro__image-wrap img {
+        height: 300px;
+    }
+
+    .rt-types__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .rt-journey__flow {
+        grid-template-columns: 1fr;
+    }
+
+    .rt-shopfront__grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+    }
+
+    .rt-shopfront__image-wrap img {
+        height: 280px;
+    }
+
+    .rt-faq__question {
+        padding: var(--space-md) var(--space-lg);
+        font-size: var(--fs-small);
+    }
+}
