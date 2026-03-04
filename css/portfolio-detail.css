@@ -33,6 +33,14 @@
     z-index: 2;
 }
 
+
+/* Hide video section until real videos are added.
+   To show on a specific project, add: #project-videos { display: block; }
+   in that project's individual CSS file. */
+#project-videos {
+    display: none;
+}
+
 /* Project Info Bar */
 .project-info-bar {
     background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
