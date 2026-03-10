@@ -188,6 +188,14 @@
 .ahero__badge-logo--fmb {
     background: rgba(252, 3, 1, 0.1);
     border: 1px solid rgba(252, 3, 1, 0.25);
+    overflow: hidden;
+}
+
+.ahero__badge-logo--fmb img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 0;
 }
 
 .ahero__badge-info {
