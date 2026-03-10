@@ -1,0 +1,545 @@
+/* =========================================================================
+   DIDSBURY HERO — Premium Hero with Trust Badges + Quick Quote Form
+   ========================================================================= */
+
+/* ── Override ALL global page-hero and page-hero--area rules for Didsbury ── */
+.page-hero--didsbury,
+.page-hero--area.page-hero--didsbury {
+    padding: 0 !important;
+    /* 16:9 cinematic hero — renders at ~1920×1080 quality on full-width screens */
+    aspect-ratio: 16 / 9;
+    min-height: 620px;
+    /* safety net so form never gets clipped */
+    display: flex;
+    align-items: stretch;
+    position: relative;
+    overflow: hidden;
+    background: transparent !important;
+}
+
+/* Remove the gold underline from the generic .page-hero::after */
+.page-hero--didsbury::after {
+    display: none !important;
+}
+
+/* ── Background image ── */
+.page-hero--didsbury .page-hero__bg-img {
+    position: absolute;
+    inset: 0;
+    background: url('../images/didsbury-hero-bg.png') center / cover no-repeat !important;
+    opacity: 1 !important;
+    z-index: 0;
+}
+
+/* ── Dark cinematic gradient overlay ── */
+.page-hero--didsbury .page-hero__overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(105deg,
+            rgba(5, 5, 8, 0.88) 0%,
+            rgba(5, 5, 8, 0.70) 50%,
+            rgba(5, 5, 8, 0.40) 100%),
+        linear-gradient(to top,
+            rgba(5, 5, 8, 0.6) 0%,
+            transparent 40%);
+    z-index: 1;
+}
+
+/* ── Two-column content wrapper ── */
+.dhero__wrap {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    gap: 3rem;
+    align-items: center;
+    width: 100%;
+    max-width: 1380px;
+    margin: 0 auto;
+    padding: calc(var(--header-height, 80px) + 4rem) 4vw 4rem;
+}
+
+/* =========================================================================
+   LEFT COLUMN — Headline, subtitle, badges, phone
+   ========================================================================= */
+.dhero__left {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+}
+
+/* ── Breadcrumb ── */
+.page-hero--didsbury .page-hero__breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.72rem;
+    color: rgba(255, 255, 255, 0.45);
+    letter-spacing: 0.04em;
+}
+
+.page-hero--didsbury .page-hero__breadcrumb a {
+    color: rgba(255, 255, 255, 0.55);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.page-hero--didsbury .page-hero__breadcrumb a:hover {
+    color: #fff;
+}
+
+.page-hero--didsbury .page-hero__breadcrumb span {
+    opacity: 0.35;
+}
+
+/* ── Hero title ── */
+.page-hero--didsbury .page-hero__title {
+    font-family: var(--font-heading);
+    font-size: clamp(2.6rem, 4.5vw, 4rem);
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.1;
+    margin: 0;
+    letter-spacing: -0.02em;
+    text-shadow: 0 2px 30px rgba(0, 0, 0, 0.5);
+}
+
+.page-hero--didsbury .page-hero__title em {
+    font-style: italic;
+    color: #fc0301;
+}
+
+/* ── Subtitle ── */
+.page-hero--didsbury .page-hero__subtitle {
+    font-size: 1.05rem;
+    color: rgba(255, 255, 255, 0.68);
+    line-height: 1.8;
+    max-width: 520px;
+    margin: 0;
+}
+
+/* =========================================================================
+   TRUST BADGES ROW
+   ========================================================================= */
+.dhero__badges {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.6rem 0;
+    padding: 1.1rem 1.4rem;
+    background: rgba(5, 5, 8, 0.55);
+    backdrop-filter: blur(16px) saturate(1.4);
+    -webkit-backdrop-filter: blur(16px) saturate(1.4);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.35);
+    max-width: 560px;
+}
+
+/* Individual badge */
+.dhero__badge {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0 0.85rem;
+    flex-shrink: 0;
+}
+
+/* Divider between badges */
+.dhero__badge-sep {
+    width: 1px;
+    height: 32px;
+    background: rgba(255, 255, 255, 0.1);
+    flex-shrink: 0;
+}
+
+/* Logo circle */
+.dhero__badge-logo {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 1.2rem;
+}
+
+.dhero__badge-logo--google {
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+}
+
+.dhero__badge-logo--fb {
+    background: #1877F2;
+    box-shadow: 0 2px 10px rgba(24, 119, 242, 0.4);
+}
+
+.dhero__badge-logo--bbb {
+    background: linear-gradient(135deg, #1a472a, #2e7d32);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+}
+
+.dhero__badge-logo--fmb {
+    background: rgba(252, 3, 1, 0.12);
+    border: 1px solid rgba(252, 3, 1, 0.25);
+}
+
+/* Badge text */
+.dhero__badge-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+}
+
+.dhero__badge-stars {
+    font-size: 0.72rem;
+    color: #f5a623;
+    letter-spacing: 1px;
+    line-height: 1;
+}
+
+.dhero__badge-title {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.2;
+}
+
+.dhero__badge-label {
+    font-size: 0.68rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.2;
+}
+
+.dhero__badge-label span {
+    color: rgba(255, 255, 255, 0.42);
+    font-weight: 400;
+}
+
+/* ── Phone CTA link ── */
+.dhero__phone {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    font-size: 0.88rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: #fff;
+    background: rgba(252, 3, 1, 0.12);
+    border: 1px solid rgba(252, 3, 1, 0.35);
+    border-radius: 10px;
+    padding: 0.75rem 1.4rem;
+    text-decoration: none;
+    width: fit-content;
+    transition: all 0.28s ease;
+    backdrop-filter: blur(8px);
+}
+
+.dhero__phone:hover {
+    background: rgba(252, 3, 1, 0.25);
+    border-color: rgba(252, 3, 1, 0.6);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px rgba(252, 3, 1, 0.25);
+}
+
+.dhero__phone svg {
+    flex-shrink: 0;
+    color: #fc0301;
+}
+
+/* =========================================================================
+   RIGHT COLUMN — Glass Quote Form Panel
+   ========================================================================= */
+.dhero__form-wrap {
+    background: rgba(8, 8, 12, 0.78);
+    backdrop-filter: blur(28px) saturate(1.6);
+    -webkit-backdrop-filter: blur(28px) saturate(1.6);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow:
+        0 40px 100px rgba(0, 0, 0, 0.65),
+        0 0 0 1px rgba(252, 3, 1, 0.06) inset,
+        0 1px 0 rgba(255, 255, 255, 0.08) inset;
+    position: relative;
+}
+
+/* Red shimmer accent line at top */
+.dhero__form-wrap::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(252, 3, 1, 0.7) 40%, rgba(255, 120, 120, 0.5) 60%, transparent);
+    z-index: 1;
+}
+
+.dhero__form-header {
+    background: rgba(252, 3, 1, 0.06);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 1.75rem 2rem 1.5rem;
+    text-align: center;
+}
+
+.dhero__form-eyebrow {
+    display: inline-block;
+    font-size: 0.62rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #fc0301;
+    margin-bottom: 0.8rem;
+    padding: 0.2rem 0.85rem;
+    border: 1px solid rgba(252, 3, 1, 0.3);
+    border-radius: 50px;
+    background: rgba(252, 3, 1, 0.05);
+}
+
+.dhero__form-title {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-weight: 400;
+    /* Playfair Display weight */
+    color: #ffffff;
+    margin: 0 0 0.4rem;
+    line-height: 1.2;
+}
+
+.dhero__form-sub {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.45);
+    margin: 0;
+    letter-spacing: 0.02em;
+}
+
+/* ── Form fields ── */
+.dhero__form {
+    padding: 1.6rem 2rem 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.dhero__form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.85rem;
+}
+
+.dhero__field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.dhero__label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.45);
+}
+
+.dhero__input-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.dhero__input-wrap--select {
+    position: relative;
+}
+
+.dhero__input-icon {
+    position: absolute;
+    left: 0.85rem;
+    color: rgba(255, 255, 255, 0.3);
+    pointer-events: none;
+    z-index: 1;
+    flex-shrink: 0;
+}
+
+.dhero__input {
+    width: 100%;
+    padding: 0.75rem 0.9rem 0.75rem 2.5rem;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    color: #fff;
+    font-size: 0.84rem;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.dhero__input::placeholder {
+    color: rgba(255, 255, 255, 0.22);
+}
+
+.dhero__input:focus {
+    border-color: rgba(252, 3, 1, 0.5);
+    background: rgba(252, 3, 1, 0.04);
+    box-shadow: 0 0 0 3px rgba(252, 3, 1, 0.1);
+}
+
+.dhero__select {
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.22);
+}
+
+.dhero__select:focus {
+    color: #fff;
+}
+
+.dhero__select option {
+    background: #111;
+    color: #fff;
+}
+
+.dhero__select-arrow {
+    position: absolute;
+    right: 0.85rem;
+    color: rgba(255, 255, 255, 0.3);
+    pointer-events: none;
+}
+
+/* ── Submit button ── */
+.dhero__submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: linear-gradient(135deg, #fc0301 0%, #a00000 100%);
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-top: 0.25rem;
+    transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 6px 24px rgba(252, 3, 1, 0.35);
+    position: relative;
+    overflow: hidden;
+    font-family: inherit;
+}
+
+.dhero__submit::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), transparent);
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+.dhero__submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 36px rgba(252, 3, 1, 0.5);
+}
+
+.dhero__submit:hover::before {
+    opacity: 1;
+}
+
+.dhero__submit:active {
+    transform: translateY(0);
+}
+
+/* ── Privacy note ── */
+.dhero__form-note {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    font-size: 0.65rem;
+    color: rgba(255, 255, 255, 0.25);
+    text-align: center;
+    margin: 0;
+}
+
+.dhero__form-note svg {
+    flex-shrink: 0;
+    color: rgba(255, 255, 255, 0.2);
+}
+
+/* =========================================================================
+   RESPONSIVE
+   ========================================================================= */
+@media (max-width: 1100px) {
+    .dhero__wrap {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+        padding-bottom: 3rem;
+    }
+
+    .dhero__form-wrap {
+        max-width: 560px;
+        width: 100%;
+    }
+
+    .page-hero--didsbury {
+        aspect-ratio: 16 / 9;
+        min-height: 560px;
+    }
+}
+
+@media (max-width: 640px) {
+
+    /* On small phones drop the fixed ratio to ensure all content fits */
+    .page-hero--didsbury,
+    .page-hero--area.page-hero--didsbury {
+        aspect-ratio: unset;
+        min-height: 100svh;
+    }
+
+    .dhero__wrap {
+        padding: calc(var(--header-height, 80px) + 2rem) 1.25rem 2.5rem;
+    }
+
+    .dhero__form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .dhero__badges {
+        gap: 0.5rem;
+    }
+
+    .dhero__badge {
+        padding: 0 0.5rem;
+    }
+
+    .dhero__badge-sep {
+        height: 24px;
+    }
+
+    .dhero__badge-logo {
+        width: 32px;
+        height: 32px;
+    }
+
+    .dhero__form-wrap {
+        border-radius: 16px;
+    }
+
+    .dhero__form-header,
+    .dhero__form {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+}

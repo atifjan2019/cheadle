@@ -1,0 +1,298 @@
+/* =========================================================================
+   AREAS DIRECTORY  — Interactive Area Cards + Filter Tabs
+   ======================================================================= */
+
+.areas-dir {
+    background: #0c0c10;
+    padding: 5rem 0 6rem;
+    color: #fff;
+}
+
+/* --- Intro --- */
+.areas-dir__intro {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 2.5rem;
+}
+
+.areas-dir__heading {
+    font-family: 'Playfair Display', 'Georgia', serif;
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 0.75rem;
+    line-height: 1.2;
+}
+
+.areas-dir__desc {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.55);
+    line-height: 1.7;
+}
+
+/* --- Filter Tabs --- */
+.areas-dir__tabs {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+}
+
+.areas-dir__tab {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.6rem 1.4rem;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 50px;
+    background: transparent;
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 0.02em;
+}
+
+.areas-dir__tab:hover {
+    border-color: rgba(255, 255, 255, 0.3);
+    color: #fff;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.areas-dir__tab--active {
+    background: var(--color-primary, #fc0301);
+    border-color: var(--color-primary, #fc0301);
+    color: #fff;
+}
+
+.areas-dir__tab--active:hover {
+    background: var(--color-primary, #fc0301);
+    border-color: var(--color-primary, #fc0301);
+}
+
+.areas-dir__tab svg {
+    width: 14px;
+    height: 14px;
+}
+
+/* --- Cards Grid --- */
+.areas-dir__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+}
+
+/* --- Individual Card --- */
+.areas-dir__card {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    display: block;
+    text-decoration: none;
+    aspect-ratio: 4 / 3;
+    min-height: 220px;
+    cursor: pointer;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, opacity 0.35s ease;
+}
+
+.areas-dir__card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55);
+}
+
+/* Featured cards (core areas) span 2 columns */
+.areas-dir__card--featured {
+    grid-column: span 2;
+    aspect-ratio: 16 / 7;
+    min-height: 280px;
+}
+
+/* Hidden cards when filtered */
+.areas-dir__card--hidden {
+    display: none;
+}
+
+/* Card background image */
+.areas-dir__card-bg {
+    position: absolute;
+    inset: 0;
+}
+
+.areas-dir__card-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.areas-dir__card:hover .areas-dir__card-bg img {
+    transform: scale(1.08);
+}
+
+.areas-dir__card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg,
+            rgba(0, 0, 0, 0.05) 0%,
+            rgba(0, 0, 0, 0.3) 40%,
+            rgba(0, 0, 0, 0.88) 100%);
+    transition: background 0.3s ease;
+}
+
+.areas-dir__card:hover .areas-dir__card-overlay {
+    background: linear-gradient(180deg,
+            rgba(0, 0, 0, 0.1) 0%,
+            rgba(0, 0, 0, 0.4) 40%,
+            rgba(0, 0, 0, 0.92) 100%);
+}
+
+/* HQ Badge */
+.areas-dir__card-badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    z-index: 3;
+    font-size: 0.6rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #fff;
+    background: var(--color-primary, #fc0301);
+    padding: 0.25rem 0.65rem;
+    border-radius: 6px;
+}
+
+/* Star indicator for premium */
+.areas-dir__card-star {
+    position: absolute;
+    top: 0.85rem;
+    right: 0.85rem;
+    z-index: 3;
+    font-size: 0.7rem;
+    color: var(--color-gold, #c8a04e);
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.areas-dir__card:hover .areas-dir__card-star {
+    opacity: 1;
+}
+
+/* Card body */
+.areas-dir__card-body {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    padding: 1.25rem 1.5rem 1.4rem;
+}
+
+.areas-dir__card-postcode {
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--color-gold, #c8a04e);
+    font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+}
+
+.areas-dir__card-name {
+    font-family: 'Playfair Display', 'Georgia', serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #fff;
+    margin: 0.2rem 0 0.3rem;
+    line-height: 1.2;
+}
+
+.areas-dir__card--featured .areas-dir__card-name {
+    font-size: 1.5rem;
+}
+
+.areas-dir__card-meta {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* CTA */
+.areas-dir__card-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #fff;
+    margin-top: 0.75rem;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 0.3s ease, transform 0.3s ease, gap 0.2s ease;
+}
+
+.areas-dir__card:hover .areas-dir__card-cta {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.areas-dir__card:hover .areas-dir__card-cta svg {
+    transition: transform 0.2s ease;
+}
+
+.areas-dir__card:hover .areas-dir__card-cta:hover svg {
+    transform: translateX(3px);
+}
+
+/* --- Responsive --- */
+@media (max-width: 1100px) {
+    .areas-dir__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .areas-dir__card--featured {
+        grid-column: span 1;
+        aspect-ratio: 4 / 3;
+    }
+}
+
+@media (max-width: 768px) {
+    .areas-dir__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .areas-dir__card {
+        min-height: 190px;
+    }
+
+    .areas-dir__card-name {
+        font-size: 1rem;
+    }
+
+    .areas-dir__card--featured .areas-dir__card-name {
+        font-size: 1.15rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .areas-dir {
+        padding: 3rem 0 4rem;
+    }
+
+    .areas-dir__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .areas-dir__card {
+        aspect-ratio: 16 / 9;
+    }
+
+    .areas-dir__card-cta {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

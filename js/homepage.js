@@ -24,7 +24,7 @@
 
   /* ----- Mobile hamburger toggle for hp-nav ----- */
   const toggle = document.getElementById('nav-toggle');
-  const nav    = document.getElementById('main-nav');
+  const nav = document.getElementById('main-nav');
 
   if (toggle && nav) {
     toggle.addEventListener('click', () => {
@@ -46,8 +46,8 @@
     // Close on outside click
     document.addEventListener('click', (e) => {
       if (nav.classList.contains('open') &&
-          !nav.contains(e.target) &&
-          !toggle.contains(e.target)) {
+        !nav.contains(e.target) &&
+        !toggle.contains(e.target)) {
         nav.classList.remove('open');
         toggle.setAttribute('aria-expanded', 'false');
         toggle.classList.remove('active');
@@ -71,11 +71,11 @@
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          const el     = entry.target;
+          const el = entry.target;
           const target = parseInt(el.dataset.target, 10);
           const duration = 1800; // ms
-          const step   = Math.ceil(target / (duration / 16));
-          let current  = 0;
+          const step = Math.ceil(target / (duration / 16));
+          let current = 0;
 
           el.classList.add('counting');
           const interval = setInterval(() => {
@@ -95,28 +95,6 @@
     counters.forEach(counter => observer.observe(counter));
   }
 
-  /* ----- Fade-in-on-scroll for sections ----- */
-  if ('IntersectionObserver' in window) {
-    const fadeEls = document.querySelectorAll(
-      '.hp-why__card, .hp-trust-badge, .hp-showcase__card, .hp-showcase__banner, .hp-stats__item'
-    );
-
-    const fadeObs = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.opacity    = '1';
-          entry.target.style.transform  = 'translateY(0)';
-          fadeObs.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.15 });
-
-    fadeEls.forEach((el, i) => {
-      el.style.opacity    = '0';
-      el.style.transform  = 'translateY(24px)';
-      el.style.transition = `opacity 0.55s ease ${i * 0.06}s, transform 0.55s ease ${i * 0.06}s`;
-      fadeObs.observe(el);
-    });
-  }
+  /* Scroll animations disabled — all content loads instantly */
 
 })();

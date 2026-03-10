@@ -1,17 +1,16 @@
 // ============================================================
 // HEADER & FOOTER INCLUDES LOADER
-// Loads header.html and footer.html from /includes/ folder
-// so changes only need to be made in one place.
+// Loads header.html from /includes/ and initialises the new
+// glass header: topbar scroll-hide, mobile drawer, accordions.
 // ============================================================
 
 (function () {
     'use strict';
 
-    // Load an include file into a placeholder element
+    /* ---------- Utility: load HTML into element by ID ---------- */
     function loadInclude(elementId, filePath, callback) {
         var el = document.getElementById(elementId);
         if (!el) return;
-
         var xhr = new XMLHttpRequest();
         xhr.open('GET', filePath, true);
         xhr.onreadystatechange = function () {
@@ -23,82 +22,121 @@
         xhr.send();
     }
 
-    // Initialize navigation (same logic as nav.js)
-    function initNav() {
-        var toggle = document.querySelector('.nav-toggle');
-        var nav = document.querySelector('.nav');
-        if (!toggle || !nav) return;
-
-        // Create overlay if not exists
-        var overlay = document.querySelector('.nav-overlay');
-        if (!overlay) {
-            overlay = document.createElement('div');
-            overlay.className = 'nav-overlay';
-            document.body.appendChild(overlay);
-        }
-
-        function openNav() {
-            nav.classList.add('nav--open');
-            overlay.classList.add('nav-overlay--active');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeNav() {
-            nav.classList.remove('nav--open');
-            overlay.classList.remove('nav-overlay--active');
-            document.body.style.overflow = '';
-        }
-
-        toggle.addEventListener('click', function () {
-            nav.classList.contains('nav--open') ? closeNav() : openNav();
-        });
-
-        overlay.addEventListener('click', closeNav);
-
-        // Mobile dropdown toggle
-        document.querySelectorAll('.nav__item').forEach(function (item) {
-            var link = item.querySelector('.nav__link');
-            var dropdown = item.querySelector('.nav__dropdown, .nav__mega');
-            if (link && dropdown) {
-                link.addEventListener('click', function (e) {
-                    if (window.innerWidth <= 900) {
-                        e.preventDefault();
-                        item.classList.toggle('open');
-                    }
-                });
-            }
-        });
-    }
-
-    // Detect home page and add class for transparent header
+    /* ---------- Detect home page (transparent hero header) ---------- */
     function detectHomePage() {
         var path = window.location.pathname;
-        if (path === '/' || path === '/index.html' || path.endsWith('/index.html') || path === '') {
+        if (path === '/' || path === '' ||
+            path.endsWith('/index.html') ||
+            path.endsWith('/cheadle-main/') ||
+            path === '/cheadle-main') {
             document.body.classList.add('home-page');
         }
     }
 
-    // Scroll handler for transparent-to-solid header transition
-    function initHeaderScroll() {
-        var header = document.querySelector('.header');
-        if (!header || !document.body.classList.contains('home-page')) return;
+    /* ---------- Full nav / header initialisation ---------- */
+    function initNav() {
+        var header = document.getElementById('header');
+        var topbar = document.getElementById('header-topbar');
+        var toggle = document.getElementById('nav-toggle');
+        var mobileNav = document.getElementById('mobile-nav');
+        var mobileClose = document.getElementById('mobile-nav-close');
+        var backdrop = document.getElementById('mobile-nav-backdrop');
 
+        /* ---- Scroll-aware header ---- */
         function onScroll() {
-            if (window.scrollY > 80) {
-                header.classList.add('header--scrolled');
-            } else {
-                header.classList.remove('header--scrolled');
+            var scrollY = window.scrollY || window.pageYOffset;
+
+            if (header) {
+                header.classList.toggle('header--scrolled', scrollY > 60);
+            }
+
+            if (topbar) {
+                if (scrollY > 80) {
+                    topbar.classList.add('is-hidden');
+                    if (header) header.style.top = '0';
+                } else {
+                    topbar.classList.remove('is-hidden');
+                    if (header) header.style.top = '';
+                }
             }
         }
 
         window.addEventListener('scroll', onScroll, { passive: true });
-        onScroll(); // run once on load
+        onScroll();
+
+        /* ---- Mobile drawer open / close ---- */
+        function openDrawer() {
+            if (!mobileNav || !backdrop) return;
+            mobileNav.classList.add('is-open');
+            mobileNav.setAttribute('aria-hidden', 'false');
+            backdrop.classList.add('is-visible');
+            document.body.style.overflow = 'hidden';
+            if (toggle) toggle.setAttribute('aria-expanded', 'true');
+        }
+
+        function closeDrawer() {
+            if (!mobileNav || !backdrop) return;
+            mobileNav.classList.remove('is-open');
+            mobileNav.setAttribute('aria-hidden', 'true');
+            backdrop.classList.remove('is-visible');
+            document.body.style.overflow = '';
+            if (toggle) toggle.setAttribute('aria-expanded', 'false');
+        }
+
+        if (toggle) toggle.addEventListener('click', openDrawer);
+        if (mobileClose) mobileClose.addEventListener('click', closeDrawer);
+        if (backdrop) backdrop.addEventListener('click', closeDrawer);
+
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && mobileNav && mobileNav.classList.contains('is-open')) {
+                closeDrawer();
+            }
+        });
+
+        /* ---- Mobile accordion ---- */
+        document.querySelectorAll('.mobile-nav__group-btn').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                var isOpen = this.getAttribute('aria-expanded') === 'true';
+
+                // Close all others
+                document.querySelectorAll('.mobile-nav__group-btn[aria-expanded="true"]').forEach(function (other) {
+                    if (other !== btn) {
+                        other.setAttribute('aria-expanded', 'false');
+                        var otherSub = other.nextElementSibling;
+                        if (otherSub) otherSub.classList.remove('is-open');
+                    }
+                });
+
+                this.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+                var sub = this.nextElementSibling;
+                if (sub) sub.classList.toggle('is-open', !isOpen);
+            });
+        });
+
+        // Close drawer on nav link click
+        document.querySelectorAll(
+            '.mobile-nav__link, .mobile-nav__sub-link, .mobile-nav__cta, .mobile-nav__phone'
+        ).forEach(function (link) {
+            link.addEventListener('click', closeDrawer);
+        });
+
+        /* ---- Active nav link highlight ---- */
+        var currentFile = window.location.pathname.split('/').pop() || 'index.html';
+        document.querySelectorAll('.nav__link, .nav__dropdown-link').forEach(function (link) {
+            var href = (link.getAttribute('href') || '').split('/').pop();
+            if (href && href === currentFile) {
+                link.classList.add('nav__link--active');
+                link.setAttribute('aria-current', 'page');
+            }
+        });
     }
 
-    // Load header, then init nav + scroll
+    /* ---------- Boot ---------- */
     detectHomePage();
-    loadInclude('header-root', 'includes/header.html', function () {
+    loadInclude('header-root', 'includes/header.html?v=2', function () {
         initNav();
-        initHeaderScroll();
+        // Fire event so quote-modal.js can initialise after header is in DOM
+        document.dispatchEvent(new CustomEvent('headerLoaded'));
     });
+
 })();

@@ -1,0 +1,727 @@
+/* =========================================================================
+   PROJECTS MAP SECTION — Cheadle Construction
+   Premium redesign: full-bleed map, floating glass panel, editorial header
+   ========================================================================= */
+
+/* ---- Section wrapper ---- */
+.projects-map-section {
+    background: #060608;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decorative ambient glow behind the section header */
+.projects-map-section::before {
+    content: '';
+    position: absolute;
+    top: -120px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 700px;
+    height: 400px;
+    background: radial-gradient(ellipse at center, rgba(252, 3, 1, 0.12) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* =========================================================================
+   SECTION HEADER — editorial two-column layout
+   ========================================================================= */
+.projects-map-section__header {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: end;
+    gap: 2rem;
+    padding: 5rem 4vw 2.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+
+/* Override global hp-section-title which defaults to dark colour for light backgrounds */
+.projects-map-section .hp-section-title {
+    color: #ffffff;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+}
+
+.projects-map-section .hp-section-title span {
+    color: var(--color-gold, #fc0301);
+    font-style: italic;
+}
+
+.projects-map-section__sub {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 0.88rem;
+    margin: 0.75rem 0 0;
+    letter-spacing: 0.03em;
+    line-height: 1.6;
+}
+
+/* Right side of header — live indicator */
+.projects-map-section__header-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1.5rem;
+    padding-bottom: 0.4rem;
+}
+
+.projects-map__live-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.85);
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 50px;
+    padding: 0.45rem 1rem;
+}
+
+.projects-map__live-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #4ade80;
+    box-shadow: 0 0 10px rgba(74, 222, 128, 0.7);
+    animation: livePulse 2s ease-in-out infinite;
+    flex-shrink: 0;
+}
+
+@keyframes livePulse {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: scale(0.75);
+    }
+}
+
+.projects-map__count {
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.55);
+    letter-spacing: 0.05em;
+}
+
+/* =========================================================================
+   MAIN MAP BODY — full-width map + floating panel overlay
+   ========================================================================= */
+.projects-map-wrap {
+    position: relative;
+    width: 100%;
+    height: 640px;
+}
+
+/* ---- MAP (full bleed, underlay) ---- */
+.projects-map {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: #0d0d14;
+}
+
+/* Vignette overlay on the map edges */
+.projects-map-wrap::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(to right, rgba(6, 6, 8, 0.55) 0%, transparent 28%),
+        linear-gradient(to left, rgba(6, 6, 8, 0.4) 0%, transparent 30%),
+        linear-gradient(to bottom, rgba(6, 6, 8, 0.6) 0%, transparent 20%),
+        linear-gradient(to top, rgba(6, 6, 8, 0.5) 0%, transparent 20%);
+    pointer-events: none;
+    z-index: 4;
+}
+
+/* =========================================================================
+   PROJECT LIST SIDEBAR — left floating list
+   ========================================================================= */
+.projects-sidebar {
+    position: absolute;
+    left: 4vw;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+    width: 230px;
+}
+
+.proj-sidebar__item {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    padding: 0.7rem 0.9rem;
+    background: rgba(10, 10, 14, 0.72);
+    backdrop-filter: blur(16px) saturate(1.4);
+    -webkit-backdrop-filter: blur(16px) saturate(1.4);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    text-align: left;
+    width: 100%;
+    font-family: inherit;
+}
+
+.proj-sidebar__item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: #fc0301;
+    transform: scaleY(0);
+    transform-origin: center;
+    transition: transform 0.25s ease;
+    border-radius: 0 2px 2px 0;
+}
+
+.proj-sidebar__item:hover {
+    border-color: rgba(252, 3, 1, 0.25);
+    background: rgba(15, 15, 20, 0.85);
+    transform: translateX(4px);
+}
+
+.proj-sidebar__item:hover::before {
+    transform: scaleY(1);
+}
+
+.proj-sidebar__item.is-active {
+    border-color: rgba(252, 3, 1, 0.35);
+    background: rgba(252, 3, 1, 0.08);
+    transform: translateX(6px);
+}
+
+.proj-sidebar__item.is-active::before {
+    transform: scaleY(1);
+}
+
+.proj-sidebar__dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    transition: all 0.25s ease;
+}
+
+.proj-sidebar__item.is-active .proj-sidebar__dot,
+.proj-sidebar__item:hover .proj-sidebar__dot {
+    background: #fc0301;
+    border-color: #fc0301;
+    box-shadow: 0 0 8px rgba(252, 3, 1, 0.6);
+}
+
+.proj-sidebar__info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    min-width: 0;
+}
+
+.proj-sidebar__name {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.8);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.3;
+    transition: color 0.2s;
+}
+
+.proj-sidebar__item.is-active .proj-sidebar__name {
+    color: #fff;
+}
+
+.proj-sidebar__loc {
+    font-size: 0.62rem;
+    color: rgba(255, 255, 255, 0.3);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* =========================================================================
+   PROJECT DETAIL PANEL — floating glass card on the right
+   ========================================================================= */
+.projects-panel {
+    position: absolute;
+    right: 4vw;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+    width: 340px;
+    max-height: 590px;
+    background: rgba(8, 8, 12, 0.82);
+    backdrop-filter: blur(24px) saturate(1.6);
+    -webkit-backdrop-filter: blur(24px) saturate(1.6);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.7),
+        0 0 0 1px rgba(252, 3, 1, 0.06) inset,
+        0 1px 0 rgba(255, 255, 255, 0.06) inset;
+}
+
+/* Red shimmer top accent */
+.projects-panel::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, rgba(252, 3, 1, 0.6) 40%, rgba(255, 100, 100, 0.4) 60%, transparent 100%);
+    z-index: 10;
+}
+
+/* Scrollable inner area */
+.projects-panel__inner {
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 590px;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(252, 3, 1, 0.3) transparent;
+}
+
+.projects-panel__inner::-webkit-scrollbar {
+    width: 4px;
+}
+
+.projects-panel__inner::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.projects-panel__inner::-webkit-scrollbar-thumb {
+    background: rgba(252, 3, 1, 0.3);
+    border-radius: 4px;
+}
+
+/* ---- Active project card ---- */
+.projects-panel__card {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Slide-in animation */
+.proj-panel--entering {
+    animation: panelSlideIn 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes panelSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(16px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* ---- Photo / gallery ---- */
+.proj-card__gallery {
+    position: relative;
+    height: 210px;
+    overflow: hidden;
+    flex-shrink: 0;
+    background: #111;
+}
+
+.proj-card__photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.proj-card__gallery:hover .proj-card__photo {
+    transform: scale(1.05);
+}
+
+/* Gradient on photo */
+.proj-card__gallery::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: linear-gradient(transparent, rgba(8, 8, 12, 0.9));
+    pointer-events: none;
+}
+
+/* Photo navigation */
+.proj-card__gallery-nav {
+    position: absolute;
+    bottom: 0.8rem;
+    right: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    padding: 0.25rem 0.6rem;
+    z-index: 2;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.proj-card__gallery-btn {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.1rem;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0 0.1rem;
+    transition: color 0.15s ease;
+}
+
+.proj-card__gallery-btn:hover {
+    color: #fc0301;
+}
+
+.proj-card__gallery-count {
+    font-size: 0.65rem;
+    color: rgba(255, 255, 255, 0.5);
+    min-width: 28px;
+    text-align: center;
+}
+
+/* Status badge */
+.proj-card__status-badge {
+    position: absolute;
+    top: 0.75rem;
+    left: 0.75rem;
+    font-size: 0.58rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.28rem 0.7rem;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    z-index: 2;
+}
+
+.status--active {
+    background: rgba(34, 197, 94, 0.15);
+    color: #4ade80;
+    border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.status--upcoming {
+    background: rgba(251, 191, 36, 0.15);
+    color: #fbbf24;
+    border: 1px solid rgba(251, 191, 36, 0.3);
+}
+
+.status--finishing {
+    background: rgba(99, 102, 241, 0.15);
+    color: #818cf8;
+    border: 1px solid rgba(99, 102, 241, 0.3);
+}
+
+/* ---- Card body ---- */
+.proj-card__body {
+    padding: 1.3rem 1.4rem 1.6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+
+.proj-card__type {
+    font-size: 0.58rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #fc0301;
+    opacity: 0.9;
+}
+
+.proj-card__title {
+    font-family: var(--font-heading, Georgia, serif);
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.25;
+    margin: 0;
+    letter-spacing: -0.01em;
+}
+
+.proj-card__location {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.38);
+    margin: 0;
+}
+
+.proj-card__location svg {
+    flex-shrink: 0;
+    opacity: 0.6;
+}
+
+.proj-card__desc {
+    font-size: 0.76rem;
+    color: rgba(255, 255, 255, 0.48);
+    line-height: 1.75;
+    margin: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 0.85rem;
+}
+
+/* Key facts 2-col grid */
+.proj-card__facts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+}
+
+.proj-card__fact {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    background: rgba(255, 255, 255, 0.025);
+    border: 1px solid rgba(255, 255, 255, 0.055);
+    border-radius: 10px;
+    padding: 0.6rem 0.8rem;
+    transition: border-color 0.2s;
+}
+
+.proj-card__fact:hover {
+    border-color: rgba(252, 3, 1, 0.2);
+}
+
+.proj-card__fact-label {
+    font-size: 0.55rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.28);
+}
+
+.proj-card__fact-value {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+/* Progress bar */
+.proj-card__progress-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.proj-card__progress-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.68rem;
+    color: rgba(255, 255, 255, 0.38);
+}
+
+.proj-card__progress-pct {
+    font-weight: 700;
+    color: #fc0301;
+    font-size: 0.8rem;
+}
+
+.proj-card__progress-track {
+    height: 4px;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.proj-card__progress-fill {
+    height: 100%;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #7a0000, #fc0301, #ff7070);
+    transition: width 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 0 12px rgba(252, 3, 1, 0.5);
+}
+
+/* CTA */
+.proj-card__cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 0.2rem;
+    padding: 0.8rem 1rem;
+    background: linear-gradient(135deg, #fc0301 0%, #a00000 100%);
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 20px rgba(252, 3, 1, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.proj-card__cta::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), transparent);
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+.proj-card__cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(252, 3, 1, 0.5);
+    color: #fff;
+}
+
+.proj-card__cta:hover::before {
+    opacity: 1;
+}
+
+/* =========================================================================
+   LEAFLET OVERRIDES
+   ========================================================================= */
+.leaflet-control-attribution {
+    font-size: 0.55rem !important;
+    background: rgba(0, 0, 0, 0.6) !important;
+    color: rgba(255, 255, 255, 0.3) !important;
+    padding: 2px 6px !important;
+    border-radius: 4px 0 0 0 !important;
+}
+
+.leaflet-control-attribution a {
+    color: rgba(255, 255, 255, 0.4) !important;
+}
+
+.leaflet-control-zoom a {
+    background: rgba(10, 10, 14, 0.88) !important;
+    color: rgba(255, 255, 255, 0.7) !important;
+    border-color: rgba(255, 255, 255, 0.08) !important;
+    transition: all 0.2s ease !important;
+}
+
+.leaflet-control-zoom a:hover {
+    background: rgba(252, 3, 1, 0.2) !important;
+    color: #fff !important;
+}
+
+/* Custom tooltip */
+.proj-tooltip {
+    background: rgba(6, 6, 10, 0.96) !important;
+    border: 1px solid rgba(252, 3, 1, 0.35) !important;
+    border-radius: 10px !important;
+    color: #fff !important;
+    font-family: inherit !important;
+    font-size: 0.76rem !important;
+    padding: 8px 14px !important;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(252, 3, 1, 0.1) !important;
+    white-space: nowrap;
+}
+
+.leaflet-tooltip.proj-tooltip::before {
+    border-top-color: rgba(252, 3, 1, 0.35) !important;
+}
+
+/* =========================================================================
+   RESPONSIVE
+   ========================================================================= */
+@media (max-width: 1100px) {
+    .projects-sidebar {
+        display: none;
+    }
+
+    .projects-panel {
+        right: 50%;
+        transform: translate(50%, -50%);
+        width: 380px;
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-map-section__header {
+        grid-template-columns: 1fr;
+        padding: 3.5rem 1.25rem 2rem;
+        gap: 1rem;
+    }
+
+    .projects-map-section__header-right {
+        justify-content: flex-start;
+    }
+
+    .projects-map-wrap {
+        height: 560px;
+    }
+
+    .projects-panel {
+        position: static;
+        transform: none;
+        width: 100%;
+        border-radius: 0;
+        border: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.07);
+        max-height: 520px;
+        box-shadow: none;
+    }
+
+    .projects-map-wrap {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .projects-map {
+        position: relative;
+        height: 320px;
+        flex-shrink: 0;
+    }
+
+    .projects-map-wrap::before {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .projects-map {
+        height: 260px;
+    }
+
+    .proj-card__gallery {
+        height: 180px;
+    }
+
+    .proj-card__facts {
+        grid-template-columns: 1fr 1fr;
+    }
+}

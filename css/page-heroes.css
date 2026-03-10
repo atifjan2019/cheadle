@@ -1,0 +1,480 @@
+/* ==========================================================================
+   PAGE-HEROES.CSS
+   Unique cinematic hero backgrounds + accent colors for every page.
+   This file is linked on every page that uses .page-hero--premium.
+   ========================================================================== */
+
+/* ── CONTACT PAGE ── warm amber/gold, professional office at dusk */
+body.page-contact .page-hero--premium .page-hero__bg-img {
+    background-image: url('../images/hero-contact.png') !important;
+    background-position: center 30% !important;
+}
+
+body.page-contact .page-hero--premium .page-hero__overlay {
+    background:
+        linear-gradient(110deg,
+            rgba(8, 5, 3, 0.90) 0%,
+            rgba(20, 12, 5, 0.75) 50%,
+            rgba(30, 18, 6, 0.35) 100%),
+        linear-gradient(to top,
+            rgba(8, 5, 3, 0.7) 0%,
+            transparent 45%) !important;
+}
+
+body.page-contact .page-hero__title em {
+    color: #f5a623 !important;
+}
+
+body.page-contact .ahero__phone {
+    border-color: rgba(245, 166, 35, 0.5) !important;
+    background: rgba(245, 166, 35, 0.1) !important;
+}
+
+body.page-contact .ahero__phone:hover {
+    background: rgba(245, 166, 35, 0.22) !important;
+    border-color: rgba(245, 166, 35, 0.8) !important;
+}
+
+body.page-contact .ahero__phone svg {
+    color: #f5a623 !important;
+}
+
+body.page-contact .ahero__submit {
+    background: linear-gradient(135deg, #f5a623 0%, #b07205 100%) !important;
+}
+
+/* ── ABOUT PAGE ── deep forest amber, team pride */
+body.page-about .page-hero--premium .page-hero__bg-img {
+    background-image: url('../images/hero-about.png') !important;
+    background-position: center 25% !important;
+}
+
+body.page-about .page-hero--premium .page-hero__overlay {
+    background:
+        linear-gradient(115deg,
+            rgba(4, 10, 4, 0.92) 0%,
+            rgba(8, 20, 8, 0.72) 50%,
+            rgba(10, 25, 10, 0.35) 100%),
+        linear-gradient(to top,
+            rgba(4, 10, 4, 0.7) 0%,
+            transparent 45%) !important;
+}
+
+body.page-about .page-hero__title em {
+    color: #7ec850 !important;
+}
+
+body.page-about .ahero__phone {
+    border-color: rgba(126, 200, 80, 0.5) !important;
+    background: rgba(126, 200, 80, 0.08) !important;
+}
+
+body.page-about .ahero__phone:hover {
+    background: rgba(126, 200, 80, 0.2) !important;
+    border-color: rgba(126, 200, 80, 0.8) !important;
+}
+
+body.page-about .ahero__phone svg {
+    color: #7ec850 !important;
+}
+
+body.page-about .ahero__submit {
+    background: linear-gradient(135deg, #5a9e2f 0%, #2d5a10 100%) !important;
+}
+
+/* ── AREAS PAGE ── deep teal/green aerial Cheshire */
+body.page-areas .page-hero--premium .page-hero__bg-img {
+    background-image: url('../images/hero-areas.png') !important;
+    background-position: center 40% !important;
+}
+
+body.page-areas .page-hero--premium .page-hero__overlay {
+    background:
+        linear-gradient(110deg,
+            rgba(2, 15, 18, 0.92) 0%,
+            rgba(2, 20, 25, 0.72) 50%,
+            rgba(2, 25, 30, 0.30) 100%),
+        linear-gradient(to top,
+            rgba(2, 15, 18, 0.72) 0%,
+            transparent 50%) !important;
+}
+
+body.page-areas .page-hero__title em {
+    color: #38c9b5 !important;
+}
+
+body.page-areas .ahero__phone {
+    border-color: rgba(56, 201, 181, 0.5) !important;
+    background: rgba(56, 201, 181, 0.08) !important;
+}
+
+body.page-areas .ahero__phone:hover {
+    background: rgba(56, 201, 181, 0.2) !important;
+}
+
+body.page-areas .ahero__phone svg {
+    color: #38c9b5 !important;
+}
+
+body.page-areas .ahero__submit {
+    background: linear-gradient(135deg, #1a9e8a 0%, #0a5548 100%) !important;
+}
+
+/* ── RESIDENTIAL PAGE ── warm brick amber, home extensions */
+body.page-residential .page-hero--premium .page-hero__bg-img {
+    background-image: url('../images/hero-residential.png') !important;
+    background-position: center 35% !important;
+}
+
+body.page-residential .page-hero--premium .page-hero__overlay {
+    background:
+        linear-gradient(110deg,
+            rgba(10, 6, 3, 0.92) 0%,
+            rgba(20, 12, 6, 0.72) 50%,
+            rgba(30, 18, 8, 0.30) 100%),
+        linear-gradient(to top,
+            rgba(10, 6, 3, 0.72) 0%,
+            transparent 50%) !important;
+}
+
+body.page-residential .page-hero__title em {
+    color: #ff7c38 !important;
+}
+
+body.page-residential .ahero__phone {
+    border-color: rgba(255, 124, 56, 0.5) !important;
+    background: rgba(255, 124, 56, 0.08) !important;
+}
+
+body.page-residential .ahero__phone svg {
+    color: #ff7c38 !important;
+}
+
+body.page-residential .ahero__submit {
+    background: linear-gradient(135deg, #e05a1a 0%, #8a2e00 100%) !important;
+}
+
+/* ── COMMERCIAL PAGE ── deep blue steel, city night */
+body.page-commercial .page-hero--premium .page-hero__bg-img {
+    background-image: url('../images/hero-commercial.png') !important;
+    background-position: center 40% !important;
+}
+
+body.page-commercial .page-hero--premium .page-hero__overlay {
+    background:
+        linear-gradient(115deg,
+            rgba(2, 8, 25, 0.93) 0%,
+            rgba(3, 12, 35, 0.75) 50%,
+            rgba(3, 15, 45, 0.30) 100%),
+        linear-gradient(to top,
+            rgba(2, 8, 25, 0.75) 0%,
+            transparent 50%) !important;
+}
+
+body.page-commercial .page-hero__title em {
+    color: #4d9eff !important;
+}
+
+body.page-commercial .ahero__phone {
+    border-color: rgba(77, 158, 255, 0.5) !important;
+    background: rgba(77, 158, 255, 0.08) !important;
+}
+
+body.page-commercial .ahero__phone svg {
+    color: #4d9eff !important;
+}
+
+body.page-commercial .ahero__submit {
+    background: linear-gradient(135deg, #1a6bbf 0%, #073580 100%) !important;
+}
+
+/* ── BLOG PAGE ── warm sepia, creative studio */
+body.page-blog .page-hero--premium .page-hero__bg-img {
+    background-image: url('../images/hero-blog.png') !important;
+    background-position: center 25% !important;
+}
+
+body.page-blog .page-hero--premium .page-hero__overlay {
+    background:
+        linear-gradient(110deg,
+            rgba(10, 7, 4, 0.92) 0%,
+            rgba(18, 13, 7, 0.75) 50%,
+            rgba(22, 16, 8, 0.30) 100%),
+        linear-gradient(to top,
+            rgba(10, 7, 4, 0.75) 0%,
+            transparent 50%) !important;
+}
+
+body.page-blog .page-hero__title em {
+    color: #e8c96a !important;
+}
+
+body.page-blog .ahero__phone {
+    border-color: rgba(232, 201, 106, 0.5) !important;
+    background: rgba(232, 201, 106, 0.08) !important;
+}
+
+body.page-blog .ahero__phone svg {
+    color: #e8c96a !important;
+}
+
+body.page-blog .ahero__submit {
+    background: linear-gradient(135deg, #b8952a 0%, #6b5200 100%) !important;
+}
+
+/* ── REQUEST QUOTE PAGE ── premium dark, handshake deal */
+body.page-quote .page-hero--premium .page-hero__bg-img {
+    background-image: url('../images/hero-quote.png') !important;
+    background-position: center 30% !important;
+}
+
+body.page-quote .page-hero--premium .page-hero__overlay {
+    background:
+        linear-gradient(110deg,
+            rgba(5, 3, 10, 0.93) 0%,
+            rgba(10, 6, 20, 0.77) 50%,
+            rgba(12, 8, 25, 0.30) 100%),
+        linear-gradient(to top,
+            rgba(5, 3, 10, 0.77) 0%,
+            transparent 50%) !important;
+}
+
+body.page-quote .page-hero__title em {
+    color: #c084fc !important;
+}
+
+body.page-quote .ahero__phone {
+    border-color: rgba(192, 132, 252, 0.5) !important;
+    background: rgba(192, 132, 252, 0.08) !important;
+}
+
+body.page-quote .ahero__phone svg {
+    color: #c084fc !important;
+}
+
+body.page-quote .ahero__submit {
+    background: linear-gradient(135deg, #9333ea 0%, #4a1080 100%) !important;
+}
+
+/* ── LOFT CONVERSIONS PAGE ── warm timber amber */
+body.page-loft .page-hero--premium .page-hero__bg-img {
+    background-image: url('../images/hero-loft.png') !important;
+    background-position: center 20% !important;
+}
+
+body.page-loft .page-hero--premium .page-hero__overlay {
+    background:
+        linear-gradient(110deg,
+            rgba(8, 5, 2, 0.90) 0%,
+            rgba(18, 12, 5, 0.72) 50%,
+            rgba(25, 16, 6, 0.28) 100%),
+        linear-gradient(to top,
+            rgba(8, 5, 2, 0.72) 0%,
+            transparent 50%) !important;
+}
+
+body.page-loft .page-hero__title em {
+    color: #f59e0b !important;
+}
+
+body.page-loft .ahero__phone {
+    border-color: rgba(245, 158, 11, 0.5) !important;
+    background: rgba(245, 158, 11, 0.08) !important;
+}
+
+body.page-loft .ahero__phone svg {
+    color: #f59e0b !important;
+}
+
+body.page-loft .ahero__submit {
+    background: linear-gradient(135deg, #b45309 0%, #6b2d00 100%) !important;
+}
+
+/* ── KITCHEN RENOVATION PAGE ── fresh sage green */
+body.page-kitchen .page-hero--premium .page-hero__bg-img {
+    background-image: url('../images/hero-kitchen.png') !important;
+    background-position: center 30% !important;
+}
+
+body.page-kitchen .page-hero--premium .page-hero__overlay {
+    background:
+        linear-gradient(110deg,
+            rgba(3, 10, 5, 0.92) 0%,
+            rgba(5, 18, 9, 0.74) 50%,
+            rgba(6, 22, 10, 0.28) 100%),
+        linear-gradient(to top,
+            rgba(3, 10, 5, 0.74) 0%,
+            transparent 50%) !important;
+}
+
+body.page-kitchen .page-hero__title em {
+    color: #4ade80 !important;
+}
+
+body.page-kitchen .ahero__phone {
+    border-color: rgba(74, 222, 128, 0.5) !important;
+    background: rgba(74, 222, 128, 0.08) !important;
+}
+
+body.page-kitchen .ahero__phone svg {
+    color: #4ade80 !important;
+}
+
+body.page-kitchen .ahero__submit {
+    background: linear-gradient(135deg, #16a34a 0%, #065f1e 100%) !important;
+}
+
+/* ── BATHROOM RENOVATION PAGE ── deep slate marble */
+body.page-bathroom .page-hero--premium .page-hero__bg-img {
+    background-image: url('../images/hero-bathroom.png') !important;
+    background-position: center 25% !important;
+}
+
+body.page-bathroom .page-hero--premium .page-hero__overlay {
+    background:
+        linear-gradient(110deg,
+            rgba(4, 6, 10, 0.92) 0%,
+            rgba(6, 10, 18, 0.74) 50%,
+            rgba(8, 12, 22, 0.28) 100%),
+        linear-gradient(to top,
+            rgba(4, 6, 10, 0.74) 0%,
+            transparent 50%) !important;
+}
+
+body.page-bathroom .page-hero__title em {
+    color: #67e8f9 !important;
+}
+
+body.page-bathroom .ahero__phone {
+    border-color: rgba(103, 232, 249, 0.5) !important;
+    background: rgba(103, 232, 249, 0.08) !important;
+}
+
+body.page-bathroom .ahero__phone svg {
+    color: #67e8f9 !important;
+}
+
+body.page-bathroom .ahero__submit {
+    background: linear-gradient(135deg, #0e7490 0%, #053040 100%) !important;
+}
+
+/* ── HOME EXTENSIONS PAGE ── dramatic crimson sunset */
+body.page-extensions .page-hero--premium .page-hero__bg-img {
+    background-image: url('../images/hero-extensions.png') !important;
+    background-position: center 40% !important;
+}
+
+body.page-extensions .page-hero--premium .page-hero__overlay {
+    background:
+        linear-gradient(110deg,
+            rgba(10, 3, 3, 0.92) 0%,
+            rgba(20, 5, 5, 0.74) 50%,
+            rgba(25, 6, 6, 0.25) 100%),
+        linear-gradient(to top,
+            rgba(10, 3, 3, 0.74) 0%,
+            transparent 50%) !important;
+}
+
+body.page-extensions .page-hero__title em {
+    color: #fb923c !important;
+}
+
+body.page-extensions .ahero__phone {
+    border-color: rgba(251, 146, 60, 0.5) !important;
+    background: rgba(251, 146, 60, 0.08) !important;
+}
+
+body.page-extensions .ahero__phone svg {
+    color: #fb923c !important;
+}
+
+body.page-extensions .ahero__submit {
+    background: linear-gradient(135deg, #c2410c 0%, #7c1d06 100%) !important;
+}
+
+/* ── NEW BUILDS PAGE ── dark dramatic dusk */
+body.page-newbuilds .page-hero--premium .page-hero__bg-img {
+    background-image: url('../images/hero-new-builds.png') !important;
+    background-position: center 30% !important;
+}
+
+body.page-newbuilds .page-hero--premium .page-hero__overlay {
+    background:
+        linear-gradient(115deg,
+            rgba(3, 5, 10, 0.93) 0%,
+            rgba(5, 8, 15, 0.77) 50%,
+            rgba(6, 10, 18, 0.28) 100%),
+        linear-gradient(to top,
+            rgba(3, 5, 10, 0.77) 0%,
+            transparent 50%) !important;
+}
+
+body.page-newbuilds .page-hero__title em {
+    color: #94a3b8 !important;
+}
+
+body.page-newbuilds .ahero__phone {
+    border-color: rgba(148, 163, 184, 0.5) !important;
+    background: rgba(148, 163, 184, 0.08) !important;
+}
+
+body.page-newbuilds .ahero__phone svg {
+    color: #94a3b8 !important;
+}
+
+body.page-newbuilds .ahero__submit {
+    background: linear-gradient(135deg, #475569 0%, #1e293b 100%) !important;
+}
+
+/* ── BUILDERS - CHEADLE PAGE ── warm Manchester aerial */
+body.page-builders-cheadle .page-hero--premium .page-hero__bg-img {
+    background-image: url('../images/hero-cheadle.png') !important;
+    background-position: center 40% !important;
+}
+
+body.page-builders-cheadle .page-hero--premium .page-hero__overlay {
+    background:
+        linear-gradient(110deg,
+            rgba(8, 5, 2, 0.91) 0%,
+            rgba(15, 10, 4, 0.73) 50%,
+            rgba(20, 14, 5, 0.28) 100%),
+        linear-gradient(to top,
+            rgba(8, 5, 2, 0.73) 0%,
+            transparent 50%) !important;
+}
+
+/* ── BUILDERS - WILMSLOW PAGE ── golden Cheshire village */
+body.page-builders-wilmslow .page-hero--premium .page-hero__bg-img {
+    background-image: url('../images/hero-wilmslow.png') !important;
+    background-position: center 40% !important;
+}
+
+body.page-builders-wilmslow .page-hero--premium .page-hero__overlay {
+    background:
+        linear-gradient(110deg,
+            rgba(5, 8, 3, 0.91) 0%,
+            rgba(8, 15, 5, 0.73) 50%,
+            rgba(10, 18, 6, 0.28) 100%),
+        linear-gradient(to top,
+            rgba(5, 8, 3, 0.73) 0%,
+            transparent 50%) !important;
+}
+
+/* ── ALL OTHER BUILDER AREA PAGES ── use shared aerial Cheshire image */
+body[class*="page-builders-"] .page-hero--premium .page-hero__bg-img {
+    background-image: url('../images/hero-areas.png') !important;
+    background-position: center 40% !important;
+}
+
+/* Override for already-specific ones (must come after the generic rule) */
+body.page-builders-cheadle .page-hero--premium .page-hero__bg-img {
+    background-image: url('../images/hero-cheadle.png') !important;
+}
+
+body.page-builders-wilmslow .page-hero--premium .page-hero__bg-img {
+    background-image: url('../images/hero-wilmslow.png') !important;
+}
+
+body.page-builders-didsbury .page-hero--premium .page-hero__bg-img {
+    background-image: url('../images/didsbury-hero-bg.png') !important;
+}

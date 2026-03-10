@@ -1,0 +1,606 @@
+/* =========================================================================
+   QUOTE MODAL — PREMIUM POPUP
+   ========================================================================= */
+
+/* --- Backdrop --- */
+.qm-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 9998;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.qm-backdrop.is-active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* --- Modal container --- */
+.qm {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+    pointer-events: none;
+}
+
+.qm.is-active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+/* --- Modal panel --- */
+.qm__panel {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    width: 100%;
+    max-width: 920px;
+    max-height: 92vh;
+    background: #111114;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(252, 3, 1, 0.08);
+    transform: scale(0.92) translateY(20px);
+    transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.qm.is-active .qm__panel {
+    transform: scale(1) translateY(0);
+}
+
+/* --- Left branding side --- */
+.qm__brand {
+    background: linear-gradient(170deg, #1a0000 0%, #0c0c10 50%, #111114 100%);
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+}
+
+.qm__brand::before {
+    content: '';
+    position: absolute;
+    top: -80px;
+    right: -80px;
+    width: 220px;
+    height: 220px;
+    background: radial-gradient(circle, rgba(252, 3, 1, 0.12) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.qm__brand-top {
+    flex: 1;
+}
+
+.qm__brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 2.5rem;
+}
+
+.qm__brand-logo img {
+    width: 38px;
+    height: 38px;
+}
+
+.qm__brand-logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.qm__brand-logo-name {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.1;
+}
+
+.qm__brand-logo-sub {
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--color-gold);
+}
+
+.qm__brand-title {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #fff;
+    line-height: 1.25;
+    margin-bottom: 1rem;
+}
+
+.qm__brand-title span {
+    color: var(--color-gold);
+    font-style: italic;
+}
+
+.qm__brand-desc {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.45);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+/* Trust points */
+.qm__trust-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+
+.qm__trust-item {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    font-size: 0.82rem;
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.qm__trust-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background: rgba(252, 3, 1, 0.1);
+    border: 1px solid rgba(252, 3, 1, 0.2);
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.qm__trust-icon svg {
+    width: 14px;
+    height: 14px;
+    color: var(--color-gold);
+}
+
+/* Brand bottom: phone/response */
+.qm__brand-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    padding-top: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.qm__brand-phone {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 0.35rem;
+    transition: color 0.3s;
+}
+
+.qm__brand-phone:hover {
+    color: var(--color-gold);
+}
+
+.qm__brand-response {
+    font-size: 0.72rem;
+    color: rgba(255, 255, 255, 0.35);
+}
+
+/* --- Right form side --- */
+.qm__form-side {
+    padding: 2.25rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    background: #151519;
+}
+
+/* Close button */
+.qm__close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s, border-color 0.3s;
+    z-index: 2;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.qm__close:hover {
+    background: rgba(252, 3, 1, 0.15);
+    border-color: rgba(252, 3, 1, 0.3);
+    color: #fff;
+}
+
+/* Step indicator */
+.qm__steps {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.qm__step-dot {
+    width: 32px;
+    height: 4px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.08);
+    transition: background 0.4s ease, width 0.4s ease;
+}
+
+.qm__step-dot.is-active {
+    background: var(--color-gold);
+    width: 48px;
+}
+
+.qm__step-dot.is-done {
+    background: rgba(252, 3, 1, 0.4);
+}
+
+/* Form header */
+.qm__form-header {
+    margin-bottom: 1.75rem;
+}
+
+.qm__form-step-label {
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-gold);
+    margin-bottom: 0.4rem;
+}
+
+.qm__form-title {
+    font-family: var(--font-heading);
+    font-size: 1.35rem;
+    font-weight: 400;
+    color: #fff;
+    line-height: 1.3;
+}
+
+/* --- Step containers --- */
+.qm__step {
+    display: none;
+    flex-direction: column;
+    flex: 1;
+}
+
+.qm__step.is-active {
+    display: flex;
+}
+
+/* --- Service selector cards --- */
+.qm__services-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.qm__service-card {
+    position: relative;
+    padding: 1.1rem;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.qm__service-card:hover {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 255, 255, 0.12);
+}
+
+.qm__service-card.is-selected {
+    background: rgba(252, 3, 1, 0.08);
+    border-color: rgba(252, 3, 1, 0.4);
+    box-shadow: 0 0 20px rgba(252, 3, 1, 0.06);
+}
+
+.qm__service-card input {
+    display: none;
+}
+
+.qm__service-icon {
+    font-size: 1.4rem;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.qm__service-info {
+    flex: 1;
+}
+
+.qm__service-name {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.2;
+    margin-bottom: 0.15rem;
+}
+
+.qm__service-sub {
+    font-size: 0.68rem;
+    color: rgba(255, 255, 255, 0.35);
+}
+
+.qm__service-check {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.12);
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.qm__service-card.is-selected .qm__service-check {
+    background: var(--color-gold);
+    border-color: var(--color-gold);
+}
+
+.qm__service-card.is-selected .qm__service-check::after {
+    content: '';
+    display: block;
+    width: 6px;
+    height: 6px;
+    background: #fff;
+    border-radius: 50%;
+}
+
+/* --- Form inputs --- */
+.qm__field {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.qm__field--half {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+}
+
+.qm__input-wrap {
+    position: relative;
+}
+
+.qm__input,
+.qm__select,
+.qm__textarea {
+    width: 100%;
+    padding: 0.9rem 1rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    color: #fff;
+    font-family: var(--font-body);
+    font-size: 0.88rem;
+    outline: none;
+    transition: border-color 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.qm__input::placeholder,
+.qm__textarea::placeholder {
+    color: rgba(255, 255, 255, 0.25);
+}
+
+.qm__input:focus,
+.qm__select:focus,
+.qm__textarea:focus {
+    border-color: rgba(252, 3, 1, 0.5);
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 0 3px rgba(252, 3, 1, 0.08);
+}
+
+.qm__select {
+    appearance: none;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' stroke='rgba(255,255,255,0.3)' stroke-width='2.5' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 14px;
+    padding-right: 2.5rem;
+}
+
+.qm__select option {
+    background: #1a1a1f;
+    color: #fff;
+}
+
+.qm__textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.qm__label {
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.4);
+    margin-bottom: 0.4rem;
+}
+
+/* --- Navigation buttons --- */
+.qm__actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 1.25rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.qm__btn-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.7rem 1.25rem;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    color: rgba(255, 255, 255, 0.5);
+    font-family: var(--font-body);
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.qm__btn-back:hover {
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+.qm__btn-next,
+.qm__btn-submit {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.85rem 2rem;
+    background: var(--color-gold);
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.qm__btn-next:hover,
+.qm__btn-submit:hover {
+    background: #e00200;
+    transform: translateY(-1px);
+    box-shadow: 0 8px 30px rgba(252, 3, 1, 0.25);
+}
+
+.qm__btn-next svg,
+.qm__btn-submit svg {
+    transition: transform 0.3s ease;
+}
+
+.qm__btn-next:hover svg {
+    transform: translateX(3px);
+}
+
+/* --- Success state --- */
+.qm__success {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 3rem 2rem;
+    flex: 1;
+}
+
+.qm__success.is-active {
+    display: flex;
+}
+
+.qm__success-icon {
+    width: 72px;
+    height: 72px;
+    background: rgba(252, 3, 1, 0.1);
+    border: 2px solid rgba(252, 3, 1, 0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    animation: qm-pop 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes qm-pop {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.qm__success-icon svg {
+    color: var(--color-gold);
+}
+
+.qm__success-title {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 0.6rem;
+}
+
+.qm__success-desc {
+    font-size: 0.88rem;
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 1.7;
+    max-width: 340px;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .qm__panel {
+        grid-template-columns: 1fr;
+        max-height: 95vh;
+    }
+
+    .qm__brand {
+        display: none;
+    }
+
+    .qm__form-side {
+        padding: 1.5rem;
+        border-radius: 20px;
+    }
+
+    .qm__services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .qm {
+        padding: 0.75rem;
+    }
+}
