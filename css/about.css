@@ -641,3 +641,118 @@
     min-height: 320px;
   }
 }
+
+
+/* =========================================================================
+   DARK SECTION OVERRIDES — about page components on .section--alt
+   Higher-specificity rules so dark sections display proper white text
+   ========================================================================= */
+
+/* Values cards */
+.section--alt .about-values__card {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.section--alt .about-values__card:hover {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(252, 3, 1, 0.4);
+  box-shadow: 0 6px 32px rgba(252, 3, 1, 0.14);
+}
+
+.section--alt .about-values__card-title {
+  color: #ffffff;
+}
+
+.section--alt .about-values__card-text {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* H&S features */
+.section--alt .about-hs__feature {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.section--alt .about-hs__feature:hover {
+  border-color: rgba(252, 3, 1, 0.35);
+}
+
+.section--alt .about-hs__feature strong {
+  color: #ffffff;
+}
+
+.section--alt .about-hs__feature p {
+  color: rgba(255, 255, 255, 0.58) !important;
+}
+
+/* Quality badges */
+.section--alt .about-quality__badge {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.section--alt .about-quality__badge:hover {
+  border-color: rgba(252, 3, 1, 0.35);
+}
+
+.section--alt .about-quality__badge strong {
+  color: #ffffff;
+}
+
+.section--alt .about-quality__badge span {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Approach steps */
+.section--alt .about-approach__step {
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+.section--alt .about-approach__step h4 {
+  color: #ffffff;
+}
+
+.section--alt .about-approach__step p {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* Story content */
+.section--alt .about-story__content p {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.section--alt .about-story__feature {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.section--alt .about-story__features {
+  border-top-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Areas columns */
+.section--alt .about-areas__content p {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.section--alt .about-areas__col h4 {
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+.section--alt .about-areas__col ul li {
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+.section--alt .about-areas__col ul li a {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.section--alt .about-areas__col ul li a:hover {
+  color: var(--color-gold);
+}
+
+/* Quality & approach body text */
+.section--alt .about-quality__content p,
+.section--alt .about-hs__content p {
+  color: rgba(255, 255, 255, 0.72);
+}

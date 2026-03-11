@@ -180,68 +180,55 @@ h6 {
 
 .section--alt {
   background-color: #0c0c10;
-  color: rgba(255, 255, 255, 0.85);
-
-  /* Override design tokens for dark context */
-  --color-bg: #0c0c10;
-  --color-bg-alt: rgba(255, 255, 255, 0.03);
-  --color-bg-card: rgba(255, 255, 255, 0.04);
-  --color-bg-card-hover: rgba(255, 255, 255, 0.07);
-  --color-surface: rgba(255, 255, 255, 0.03);
-  --color-border: rgba(255, 255, 255, 0.08);
-  --color-border-hover: rgba(255, 255, 255, 0.15);
-  --color-text: #ffffff;
-  --color-text-secondary: rgba(255, 255, 255, 0.6);
-  --color-text-muted: rgba(255, 255, 255, 0.4);
-  --shadow-card: 0 2px 20px rgba(0, 0, 0, 0.3);
-  --shadow-sm: 0 1px 10px rgba(0, 0, 0, 0.2);
-  --shadow-md: 0 4px 30px rgba(0, 0, 0, 0.4);
+  color: #ffffff;
 }
 
-/* ---- Dark section text overrides ---- */
-.section--alt h1,
+/* =========================================================================
+   DARK SECTION TEXT OVERRIDES — applies to every .section--alt on every page
+   Uses !important to win over per-page CSS files loaded after this stylesheet.
+   Ensures all headings, body text, cards, and features are legible on #0c0c10
+   ========================================================================= */
+
+/* Section headings & labels inside dark sections */
+.section--alt .section-title,
 .section--alt h2,
 .section--alt h3,
 .section--alt h4,
 .section--alt h5,
 .section--alt h6 {
-  color: #ffffff;
-}
-
-.section--alt p,
-.section--alt li,
-.section--alt span,
-.section--alt div,
-.section--alt strong,
-.section--alt label {
-  color: rgba(255, 255, 255, 0.85);
-}
-
-.section--alt .section-title {
-  color: #ffffff;
+  color: #ffffff !important;
 }
 
 .section--alt .section-desc {
-  color: rgba(255, 255, 255, 0.65);
+  color: rgba(255, 255, 255, 0.75) !important;
+  opacity: 1 !important;
 }
 
 .section--alt p {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.72) !important;
 }
 
-.section--alt .section-label {
-  color: var(--color-gold);
+/* strong, span text inside dark sections */
+.section--alt strong {
+  color: #ffffff !important;
 }
 
-/* Cards inside dark sections */
+/* Cards & timeline steps inside dark sections — dark glass style */
 .section--alt .ip-card,
 .section--alt .ip-timeline__step,
 .section--alt .ip-badge,
 .section--alt .ip-faq__item,
 .section--alt .ip-testimonial,
-.section--alt .ip-checklist__item {
-  background: rgba(255, 255, 255, 0.04);
-  border-color: rgba(255, 255, 255, 0.08);
+.section--alt .ip-featured,
+.section--alt .about-values__card,
+.section--alt .about-hs__feature,
+.section--alt .about-quality__badge,
+.section--alt [class*="__card"],
+.section--alt [class*="__step"],
+.section--alt [class*="__feature"],
+.section--alt [class*="__badge"] {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
 }
 
 .section--alt .ip-card:hover,
@@ -249,204 +236,207 @@ h6 {
 .section--alt .ip-badge:hover,
 .section--alt .ip-faq__item:hover,
 .section--alt .ip-testimonial:hover,
-.section--alt .ip-checklist__item:hover {
-  border-color: rgba(255, 255, 255, 0.15);
-  background: rgba(255, 255, 255, 0.06);
+.section--alt .about-values__card:hover,
+.section--alt .about-hs__feature:hover,
+.section--alt .about-quality__badge:hover,
+.section--alt [class*="__card"]:hover,
+.section--alt [class*="__step"]:hover,
+.section--alt [class*="__feature"]:hover {
+  background: rgba(255, 255, 255, 0.07) !important;
+  border-color: rgba(252, 3, 1, 0.35) !important;
+  box-shadow: 0 4px 30px rgba(252, 3, 1, 0.12) !important;
 }
 
+/* Text inside cards on dark sections */
 .section--alt .ip-card h3,
 .section--alt .ip-timeline__step h3,
 .section--alt .ip-badge h3,
-.section--alt .ip-faq__item h3 {
-  color: #ffffff;
+.section--alt .ip-faq__item h3,
+.section--alt .ip-testimonial__author,
+.section--alt .ip-featured__quote,
+.section--alt .about-values__card-title,
+.section--alt .about-hs__feature strong,
+.section--alt .about-quality__badge strong,
+.section--alt .ip-checklist__item strong,
+.section--alt .ip-split__content h2,
+.section--alt .ip-split__content h3,
+.section--alt .ip-split__content h4 {
+  color: #ffffff !important;
 }
 
 .section--alt .ip-card p,
 .section--alt .ip-timeline__step p,
 .section--alt .ip-badge p,
 .section--alt .ip-faq__item p,
-.section--alt .ip-testimonial__quote {
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.section--alt .ip-testimonial__author,
-.section--alt .ip-checklist__item strong {
-  color: #ffffff;
-}
-
-.section--alt .ip-testimonial__meta,
+.section--alt .ip-testimonial__quote,
+.section--alt .ip-featured__meta,
+.section--alt .about-values__card-text,
+.section--alt .about-hs__feature p,
+.section--alt .about-quality__badge span,
 .section--alt .ip-checklist__item p,
-.section--alt .ip-timeline__step ul li {
-  color: rgba(255, 255, 255, 0.5);
-}
-
-.section--alt .ip-timeline__step ul li {
-  border-top-color: rgba(255, 255, 255, 0.06);
-}
-
-.section--alt .ip-feature {
-  color: rgba(255, 255, 255, 0.65);
-}
-
-.section--alt .ip-features {
-  border-top-color: rgba(255, 255, 255, 0.08);
-}
-
 .section--alt .ip-split__content p {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.65) !important;
 }
 
-.section--alt .btn--secondary {
-  color: rgba(255, 255, 255, 0.85);
-  border-color: rgba(255, 255, 255, 0.25);
+/* List items inside dark section timeline steps */
+.section--alt .ip-timeline__step ul li {
+  color: rgba(255, 255, 255, 0.58) !important;
+  border-top-color: rgba(255, 255, 255, 0.08) !important;
 }
 
-.section--alt .btn--secondary:hover {
-  color: #fff;
-  border-color: var(--color-gold);
-  background: rgba(252, 3, 1, 0.1);
+/* Testimonial meta on dark sections */
+.section--alt .ip-testimonial__meta {
+  color: rgba(255, 255, 255, 0.45) !important;
 }
 
-/* Page-specific cards inside dark sections */
-.section--alt .hr-services__card,
-.section--alt .hr-faq__item,
-.section--alt .hr-approach__step,
-.section--alt .hr-scope__card,
-.section--alt .hr-why__card,
-.section--alt .area-services__card,
-.section--alt .area-why__card,
-.section--alt .ip-badge__placeholder {
-  background: rgba(255, 255, 255, 0.04);
-  border-color: rgba(255, 255, 255, 0.08);
+/* ip-feature text on dark sections */
+.section--alt .ip-feature {
+  color: rgba(255, 255, 255, 0.72) !important;
 }
 
-.section--alt .hr-services__card:hover,
-.section--alt .hr-faq__item:hover,
-.section--alt .hr-approach__step:hover,
-.section--alt .hr-scope__card:hover,
-.section--alt .hr-why__card:hover,
-.section--alt .area-services__card:hover,
-.section--alt .area-why__card:hover {
-  border-color: rgba(255, 255, 255, 0.15);
-  background: rgba(255, 255, 255, 0.06);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+/* Nearby area cards & links on dark sections */
+.section--alt .area-nearby-card,
+.section--alt .area-card {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  color: #ffffff !important;
 }
 
-.section--alt .hr-services__card h3,
-.section--alt .hr-scope__card h3,
-.section--alt .hr-why__card h3,
-.section--alt .hr-approach__step strong,
-.section--alt .area-services__card h3,
-.section--alt .area-why__card h3 {
-  color: #ffffff;
+.section--alt .area-nearby-card:hover,
+.section--alt .area-card:hover {
+  background: rgba(255, 255, 255, 0.07) !important;
+  border-color: rgba(252, 3, 1, 0.35) !important;
 }
 
-.section--alt .hr-services__card p,
-.section--alt .hr-scope__card p,
-.section--alt .hr-why__card p,
-.section--alt .hr-approach__step p,
-.section--alt .hr-approach__content>p,
-.section--alt .hr-faq__answer p,
-.section--alt .area-services__card p,
-.section--alt .area-why__card p {
-  color: rgba(255, 255, 255, 0.6);
+.section--alt .area-nearby-card h3,
+.section--alt .area-card h3 {
+  color: #ffffff !important;
 }
 
-.section--alt .hr-faq__question {
-  color: rgba(255, 255, 255, 0.9);
+.section--alt .area-nearby-card p,
+.section--alt .area-card p {
+  color: rgba(255, 255, 255, 0.65) !important;
 }
 
-.section--alt .hr-faq__question:hover {
-  color: var(--color-gold);
+/* Service/feature item text (page-specific classes) inside dark sections */
+.section--alt [class*="-card"] h3,
+.section--alt [class*="-card"] h4,
+.section--alt [class*="-item"] h3,
+.section--alt [class*="-item"] h4,
+.section--alt [class*="-step"] h3,
+.section--alt [class*="-step"] h4 {
+  color: #ffffff !important;
 }
 
-.section--alt .hr-faq__item[open] {
-  border-color: rgba(252, 3, 1, 0.25);
+.section--alt [class*="-card"] p,
+.section--alt [class*="-item"] p,
+.section--alt [class*="-step"] p {
+  color: rgba(255, 255, 255, 0.65) !important;
 }
 
+/* FAQ items using <details> tag on dark sections */
+.section--alt [class*="-faq__item"],
+.section--alt details[class*="-faq__item"] {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.section--alt [class*="-faq__item"]:hover {
+  border-color: rgba(252, 3, 1, 0.35) !important;
+}
+
+.section--alt [class*="-faq__question"] {
+  color: #ffffff !important;
+}
+
+.section--alt [class*="-faq__answer"] p {
+  color: rgba(255, 255, 255, 0.65) !important;
+}
+
+/* Borders inside dark sections */
+.section--alt .about-approach__step {
+  border-bottom-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.section--alt .about-story__features {
+  border-top-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* About areas column borders & links */
+.section--alt .about-areas__col h4 {
+  border-bottom-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.section--alt .about-areas__col ul li {
+  border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+.section--alt .about-areas__col ul li a {
+  color: rgba(255, 255, 255, 0.65) !important;
+}
+
+.section--alt .about-areas__col ul li a:hover {
+  color: var(--color-gold) !important;
+}
+
+/* Dividers inside dark sections */
+.section--alt hr.divider {
+  background: linear-gradient(90deg, var(--color-gold), transparent);
+}
+
+/* Stat bars labels */
+.section--alt .ip-stats__label {
+  color: rgba(255, 255, 255, 0.55) !important;
+}
+
+/* Logo placeholder on dark (keep white background so logos remain visible) */
 .section--alt .ip-badge__logo {
-  background: rgba(255, 255, 255, 0.06);
-  border-color: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.92) !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
 }
 
-.section--alt .ip-badge__placeholder {
-  border-color: rgba(255, 255, 255, 0.12);
-  color: rgba(255, 255, 255, 0.4);
+/* Cost table rows on dark sections */
+.section--alt [class*="-costs__row"],
+.section--alt [class*="-cost__row"] {
+  color: rgba(255, 255, 255, 0.65) !important;
+  border-bottom-color: rgba(255, 255, 255, 0.08) !important;
 }
 
-.section--alt .btn--small.btn--secondary {
-  color: rgba(255, 255, 255, 0.65);
-  border-color: rgba(255, 255, 255, 0.15);
+.section--alt [class*="-costs__row--header"],
+.section--alt [class*="-cost__row--header"] {
+  background: rgba(255, 255, 255, 0.07) !important;
+  color: #ffffff !important;
 }
 
-.section--alt .btn--small.btn--secondary:hover {
-  color: var(--color-gold);
-  border-color: var(--color-gold);
+/* Suitability check items on dark sections */
+.section--alt [class*="-suitable__check"],
+.section--alt [class*="-check"] {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
 }
 
-/* About page cards inside dark sections */
-.section--alt .about-values__card {
-  background: rgba(255, 255, 255, 0.04);
-  border-color: rgba(255, 255, 255, 0.08);
+/* Intro stat boxes on dark sections */
+.section--alt [class*="-intro__stat"],
+.section--alt [class*="-intro__highlight"] {
+  background: rgba(255, 255, 255, 0.06) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
 }
 
-.section--alt .about-values__card:hover {
-  background: rgba(255, 255, 255, 0.07);
-  border-color: rgba(255, 255, 255, 0.15);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+.section--alt [class*="-intro__stat"] span,
+.section--alt [class*="-intro__highlight"] span {
+  color: rgba(255, 255, 255, 0.65) !important;
 }
 
-.section--alt .about-values__card-title {
-  color: #ffffff;
+/* Trend items on dark sections */
+.section--alt [class*="-trends__item"] {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  color: rgba(255, 255, 255, 0.75) !important;
 }
 
-.section--alt .about-values__card-text {
-  color: rgba(255, 255, 255, 0.6);
-}
-
-/* Quality & Standards badges in dark sections */
-.section--alt .about-quality__badge {
-  background: rgba(255, 255, 255, 0.04);
-  border-color: rgba(255, 255, 255, 0.08);
-}
-
-.section--alt .about-quality__badge:hover {
-  border-color: rgba(255, 255, 255, 0.15);
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
-}
-
-.section--alt .about-quality__badge strong {
-  color: #ffffff;
-}
-
-.section--alt .about-quality__badge span {
-  color: rgba(255, 255, 255, 0.45);
-}
-
-.section--alt .about-quality__content p {
-  color: rgba(255, 255, 255, 0.6);
-}
-
-/* Health & Safety features in dark sections */
-.section--alt .about-hs__feature {
-  background: rgba(255, 255, 255, 0.04);
-  border-color: rgba(255, 255, 255, 0.08);
-}
-
-.section--alt .about-hs__feature:hover {
-  border-color: rgba(255, 255, 255, 0.15);
-}
-
-.section--alt .about-hs__feature strong {
-  color: #ffffff;
-}
-
-.section--alt .about-hs__feature p {
-  color: rgba(255, 255, 255, 0.5);
-}
-
-.section--alt .about-hs__content p {
-  color: rgba(255, 255, 255, 0.6);
+.section--alt [class*="-trends__item"]:hover {
+  background: rgba(255, 255, 255, 0.07) !important;
+  border-color: rgba(252, 3, 1, 0.35) !important;
 }
 
 .section--surface {
@@ -478,7 +468,11 @@ h6 {
 .section-title {
   font-size: var(--fs-h2);
   margin-bottom: var(--space-md);
-  color: inherit;
+  color: var(--color-text);
+}
+
+.section--alt .section-title {
+  color: #ffffff !important;
 }
 
 .section-title--gold span {
@@ -487,9 +481,14 @@ h6 {
 
 .section-desc {
   font-size: var(--fs-body-lg);
-  color: inherit;
+  color: var(--color-text-secondary);
   line-height: 1.8;
   opacity: 0.75;
+}
+
+.section--alt .section-desc {
+  color: rgba(255, 255, 255, 0.8) !important;
+  opacity: 1 !important;
 }
 
 .divider {

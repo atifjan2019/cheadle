@@ -668,3 +668,168 @@
         margin: 0 auto;
     }
 }
+
+
+/* =========================================================================
+   DARK SECTION OVERRIDES — inner-pages components on .section--alt
+   High-specificity rules to win over the single-class rules above
+   ========================================================================= */
+
+/* Timeline steps */
+.section--alt .ip-timeline__step {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.section--alt .ip-timeline__step:hover {
+    background: rgba(255, 255, 255, 0.07);
+    border-color: rgba(252, 3, 1, 0.4);
+    box-shadow: 0 6px 32px rgba(252, 3, 1, 0.14);
+}
+
+.section--alt .ip-timeline__step h3 {
+    color: #ffffff;
+}
+
+.section--alt .ip-timeline__step p {
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.section--alt .ip-timeline__step ul li {
+    color: rgba(255, 255, 255, 0.55);
+    border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Cards */
+.section--alt .ip-card {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.section--alt .ip-card:hover {
+    background: rgba(255, 255, 255, 0.07);
+    border-color: rgba(252, 3, 1, 0.4);
+    box-shadow: 0 6px 32px rgba(252, 3, 1, 0.14);
+}
+
+.section--alt .ip-card h3 {
+    color: #ffffff;
+}
+
+.section--alt .ip-card p {
+    color: rgba(255, 255, 255, 0.65);
+}
+
+/* Badges / Certs */
+.section--alt .ip-badge {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.section--alt .ip-badge:hover {
+    background: rgba(255, 255, 255, 0.07);
+    border-color: rgba(252, 3, 1, 0.4);
+    box-shadow: 0 6px 32px rgba(252, 3, 1, 0.14);
+}
+
+.section--alt .ip-badge h3 {
+    color: #ffffff;
+}
+
+.section--alt .ip-badge p {
+    color: rgba(255, 255, 255, 0.65);
+}
+
+/* FAQ items */
+.section--alt .ip-faq__item {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.section--alt .ip-faq__item:hover {
+    border-color: rgba(252, 3, 1, 0.35);
+}
+
+.section--alt .ip-faq__item h3 {
+    color: #ffffff;
+}
+
+.section--alt .ip-faq__item p {
+    color: rgba(255, 255, 255, 0.65);
+}
+
+/* Testimonials */
+.section--alt .ip-testimonial {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.section--alt .ip-testimonial:hover {
+    background: rgba(255, 255, 255, 0.07);
+    border-color: rgba(252, 3, 1, 0.4);
+}
+
+.section--alt .ip-testimonial__author {
+    color: #ffffff;
+}
+
+.section--alt .ip-testimonial__quote {
+    color: rgba(255, 255, 255, 0.72);
+}
+
+.section--alt .ip-testimonial__meta {
+    color: rgba(255, 255, 255, 0.45);
+}
+
+/* Featured testimonial */
+.section--alt .ip-featured {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.section--alt .ip-featured__quote {
+    color: #ffffff;
+}
+
+.section--alt .ip-featured__meta {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Checklists */
+.section--alt .ip-checklist__item {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.section--alt .ip-checklist__item:hover {
+    border-color: rgba(252, 3, 1, 0.35);
+}
+
+.section--alt .ip-checklist__item strong {
+    color: #ffffff;
+}
+
+.section--alt .ip-checklist__item p {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Split layout content */
+.section--alt .ip-split__content h2,
+.section--alt .ip-split__content h3,
+.section--alt .ip-split__content h4 {
+    color: #ffffff;
+}
+
+.section--alt .ip-split__content p {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.section--alt .ip-feature {
+    color: rgba(255, 255, 255, 0.72);
+}
+
+/* Logo placeholder on dark */
+.section--alt .ip-badge__logo {
+    background: rgba(255, 255, 255, 0.92);
+    border-color: rgba(255, 255, 255, 0.15);
+}
