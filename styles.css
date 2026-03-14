@@ -2738,6 +2738,29 @@ h6 {
   .cta-banner__title {
     font-size: clamp(1.5rem, 5vw, 2rem);
   }
+
+  .hp-hero__badges-row {
+    flex-direction: column;
+  }
+
+  .hp-hero__badge {
+    width: 100%;
+  }
+
+  .hp-hero__badge-sep {
+    display: none;
+  }
+
+  .hp-hero__actions {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hp-btn {
+    width: 100%;
+  }
+
+
 }
 
 /* Small Mobile: 400px */
@@ -2745,6 +2768,19 @@ h6 {
   .hero__title {
     font-size: 2rem;
   }
+
+  .header-topbar {
+    display: none;
+  }
+
+  .header {
+    top: 0;
+  }
+
+  .hp-hero__content {
+    padding-top: 0;
+  }
+
 
   .areas__grid {
     grid-template-columns: 1fr;

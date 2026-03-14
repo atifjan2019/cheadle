@@ -205,8 +205,6 @@
    ========================================================================= */
 .hp-hero {
   position: relative;
-  /* 16:9 cinematic ratio — renders at ~1920×1080 on full-width desktop screens */
-  aspect-ratio: 16 / 9;
   min-height: 560px;
   /* safety net for very small or very tall viewports */
   display: flex;
